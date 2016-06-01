@@ -2,11 +2,129 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Пинк</title>
+    <title>HTML Academy: Пинк Главная страница</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
+    <header class="page-header">
+      <img class="page-header__logo  page-header__logo--menu-open" src="https://placehold.it/75x20" alt="Pink" width="75" height="20">
+      <button class="page-header__button  page-header__button--menu-open" type="button"></button>
+      <nav class="menu">
+        <ul class="menu__list">
+          <li class="menu__item"><span class="menu__link">Главная</span></li>
+          <li class="menu__item"><a href="photo.html" class="menu__link">Фотографии</a></li>
+          <li class="menu__item"><a href="form.html" class="menu__link">Конкурс</a></li>
+          <li class="menu__item"><a href="https://htmlacademy.ru" class="menu__link">HTML Academy</a></li>
+        </ul>
+      </nav>
+      <h1 class="page-title">Главная страница</h1>
+    </header>
 
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">Продвинутый HTML и CSS</a>».</p>
+    <main>
+      <div class="applications">
+        <button class="applications__download" type="button">Скачать приложение</button>
+        <a class="applications__item applications__item--apple" href="#"></a>
+        <a class="applications__item applications__item--android" href="#"></a>
+        <a class="applications__item applications__item--windows-mobile" href="#"></a>
+        <p class="applications__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+      </div>
+      <div class="advetisment">
+          <p class="advetisment__text">Устали от серости мегаполиса?</p>
+          <p class="advetisment__text">Нам есть, что вам предложить!</p>
+      </div>
+      <div class="profit-list">
+        <div class="profit-item">
+          <h2 class="profit-item__title">Поднимает настроение</h2>
+          <p class="profit-item__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+        </div>
+        <div class="profit-item">
+          <h2 class="profit-item__title">Меняет мир вокруг</h2>
+          <p class="profit-item__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+        </div>
+        <div class="profit-item">
+          <h2 class="profit-item__title">Заводит новых друзей</h2>
+          <p class="profit-item__text">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+        </div>
+      </div>
+      <div class="feedbacks  slider">
+        <input class="slider__input" type="radio" name="feedback" id="feedback-input-1" checked>
+        <input class="slider__input" type="radio" name="feedback" id="feedback-input-2">
+        <input class="slider__input" type="radio" name="feedback" id="feedback-input-3">
+      <div class="feedback feedback--current slider__item">
+          <div class="feedback__author">Николай Петров</div>
+          <p class="feedback__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+        </div>
+        <div class="feedback  slider__item">
+          <div class="feedback__author"></div>
+          <p class="feedback__text"></p>
+        </div>
+        <div class="feedback  slider__item">
+          <div class="feedback__author"></div>
+          <p class="feedback__text"></p>
+        </div>
+      </div>
+      <div class="feedbacks__toggle  slider__toggles">
+        <label class="slider__toggle" for="feedback-input-1">1</label>
+        <label class="slider__toggle" for="feedback-input-2">2</label>
+        <label class="slider__toggle" for="feedback-input-3">3</label>
+      </div>
+
+
+      <div class="plans  slider">
+        <input class="slider__input" type="radio" name="plan" id="plan-input-1">
+        <input class="slider__input" type="radio" name="plan" id="plan-input-2" checked>
+        <input class="slider__input" type="radio" name="plan" id="plan-input-3">
+        <div class="plan  slider__item">
+          <h3 class="plan__title"></h3>
+          <span></span>
+          <ul class="plan__features">
+            <li class="plan__feature plan__feature--modificator"></li>
+            <li class="plan__feature plan__feature--modificator"></li>
+            <li class="plan__feature plan__feature--modificator"></li>
+          </ul>
+        </div>
+        <div class="plan  plan--current  slider__item">
+          <h3 class="plan__title">Стандарт</h3>
+          <span>3,99 USD</span>
+          <ul class="plan__features">
+            <li class="plan__feature">Розовый фильтр</li>
+            <li class="plan__feature">Смайлики</li>
+            <li class="plan__feature plan__feature--no-mark">Комментарии</li>
+          </ul>
+        </div>
+        <div class="plan  slider__item">
+          <h3 class="plan__title"></h3>
+          <span></span>
+          <ul class="plan__features">
+            <li class="plan__feature plan__feature--modificator"></li>
+            <li class="plan__feature plan__feature--modificator"></li>
+            <li class="plan__feature plan__feature--modificator"></li>
+          </ul>
+        </div>
+        <div class="plans  slider__toggles">
+          <label class="slider__toggle" for="plan-input-1">1</label>
+          <label class="slider__toggle" for="plan-input-2">2</label>
+          <label class="slider__toggle" for="plan-input-3">3</label>
+        </div>
+      </div>
+      <footer class="page-footer">
+        <p class="page-footer__top">Остались вопросы? Свяжитесь с нами!</p>
+        <div class="contact">
+          <span class="contact__title">Звоните:</span>
+          <a class="contact__link" href="tel:+78125556666">+7 (812) 555-66-66</a>
+        </div>
+        <div class="contact">
+          <span class="contact__title">Пишите:</span>
+          <a class="contact__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+        </div>
+        <div class="contact">
+          <span class="contact__title">Приезжайте в гости:</span>
+          <p class="contact__text">ул. Большая<br>Конюшенная, 19/8</p>
+        </div>
+        <div class="page-footer__map"></div>
+      </footer>
+    </main>
 
   </body>
 </html>
