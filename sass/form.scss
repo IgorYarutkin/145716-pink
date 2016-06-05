@@ -1,0 +1,51 @@
+.form {
+  box-sizing: border-box;
+  padding: 0px;
+  width: 320px;
+  box-shadow: 2px 0px 5px yellow;
+}
+
+.form__group {
+    margin: 0;
+    padding: 35px 0px 40px;
+    border: none;
+    &--grey {
+      padding-top: 90px;
+      background-color: $grey-light;
+    }
+}
+
+.form__legend {
+    position: relative;
+    top: 50px;
+    width: 230px;
+    color: $red-text;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.form__field-name {
+    margin-left: 23px;
+    color: $red-text;
+    line-height: 32px;
+    text-transform: uppercase;
+}
+
+.form__input-wrapper {
+    padding: 20px 20px;
+  }
+
+.form__input--text,
+.form__textarea {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.form__checkbox-name,
+.form__radio-name {
+    font-size: 18px;
+}
+
+.form__submit {
+    width: 100%;
+}

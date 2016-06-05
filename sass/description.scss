@@ -1,0 +1,12 @@
+.description {
+  box-sizing: border-box;
+  padding: 55px 20px 15px;
+  width: 320px;
+  line-height: 24px;
+  text-align: center;
+  border: 1px solid blue;
+
+  &--upload {
+    padding-bottom: 50px;
+  }
+}

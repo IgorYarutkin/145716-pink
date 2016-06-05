@@ -1,0 +1,29 @@
+.slider__input {
+  display: none;
+}
+.slider__item {
+  display: none;
+  &--current {
+    display: block;
+  }
+}
+.slider__toggles {
+  box-sizing: border-box;
+  padding-top: 50px;
+  height: 100px;
+  text-align: center;
+}
+.slider__toggle {
+  display: inline-block;
+  margin-right: 10px;
+  width: 6px;
+  height: 6px;
+  vertical-align: top;
+  font-size: 0;
+  background: $grey-secondary;
+  border: 3px solid transparent;
+  border-radius: 50%;
+  &:last-child {
+    margin-right: 0;
+  }
+}

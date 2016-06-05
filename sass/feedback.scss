@@ -1,0 +1,13 @@
+.feedback {
+  text-align: center;
+}
+
+.feedback__author {
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.feedback__text {
+    color: $grey-text;
+}
