@@ -1,0 +1,26 @@
+.menu {
+  position: absolute;
+  top: 64px;
+  width: 100%;
+  color: #fff;
+  background-color: $grey-dark;
+  z-index: 2;
+
+.menu__list {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.menu__item {
+    display: block;
+    height: 62px;
+    line-height: 62px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    box-shadow: 0px 1px #000;
+}
+.menu__link {
+    text-align: center;
+}

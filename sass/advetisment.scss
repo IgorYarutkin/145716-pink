@@ -1,0 +1,15 @@
+.advetisment {
+  box-sizing: border-box;
+  padding-top: 50px;
+  width: 320px;
+  height: 250px;  // для сетки
+  font-weight: 300;
+  font-size: 24px;
+  text-align: center;
+  color: $grey-text;
+  border: 1px solid blue;
+}
+
+.advetisment__text {
+    margin-bottom: 40px;
+}

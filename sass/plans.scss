@@ -1,0 +1,10 @@
+.plans {
+  box-sizing: border-box;
+  font-size: 0;
+  width: 320px;
+  border: 1px solid blue;
+}
+.plans__toggle {
+  height: 100px;
+  background-color: $grey-light;
+}

@@ -3,13 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк Главная страница</title>
-    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
-      <img class="page-header__logo  page-header__logo--menu-open" src="https://placehold.it/75x20" alt="Pink" width="75" height="20">
-      <button class="page-header__button  page-header__button--menu-open" type="button"></button>
+      <div class="page-header__top page-header__top--menu-open">
+        <img class="page-header__logo" src="img/logo-pink-white-mobile.svg" alt="Pink" width="74" height="23">
+        <button class="page-header__button" type="button"></button>
+      </div>
       <nav class="menu">
         <ul class="menu__list">
           <li class="menu__item"><span class="menu__link">Главная</span></li>
@@ -18,7 +19,9 @@
           <li class="menu__item"><a href="https://htmlacademy.ru" class="menu__link">HTML Academy</a></li>
         </ul>
       </nav>
-      <h1 class="page-title">Главная страница</h1>
+      <div class="page-title page-title--page-index">
+        <h1 class="page-title__description">Главная страница</h1>
+      </div>
     </header>
 
     <main>
@@ -47,11 +50,11 @@
           <p class="profit-item__text">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
         </div>
       </div>
-      <div class="feedbacks  slider">
+      <div class="feedbacks-list  slider">
         <input class="slider__input" type="radio" name="feedback" id="feedback-input-1" checked>
         <input class="slider__input" type="radio" name="feedback" id="feedback-input-2">
         <input class="slider__input" type="radio" name="feedback" id="feedback-input-3">
-      <div class="feedback feedback--current slider__item">
+      <div class="feedback slider__item--current">
           <div class="feedback__author">Николай Петров</div>
           <p class="feedback__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
         </div>
@@ -63,12 +66,12 @@
           <div class="feedback__author"></div>
           <p class="feedback__text"></p>
         </div>
-      </div>
-      <div class="feedbacks__toggle  slider__toggles">
+      <div class="feedbacks-list__toggle  slider__toggles">
         <label class="slider__toggle" for="feedback-input-1">1</label>
         <label class="slider__toggle" for="feedback-input-2">2</label>
         <label class="slider__toggle" for="feedback-input-3">3</label>
       </div>
+    </div>
 
 
       <div class="plans  slider">
@@ -76,40 +79,42 @@
         <input class="slider__input" type="radio" name="plan" id="plan-input-2" checked>
         <input class="slider__input" type="radio" name="plan" id="plan-input-3">
         <div class="plan  slider__item">
-          <h3 class="plan__title"></h3>
-          <span></span>
+          <h3 class="plan__title">База</h3>
+          <span>1,99 USD</span>
           <ul class="plan__features">
-            <li class="plan__feature plan__feature--modificator"></li>
-            <li class="plan__feature plan__feature--modificator"></li>
-            <li class="plan__feature plan__feature--modificator"></li>
-          </ul>
-        </div>
-        <div class="plan  plan--current  slider__item">
-          <h3 class="plan__title">Стандарт</h3>
-          <span>3,99 USD</span>
-          <ul class="plan__features">
-            <li class="plan__feature">Розовый фильтр</li>
-            <li class="plan__feature">Смайлики</li>
+            <li class="plan__feature plan__feature--yes-mark">Розовый фильтр</li>
+            <li class="plan__feature plan__feature--no-mark">Смайлики</li>
             <li class="plan__feature plan__feature--no-mark">Комментарии</li>
           </ul>
         </div>
-        <div class="plan  slider__item">
-          <h3 class="plan__title"></h3>
-          <span></span>
+        <div class="plan  slider__item slider__item--current">
+          <div class="plan__top">
+            <h3 class="plan__title">Стандарт</h3>
+            <span>3,99 USD</span>
+          </div>
           <ul class="plan__features">
-            <li class="plan__feature plan__feature--modificator"></li>
-            <li class="plan__feature plan__feature--modificator"></li>
-            <li class="plan__feature plan__feature--modificator"></li>
+            <li class="plan__feature  plan__feature--yes-mark">Розовый фильтр</li>
+            <li class="plan__feature  plan__feature--yes-mark">Смайлики</li>
+            <li class="plan__feature  plan__feature--no-mark">Комментарии</li>
           </ul>
         </div>
-        <div class="plans  slider__toggles">
+        <div class="plan  slider__item">
+          <h3 class="plan__title">Анлим</h3>
+          <span>9,99 USD</span>
+          <ul class="plan__features">
+            <li class="plan__feature  plan__feature--yes-mark">Розовый фильтр</li>
+            <li class="plan__feature  plan__feature--yes-mark">Смайлики</li>
+            <li class="plan__feature  plan__feature--yes-mark">Комментарии</li>
+          </ul>
+        </div>
+        <div class="plans__toggle  slider__toggles">
           <label class="slider__toggle" for="plan-input-1">1</label>
           <label class="slider__toggle" for="plan-input-2">2</label>
           <label class="slider__toggle" for="plan-input-3">3</label>
         </div>
       </div>
-      <footer class="page-footer">
-        <p class="page-footer__top">Остались вопросы? Свяжитесь с нами!</p>
+      <footer class="page-footer  page-footer--page-index">
+        <p class="page-footer__top  page-footer__top--page-index">Остались вопросы?<br>Свяжитесь с нами!</p>
         <div class="contact">
           <span class="contact__title">Звоните:</span>
           <a class="contact__link" href="tel:+78125556666">+7 (812) 555-66-66</a>
