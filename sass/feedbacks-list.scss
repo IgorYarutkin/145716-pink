@@ -1,16 +1,30 @@
 .feedbacks-list {
   position: relative;
   box-sizing: border-box;
-  padding: 50px 20px 85px;
+  @include container();
+  padding: 93px 20px 50px;
   width: 320px;
   border: 1px solid red;
-  &::after {
-    position: absolute;
-    content: "";
-    bottom: 0px;
-    left: 0px;
-    width: 320px;
-    height: 85px;
-    background: $grey-light;
+}
+
+// планшетная версия
+@media #{$tablet} {
+  .feedbacks-list {
+    padding-top: 30px;
+    width: 700px;
+    &::after {
+      width: 700px;
+    }
+  }
+}
+
+// десктопная версия
+@media #{$desktop} {
+  .feedbacks-list {
+    padding: 180px 130px 110px;
+    width: 1200px;
+  }
+  .feedbacks-list__toggle {
+    display: none;
   }
 }

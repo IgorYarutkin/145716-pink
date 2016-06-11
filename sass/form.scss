@@ -1,15 +1,18 @@
 .form {
+  position: relative;
   box-sizing: border-box;
-  padding: 0px;
+  @include container();
+  padding: 0;
   width: 320px;
-  box-shadow: 2px 0px 5px yellow;
+  box-shadow: 2px 0 5px yellow;
 }
 
 .form__group {
     margin: 0;
-    padding: 35px 0px 40px;
+    padding: 35px 0 40px;
     border: none;
-    &--grey {
+    &--achivements,
+    &--application {
       padding-top: 90px;
       background-color: $grey-light;
     }
@@ -48,4 +51,116 @@
 
 .form__submit {
     width: 100%;
+}
+
+// планшетная версия
+@media #{$tablet} {
+  .form {
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 700px;
+  }
+  .form__field-name {
+    display: inline-block;
+    margin: 0;
+    margin-right: 20px;
+  }
+  .form__input {
+    &--text {
+      display: inline-block;
+      width: 523px;
+      height: 60px;
+    }
+  }
+  .form__group {
+    border: 2px solid $grey-line;
+    background: none;
+    &--name {
+      border: none;
+    }
+    &--contacts {
+      margin-top: 430px;
+      margin-bottom: 685px;
+    }
+    &--achivements,
+    &--application {
+      position: absolute;
+      width: 620px;
+      top: 655px;
+      left: 40px;
+    }
+    &--achivements {
+      top: 1490px;
+    }
+  }
+  .form__input-wrapper {
+    &--submit {
+    padding: 65px 0;
+    @include clearfix();
+    }
+  }
+  .form__submit {
+    float: left;
+    width: 300px;
+  }
+  .form__note {
+    float: right;
+    width: 190px;
+  }
+
+  .form__legend {
+    top: 0;
+    width: auto;
+  }
+}
+
+// десктопная версия
+@media #{$desktop} {
+  .form {
+    padding-left: 130px;
+    padding-right: 130px;
+    width: 1200px;
+  }
+  .form__group {
+    &--name {
+      width: 470px;
+    }
+    &--application {
+      top: 225px;
+      right: 130px;
+      left: auto;
+      width: 430px;
+    }
+    &--contacts {
+      margin-top: 0;
+      margin-bottom: 350px;
+      width: 940px;
+    }
+    &--contacts .form__input-wrapper {
+      display: inline-block;
+      width: 410px;
+    }
+    &--achivements {
+      top: 830px;
+      left: 130px;
+      width: 940px;
+      font-size: 0;
+    }
+    &--achivements .form__input-wrapper {
+      display: inline-block;
+      width: 260px;
+    }
+  }
+  .form__input-wrapper {
+    &--contacts {
+      float: left;
+      width: 470px;
+    }
+  }
+  .form__input--text {
+    width: 335px;
+  }
+  .form__legend {
+    font-size: 14px;
+  }
 }

@@ -26,3 +26,22 @@
     background-image: url("../img/icon-youtube.svg");
   }
 }
+
+
+// планшетная версия
+@media #{$tablet} {
+  .social {
+    display: inline-block;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    width: 206px;
+    vertical-align: middle;
+  }
+}
+
+// десктопная версия
+@media #{$desktop} {
+  .social {
+    margin-right: 200px;
+  }
+}

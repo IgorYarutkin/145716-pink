@@ -1,15 +1,40 @@
 .advetisment {
   box-sizing: border-box;
+  @include container();
   padding-top: 50px;
   width: 320px;
-  height: 250px;  // для сетки
   font-weight: 300;
   font-size: 24px;
   text-align: center;
   color: $grey-text;
   border: 1px solid blue;
 }
-
 .advetisment__text {
-    margin-bottom: 40px;
+    line-height: 65px;
+}
+.advetisment__text span {
+  display: block;
+  line-height: 65px;
+}
+
+// планшетная версия
+@media #{$tablet} {
+  .advetisment {
+    width: 700px;
+  }
+}
+
+// десктопная версия
+@media #{$desktop} {
+  .advetisment {
+    width: 1200px;
+  }
+  .advetisment__text {
+    margin-bottom: 25px;
+    font-size: 50px;
+    &:nth-child(2) {
+      padding: 0 380px;
+      line-height: 50px;
+    }
+  }
 }

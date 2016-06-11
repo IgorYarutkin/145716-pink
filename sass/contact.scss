@@ -14,3 +14,32 @@
     font-size: 24px;
     color: $red-text;
 }
+
+
+
+// планшетная версия
+@media #{$tablet} {
+  .contact {
+    display: inline-block;
+    width: 300px;
+    vertical-align: top;
+  }
+}
+
+// десктопная версия
+@media #{$desktop} {
+  .contact {
+    width: 280px;
+    &--phone {
+      float: left;
+      margin-left: 40px;
+    }
+    &--email {
+      float: right;
+      margin-right: 40px;
+    }
+    &--address {
+      width: 270px;
+    }
+  }
+}

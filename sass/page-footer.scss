@@ -1,23 +1,36 @@
 .page-footer {
+  position: relative;
   box-sizing: border-box;
   padding-bottom: 22px;
-  width: 320px;
+  width: 100%;
   text-align: center;
-  border: 1px solid red;
+  &--page-index {
+    padding: 53px 0 0;
+  }
 }
 
-.page-footer__top--page-index {
-    margin-bottom: 45px;
-    font-weight: 300;
-    font-size: 24px;
-    text-align: center;
+.page-footer__top {
+  @include container();
+  margin-bottom: 45px;
+  font-weight: 300;
+  font-size: 24px;
+  text-align: center;
 }
 
 .page-footer__map {
-    height: 200px;
-    background: url("../img/bg-map-mobile@1x.png") top center no-repeat;
+  @include container();
+  width: 320px;
+  height: 200px;
+  background: url("../img/bg-map-mobile@1x.png") top center no-repeat;
 }
-
+.page-footer__bottom {
+  @include container();
+  width: 320px;
+  border: 1px solid red;
+  &--page-index {
+  display: none;
+  }
+}
 .page-footer__logo {
     display: block;
     margin: 40px auto;
@@ -28,9 +41,60 @@
 .page-footer__htmlacademy-logo {
   position: relative;
   top: 30px;
-  left: 0px;
+  left: 0;
+}
+.page-footer__copyright {
+  font-size: 14px;
 }
 
-.page-footer--page-index {
-  padding: 53px 0px 0px;
+// планшетная версия
+@media #{$tablet} {
+  .page-footer {
+    font-size: 0;
+  }
+  .page-footer__top {
+    width: 700px;
+    font-size: 40px;
+    line-height: 45px;
+  }
+  .page-footer__map {
+    width: 700px;
+    height: 375px;
+    background: url("../img/bg-map-tablet@1x.jpg") top center no-repeat;
+  }
+  .page-footer__bottom {
+    width: 700px;
+    &--page-index {
+    display: block;
+    }
+  }
+  .page-footer__logo,
+  .page-footer__copyright {
+    display: inline-block;
+    width: 206px;
+    vertical-align: top;
+  }
+}
+
+// десктопная версия
+@media #{$desktop} {
+  .page-footer__top {
+    width: 1200px;
+  }
+  .page-footer__map {
+    width: 1200px;
+    height: 500px;
+    background-image: url("../img/bg-map-desktop@1x.jpg");
+    &::before {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+  .page-footer__bottom {
+    width: 1200px;
+  }
+  .page-footer__logo {
+    margin-right: 200px;
+  }
 }

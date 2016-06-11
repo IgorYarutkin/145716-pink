@@ -1,0 +1,42 @@
+.plans-wrapper {
+  width: 100%;
+  background-color: $grey-light;
+}
+
+.plans-wrapper__container {
+  position: relative;
+  box-sizing: border-box;
+  @include container();
+  padding: 66px 0 33px;
+  width: 320px;
+  overflow: hidden;
+  &::before {
+    position: absolute;
+    content: "";
+    top: -85px;
+    left: 0;
+    width: 320px;
+    height: 85px;
+    background-color: $grey-light;
+  }
+}
+
+
+// планшетная версия
+@media #{$tablet} {
+  .plans-wrapper__container {
+    padding: 35px 40px 65px;
+    width: 700px;
+    &::before {
+      width: 700px;
+    }
+  }
+}
+
+// десктопная версия
+@media #{$desktop} {
+  .plans-wrapper__container {
+    padding: 65px 130px 85px;
+    width: 1200px;
+  }
+}

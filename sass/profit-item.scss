@@ -11,3 +11,30 @@
   margin-bottom: 44px;
   color: $grey-text;
 }
+
+// планшетная версия
+@media #{$tablet} {
+  .profit-item {
+    text-align: left;
+  }
+}
+
+// десктопная версия
+@media #{$desktop} {
+  .profit-item {
+    display: inline-block;
+    margin-right: 20px;
+    width: 290px;
+    vertical-align: top;
+    text-align: center;
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+  .profit-item__title {
+    font-size: 30px;
+  }
+  .profit-item__text {
+    font-size: 18px;
+  }
+}
