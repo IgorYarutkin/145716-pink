@@ -1,13 +1,17 @@
 .upload {
   box-sizing: border-box;
-  width: 320px;
-  border: 1px solid green;
+  @include container();
+  width: 100%;
+  max-width: 940px;
+  background: $grey-light;
+  border: 1px solid green;  // для сетки
 }
 .upload__inner {
   box-sizing: border-box;
   @include container();
   padding: 20px;
-  background: $grey-light;
+  width: 320px;
+  @include clearfix();
 }
 .upload__filter-list {
   padding: 20px 0;
@@ -24,7 +28,7 @@
   &:last-child {
     margin-right: 0;
   }
-  &:after {
+  &::after {
     position: absolute;
     content: "";
     top: -16px;
@@ -62,4 +66,56 @@
 .upload__cancel {
   color: #dddfe0;
   border: 3px solid #dddfe0;
+}
+
+// планшетная версия
+@media #{$tablet} {
+  .upload__inner {
+    padding: 50px 40px;
+    width: 700px;
+  }
+  .upload__photo {
+    float: left;
+    width: 300px;
+    height: 500px;
+  }
+  .upload__filter-list {
+    float: right;
+    margin-bottom: 70px;
+    width: 300px;
+  }
+  .upload__filter {
+    display: inline-block;
+    width: 30px;
+    height: 70px;
+  }
+  .upload__start,
+  .upload__cancel {
+    float: left;
+    margin-left: 30px;
+    width: 254px;
+  }
+  .upload__start {
+    margin-bottom: 20px;
+  }
+}
+
+// десктопная версия
+@media #{$desktop} {
+  .upload__inner {
+    padding: 45px 80px 55px;
+    width: 940px;
+  }
+  .upload__filter-list {
+    width: 410px;
+  }
+  .upload__filter {
+    margin-right: 36px;
+  }
+  .upload__start,
+  .upload__cancel {
+    float: left;
+    margin-left: 20px;
+    width: 220px;
+  }
 }

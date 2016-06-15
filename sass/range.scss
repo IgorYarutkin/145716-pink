@@ -1,0 +1,48 @@
+.range {
+  &--main {
+    position: relative;
+    margin: 0px auto;
+    width: 236px;
+    height: 15px;
+  }
+  &--crop,
+  &--fill,
+  &--contrast {
+    display: none;
+  }
+}
+.range__axis {
+  width: 100%;
+  height: 2px;
+  background-color: $grey-text;
+}
+.range__dot {
+  position: absolute;
+  top: -7px;
+  right: 25px;
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  border: 2px solid $red-text;
+  border-radius: 50%;
+}
+
+// планшетная версия
+@media #{$tablet} {
+  .range {
+    display: inline-block;
+    width: 200px;
+    height: 70px;
+    &--main {
+      display: none;
+    }
+  }
+}
+
+// десктопная версия
+@media #{$desktop} {
+  .range {
+    width: 280px;
+  }
+
+}

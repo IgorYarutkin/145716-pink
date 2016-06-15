@@ -1,0 +1,46 @@
+.research {
+  display: none;
+}
+
+// планшетная версия
+@media #{$tablet} {
+  .research {
+    display: block;
+    box-sizing: border-box;
+    @include container();
+    padding: 108px 40px 0 350px;
+    width: 700px;
+    height: 445px;
+    border: 1px solid green;
+  }
+  .research__title {
+    margin-bottom: 25px;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  .research__text {
+    margin-bottom: 20px;
+  }
+  .research__link {
+    color: $red-text;
+    text-decoration: underline;
+  }
+}
+
+// десктопная версия
+@media #{$desktop} {
+  .research {
+    padding: 135px 130px 100px 500px;
+    width: 1200px;
+    background-color: $grey-light;
+  }
+  .research__title {
+    font-size: 30px;
+  }
+  .research__text {
+    font-size: 18px;
+  }
+  .research__link {
+    font-size: 18px;
+  }
+}

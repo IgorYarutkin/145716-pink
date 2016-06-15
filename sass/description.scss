@@ -1,12 +1,55 @@
 .description {
   box-sizing: border-box;
+  @include container();
   padding: 55px 20px 15px;
   width: 320px;
   line-height: 24px;
   text-align: center;
   border: 1px solid blue;
-
+  &--fill-form {
+    display: none;
+  }
   &--upload {
     padding-bottom: 50px;
+  }
+}
+
+// планшетная версия
+@media #{$tablet} {
+  .description {
+    padding: 100px 60px 2px;
+    width: 620px;
+    font-size: 18px;
+    &--fill-form {
+      display: block;
+      text-align: center;
+      font-size: 18px;
+      margin-bottom: 60px;
+    }
+    &--page-photo {
+      padding: 100px 105px 80px;
+      width: 700px;
+    }
+    &--upload {
+      padding: 75px 80px;
+      width: 700px;
+    }
+  }
+}
+
+// десктопная версия
+@media #{$desktop} {
+  .description {
+    width: 940px;
+    &--page-photo {
+      padding: 100px 280px 80px;
+      width: 1200px;
+    }
+    &--fill-form {
+      display: inline;
+    }
+    &--upload {
+      width: 1200px;
+    }
   }
 }

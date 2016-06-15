@@ -49,3 +49,77 @@
     background: url("../img/icon-heart.svg") center no-repeat;
   }
 }
+.post__likes-text {
+  color: $red-text;
+}
+
+// планшетная версия
+@media #{$tablet} {
+  .post {
+    display: inline-block;
+    padding-bottom: 50px;
+    width: 300px;
+    vertical-align: top;
+    font-size: 14px;
+    &--first {
+      display: block;
+      width: 620px;
+    }
+    &--first .post__inner {
+      width: 620px;
+    }
+    &:nth-child(2n+2) {
+      margin-right: 20px;
+    }
+  }
+  .post__inner {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 300px;
+  }
+  .post--first .post__likes-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  .post__photo {
+    margin-left: 0;
+    width: 300px;
+    &--first {
+      margin-left: -40px;
+      width: 700px;
+      height: 507px;
+    }
+  }
+  .post-inner {
+    padding: 30px;
+  }
+}
+
+
+// десктопная версия
+@media #{$desktop} {
+  .post {
+    &:nth-child(2n+2) {
+      margin-right: 0;
+    }
+    &:nth-child(n+2) {
+      margin-right: 20px;
+    }
+    &:nth-child(3n+4) {
+      margin-right: 0;
+    }
+    &--first .post__inner {
+      width: 940px;
+    }
+  }
+  .post__photo {
+    &--first {
+    margin-left: -130px;
+    width: 1200px;
+    height: auto;
+    }
+  }
+
+}

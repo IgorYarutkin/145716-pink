@@ -1,10 +1,36 @@
 .profit-list {
+  width: 100%;
+  background-color: $grey-light;
+}
+
+.profit-list__container {
   box-sizing: border-box;
+  @include container();
   padding: 50px 20px 280px;
   width: 320px;
-  background-color: $grey-light;
   background-image: url("../img/iphone-screen-mobile@1x.png");
   background-position: center 543px;
   background-repeat: no-repeat;
   border: 1px solid black;
+}
+
+// планшетная версия
+@media #{$tablet} {
+  .profit-list__container {
+    padding-left: 350px;
+    padding-bottom: 0;
+    width: 700px;
+    background-position: 40px 47px;
+    background-size: 263px auto;
+  }
+}
+
+// десктопная версия
+@media #{$desktop} {
+  .profit-list__container {
+    padding: 270px 130px 20px;
+    width: 1200px;
+    font-size: 0;
+    background-image: none;
+  }
 }

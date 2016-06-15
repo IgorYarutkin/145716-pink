@@ -7,36 +7,38 @@
   </head>
   <body>
     <header class="page-header">
-      <div class="page-header__top page-header__top--menu-open">
+      <div class="page-header__top">
+        <div class="page-header__top-container">
         <img class="page-header__logo" src="img/logo-pink-white-mobile.svg" alt="Pink" width="74" height="23">
         <button class="page-header__button" type="button"></button>
+        <nav class="menu visually-hidden">
+          <ul class="menu__list">
+            <li class="menu__item"><span class="menu__link">Главная</span></li>
+            <li class="menu__item"><a href="photo.html" class="menu__link">Фотографии</a></li>
+            <li class="menu__item"><a href="form.html" class="menu__link">Конкурс</a></li>
+            <li class="menu__item"><a href="https://htmlacademy.ru" class="menu__link">HTML Academy</a></li>
+          </ul>
+        </nav>
+        </div>
       </div>
-      <nav class="menu">
-        <ul class="menu__list">
-          <li class="menu__item"><span class="menu__link">Главная</span></li>
-          <li class="menu__item"><a href="photo.html" class="menu__link">Фотографии</a></li>
-          <li class="menu__item"><a href="form.html" class="menu__link">Конкурс</a></li>
-          <li class="menu__item"><a href="https://htmlacademy.ru" class="menu__link">HTML Academy</a></li>
-        </ul>
-      </nav>
-      <div class="page-title page-title--page-index">
-        <h1 class="page-title__description">Главная страница</h1>
-      </div>
-    </header>
-
-    <main>
+        <div class="page-header__container  page-header__container--page-index">
       <div class="applications">
+        <div class="applications__title">Взгляните на жизнь иначе!</div>
         <button class="applications__download" type="button">Скачать приложение</button>
         <a class="applications__item applications__item--apple" href="#"></a>
         <a class="applications__item applications__item--android" href="#"></a>
         <a class="applications__item applications__item--windows-mobile" href="#"></a>
         <p class="applications__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
       </div>
+    </div>
+    </header>
+
+    <main>
       <div class="advetisment">
-          <p class="advetisment__text">Устали от серости мегаполиса?</p>
-          <p class="advetisment__text">Нам есть, что вам предложить!</p>
+          <p class="advetisment__text">Устали от серости мегаполиса?<span>Нам есть, что вам<br>предложить!</span></p>
       </div>
       <div class="profit-list">
+      <div class="profit-list__container">
         <div class="profit-item">
           <h2 class="profit-item__title">Поднимает настроение</h2>
           <p class="profit-item__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
@@ -50,21 +52,30 @@
           <p class="profit-item__text">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
         </div>
       </div>
+      </div>
+      <div class="research">
+        <div class="research__title">Эффект на 24 часа!</div>
+        <p class="research__text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+        <a href="#" class="research__link">Узнать больше об исследовании</a>
+      </div>
       <div class="feedbacks-list  slider">
         <input class="slider__input" type="radio" name="feedback" id="feedback-input-1" checked>
         <input class="slider__input" type="radio" name="feedback" id="feedback-input-2">
         <input class="slider__input" type="radio" name="feedback" id="feedback-input-3">
-      <div class="feedback slider__item--current">
-          <div class="feedback__author">Николай Петров</div>
+        <div class="feedback slider__item--current">
           <p class="feedback__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+          <div class="feedback__author-name">Николай Петров</div>
+          <div class="feedback__author-details">25 лет, водитель трамвая</div>
         </div>
         <div class="feedback  slider__item">
-          <div class="feedback__author"></div>
           <p class="feedback__text"></p>
+          <div class="feedback__author-name"></div>
+          <div class="feedback__author-details"></div>
         </div>
         <div class="feedback  slider__item">
-          <div class="feedback__author"></div>
           <p class="feedback__text"></p>
+          <div class="feedback__author-name"></div>
+          <div class="feedback__author-details"></div>
         </div>
       <div class="feedbacks-list__toggle  slider__toggles">
         <label class="slider__toggle" for="feedback-input-1">1</label>
@@ -72,62 +83,97 @@
         <label class="slider__toggle" for="feedback-input-3">3</label>
       </div>
     </div>
-
-
-      <div class="plans  slider">
+      <div class="plans-wrapper">
+      <div class="plans-wrapper__container slider">
         <input class="slider__input" type="radio" name="plan" id="plan-input-1">
         <input class="slider__input" type="radio" name="plan" id="plan-input-2" checked>
         <input class="slider__input" type="radio" name="plan" id="plan-input-3">
-        <div class="plan  slider__item">
-          <h3 class="plan__title">База</h3>
-          <span>1,99 USD</span>
-          <ul class="plan__features">
-            <li class="plan__feature plan__feature--yes-mark">Розовый фильтр</li>
-            <li class="plan__feature plan__feature--no-mark">Смайлики</li>
-            <li class="plan__feature plan__feature--no-mark">Комментарии</li>
-          </ul>
-        </div>
-        <div class="plan  slider__item slider__item--current">
-          <div class="plan__top">
-            <h3 class="plan__title">Стандарт</h3>
-            <span>3,99 USD</span>
-          </div>
-          <ul class="plan__features">
-            <li class="plan__feature  plan__feature--yes-mark">Розовый фильтр</li>
-            <li class="plan__feature  plan__feature--yes-mark">Смайлики</li>
-            <li class="plan__feature  plan__feature--no-mark">Комментарии</li>
-          </ul>
-        </div>
-        <div class="plan  slider__item">
-          <h3 class="plan__title">Анлим</h3>
-          <span>9,99 USD</span>
-          <ul class="plan__features">
-            <li class="plan__feature  plan__feature--yes-mark">Розовый фильтр</li>
-            <li class="plan__feature  plan__feature--yes-mark">Смайлики</li>
-            <li class="plan__feature  plan__feature--yes-mark">Комментарии</li>
-          </ul>
-        </div>
+
+        <table class="plans">
+        <col class="plans__column  plans__column--first">
+        <col class="plans__column  plans__column--duplicate">
+        <col class="plans__column  plans__column--marks">
+        <col class="plans__column  plans__column--duplicate">
+        <col class="plans__column  plans__column--marks">
+        <col class="plans__column  plans__column--duplicate">
+        <col class="plans__column  plans__column--marks">
+        <thead>
+          <td class="plans__title  plans__title--empty"></td>
+          <td class="plans__title" colspan="2">
+            <h3 class="plans__title-name">База</h3>
+            <span class="plans__title-price">1,99 USD</span>
+          </td>
+          <td class="plans__title"colspan="2">
+            <h3 class="plans__title-name">Стандарт</h3>
+            <span class="plans__title-price">3,99 USD</span>
+          </td>
+          <td class="plans__title"colspan="2">
+            <h3 class="plans__title-name">Анлим</h3>
+            <span class="plans__title-price">9,99 USD</span>
+          </td>
+        </thead>
+        <tr class="plans__row  plans__row--filter">
+          <td class="plans__cell  plans__cell--name  plans__cell--first">Розовый фильтр</td>
+          <td class="plans__cell plans__cell--name">Розовый фильтр</td>
+          <td class="plans__cell plans__cell--mark"><img class="plans__mark plans__mark--mark-yes" src="img/icon-yes.svg" alt="mark-yes"></td>
+          <td class="plans__cell plans__cell--name">Розовый фильтр</td>
+          <td class="plans__cell plans__cell--mark"><img class="plans__mark plans__mark--mark-yes" src="img/icon-yes.svg" alt="mark-yes"></td>
+          <td class="plans__cell plans__cell--name">Розовый фильтр</td>
+          <td class="plans__cell plans__cell--mark"><img class="plans__mark plans__mark--mark-yes" src="img/icon-yes.svg" alt="mark-yes"></td>
+        </tr>
+        <tr class="plans__row  plans__row--smiles">
+          <td class="plans__cell plans__cell--name  plans__cell--first">Смайлики</td>
+          <td class="plans__cell plans__cell--name">Смайлики</td>
+          <td class="plans__cell plans__cell--mark"><img class="plans__mark plans__mark--mark-no" src="img/icon-no.svg" alt="mark-no"></td>
+          <td class="plans__cell plans__cell--name">Смайлики</td>
+          <td class="plans__cell plans__cell--mark"><img class="plans__mark plans__mark--mark-yes" src="img/icon-yes.svg" alt="mark-yes"></td>
+          <td class="plans__cell plans__cell--name">Смайлики</td>
+          <td class="plans__cell plans__cell--mark"><img class="plans__mark plans__mark--mark-yes" src="img/icon-yes.svg" alt="mark-yes"></td>
+        </tr>
+        <tr class="plans__row plans__row--notes">
+          <td class="plans__cell plans__cell--name  plans__cell--first">Комментарии</td>
+          <td class="plans__cell plans__cell--name">Комментарии</td>
+          <td class="plans__cell plans__cell--mark"><img class="plans__mark plans__mark--mark-no" src="img/icon-no.svg" alt="mark-no"></td>
+          <td class="plans__cell plans__cell--name">Комментарии</td>
+          <td class="plans__cell plans__cell--mark"><img class="plans__mark plans__mark--mark-no" src="img/icon-no.svg" alt="mark-no"></td>
+          <td class="plans__cell plans__cell--name">Комментарии</td>
+          <td class="plans__cell plans__cell--mark"><img class="plans__mark plans__mark--mark-yes" src="img/icon-yes.svg" alt="mark-yes"></td>
+        </tr>
+        </table>
         <div class="plans__toggle  slider__toggles">
           <label class="slider__toggle" for="plan-input-1">1</label>
           <label class="slider__toggle" for="plan-input-2">2</label>
           <label class="slider__toggle" for="plan-input-3">3</label>
         </div>
       </div>
+    </div>
+
       <footer class="page-footer  page-footer--page-index">
-        <p class="page-footer__top  page-footer__top--page-index">Остались вопросы?<br>Свяжитесь с нами!</p>
-        <div class="contact">
+        <div class="page-footer__top">
+        <p>Остались вопросы?<br>Свяжитесь с нами!</p>
+        <div class="contact  contact--phone">
           <span class="contact__title">Звоните:</span>
           <a class="contact__link" href="tel:+78125556666">+7 (812) 555-66-66</a>
         </div>
-        <div class="contact">
+        <div class="contact  contact--email">
           <span class="contact__title">Пишите:</span>
           <a class="contact__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
         </div>
-        <div class="contact">
+        <div class="contact  contact--address">
           <span class="contact__title">Приезжайте в гости:</span>
           <p class="contact__text">ул. Большая<br>Конюшенная, 19/8</p>
         </div>
-        <div class="page-footer__map"></div>
+      </div>
+        <div class="page-footer__map  "></div>
+        <div class="page-footer__bottom  page-footer__bottom--page-index">
+          <img class="page-footer__logo" src="img/logo-pink-blue-mobile.svg" alt="Pink" width="146" height="40">
+          <div class="social">
+            <a href="#" class="social__item  social__item--twitter">twitter</a>
+            <a href="#" class="social__item  social__item--facebook">facebook</a>
+            <a href="#" class="social__item  social__item--youtube">youtube</a>
+          </div>
+          <a href="https://htmlacademy.ru" class="page-footer__copyright">Разработано<img class="page-footer__htmlacademy-logo" src="img/htmlacademy.svg" alt="HTML Academy" width="60" height="60"></a>
+        </div>
       </footer>
     </main>
 

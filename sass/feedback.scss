@@ -2,12 +2,34 @@
   text-align: center;
 }
 
-.feedback__author {
-    margin-bottom: 30px;
+.feedback__author-name {
+    position: absolute;
+    top: 40px ;
+    left: 50%;
     font-weight: bold;
     font-size: 18px;
+    transform: translateX(-50%);
+}
+
+.feedback__author-details {
+  display: none;
 }
 
 .feedback__text {
     color: $grey-text;
+}
+
+// планшетная версия
+@media #{$tablet} {
+  .feedback__author-name {
+    position: static;
+    margin-top: 20px;
+    text-align: center;
+    transform: none;
+  }
+  .feedback__author-details {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+  }
 }
