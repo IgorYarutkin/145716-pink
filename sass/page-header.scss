@@ -8,48 +8,29 @@
 .page-header__top {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.3);
-}
-.page-header__top-container {
-  position: relative;
-  @include container();
-  padding: 20px;
-  width: 320px;
-  height: 64px;
-  z-index: 1;
-  outline: 1px solid yellow;  // для сетки
-}
-.page-header__top--menu-open {
-  background-color: $grey-dark;
-  box-shadow: 0 1px #000;
-}
-.page-header__container {
-  @include container();
-  position: relative;
-  box-sizing: border-box;
-  padding: 20px;
-  width: 320px;
-  border: 1px solid red; // для сетки
-  min-height: 171px;
-  &--page-index {
-    min-height: 392px;
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: 287px;
-      left: 0;
-      width: 258px;
-      height: 286px;
-      background: url("../img/iphone-hand-mobile@1x.png") no-repeat;
-   }
+  &--no-js {
+    background-color: $grey-dark;
+    box-shadow: 0 1px #000;
+  }
+  &--menu-open {
+    background-color: $grey-dark;
+    box-shadow: 0 1px #000,
+      inset 0 2px rgba(255, 255, 255, 0.15);
   }
 }
+.page-header__top-container {
+  @include container();
+  display: flex;
+  justify-content: space-between;
+  padding: 20px (20/320)*100%;
+  height: 64px;
+  z-index: 1;
+}
 .page-header__logo {
-  float: left;
   width: 74px;
   height: 23px;
 }
 .page-header__button {
-  float: right;
   width: 50px;
   height: 24px;
   border: none;
@@ -59,25 +40,50 @@
   }
 }
 
+.page-header__container {
+  @include container();
+  position: relative;
+  box-sizing: border-box;
+  padding: 20px (20/320)*100%;
+  border: 1px solid red; // для сетки
+  min-height: 171px;
+  &--page-index {
+    min-height: 392px;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 104px;
+      left: 50%;
+      width: 258px;
+      height: 286px;
+      background: url("../img/iphone-hand-mobile@1x.png") no-repeat;
+      transform: translateX(-154px);
+   }
+  }
+}
+
 // планшетная версия
 @media #{$tablet} {
   .page-header {
     background-size: cover;
   }
+  .page-header__top {
+    box-shadow: none;
+  }
   .page-header__top-container {
-    padding: 40px;
+    padding: 40px (30/700)*100%;
     width: 700px;
     height: 110px;
   }
   .page-header__container {
-    padding: 40px;
-    width: 700px;
+    padding: 40px (30/700)*100%;
     min-height: 326px;
     &--page-index {
       min-height: 618px;
       &::after {
+        top: auto;
         bottom: 0;
-        left: 190px;
+        left: 50%;
         width: 485px;
         height: 542px;
         background-size: auto 542px;

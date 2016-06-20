@@ -1,5 +1,9 @@
 .applications {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   box-sizing: border-box;
   margin-top: 435px;
   width: 100%;
@@ -22,10 +26,17 @@
     font-size: 18px;
     background-color: inherit;
     border: 3px solid #fff;
+    border-radius: 25px;
 }
-
+.applications__item {
+  width: (70/320)*100%;
+  text-align: center;
+  vertical-align: middle;  // не работает?
+}
 .applications__description {
-    font-weight: 300;
+  width: 240px;
+  text-align: center;
+  font-weight: 300;
 }
 
 // планшетная версия

@@ -20,26 +20,19 @@
 // планшетная версия
 @media #{$tablet} {
   .contact {
-    display: inline-block;
     width: 300px;
-    vertical-align: top;
+    &--phone {
+      margin-right: 20px;
+    }
   }
 }
 
 // десктопная версия
 @media #{$desktop} {
   .contact {
-    width: 280px;
-    &--phone {
-      float: left;
-      margin-left: 40px;
-    }
-    &--email {
-      float: right;
-      margin-right: 40px;
-    }
-    &--address {
-      width: 270px;
-    }
+    align-content: stretch;
+    margin-right: 0;
+    width: 313px;
+    vertical-align: top;
   }
 }

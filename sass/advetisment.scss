@@ -1,7 +1,7 @@
 .advetisment {
   box-sizing: border-box;
   @include container();
-  padding-top: 50px;
+  padding: 50px 20px 70px;
   width: 320px;
   font-weight: 300;
   font-size: 24px;
@@ -10,11 +10,12 @@
   border: 1px solid blue;
 }
 .advetisment__text {
-    line-height: 65px;
+    line-height: 32px;
 }
 .advetisment__text span {
   display: block;
-  line-height: 65px;
+  margin-top: 40px;
+  line-height: 32px;
 }
 
 // планшетная версия
@@ -30,11 +31,10 @@
     width: 1200px;
   }
   .advetisment__text {
-    margin-bottom: 25px;
+    line-height: 65px;
     font-size: 50px;
-    &:nth-child(2) {
-      padding: 0 380px;
-      line-height: 50px;
-    }
+  }
+  .advetisment__text span {
+    line-height: 65px;
   }
 }

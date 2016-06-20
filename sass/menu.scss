@@ -1,12 +1,20 @@
 .menu {
   display: none;
   position: absolute;
-  top: 64px;
+  top: 65px;
+  left: 0;
   width: 100%;
   color: #fff;
   background-color: $grey-dark;
-  z-index: 2;
+  z-index: 3;
+  &--no-js {
+    display: block;
+  }
+  &--open {
+    display: block;
+  }
 }
+
 
 .menu__list {
     display: block;
@@ -21,7 +29,8 @@
     font-weight: bold;
     text-transform: uppercase;
     text-align: center;
-    box-shadow: 0 1px #000;
+    box-shadow: 0 1px #000,
+      inset 0 2px rgba(255, 255, 255, 0.15);
 }
 .menu__link {
     text-align: center;
@@ -30,25 +39,27 @@
 // планшетная версия
 @media #{$tablet} {
   .menu {
-    top: 106px;
+    top: 111px;
   }
 }
 
 // десктопная версия
 @media #{$desktop} {
   .menu {
-    display: block;
     position: static;
-    float: right;
+    display: block;
     margin-top: -22px; // не понял почему?
     width: 755px;
     background: none;
   }
   .menu__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     font-size: 0;
   }
   .menu__item {
-    display: inline-block;
     margin-right: 75px;
     font-size: 18px;
     font-weight: normal;
