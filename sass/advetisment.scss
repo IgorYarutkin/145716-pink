@@ -1,21 +1,20 @@
 .advetisment {
   box-sizing: border-box;
   @include container();
-  padding: 50px 20px 70px;
+  padding: 38px 20px 5px;
   width: 320px;
   font-weight: 300;
   font-size: 24px;
   text-align: center;
   color: $grey-text;
-  border: 1px solid blue;
 }
 .advetisment__text {
     line-height: 32px;
 }
 .advetisment__text span {
   display: block;
-  margin-top: 40px;
-  line-height: 32px;
+  margin-top: 25px;
+  line-height: 29px;
 }
 
 // планшетная версия

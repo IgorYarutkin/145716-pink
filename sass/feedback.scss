@@ -4,7 +4,7 @@
 
 .feedback__author-name {
     position: absolute;
-    top: 40px ;
+    top: 47px ;
     left: 50%;
     font-weight: bold;
     font-size: 18px;
@@ -16,6 +16,7 @@
 }
 
 .feedback__text {
+  line-height: 29px;
     color: $grey-text;
 }
 

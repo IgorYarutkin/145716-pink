@@ -1,6 +1,10 @@
 .contact {
-  margin-bottom: 35px;
+  margin-bottom: 21px;
   text-align: center;
+  line-height: 27px;
+  &--email {
+    margin-bottom: 26px;
+  }
 }
 .contact__title {
     display: block;

@@ -1,17 +1,18 @@
 .profit-list {
   width: 100%;
   background-color: $grey-light;
+  background-image: url("../img/bg-triangle-white.svg");
+  background-repeat: no-repeat;
+  background-position: center top;
 }
 
 .profit-list__container {
   box-sizing: border-box;
   @include container();
-  padding: 50px 20px 280px;
-  width: 320px;
+  padding: 108px (20/320)*100% 286px;
   background-image: url("../img/iphone-screen-mobile@1x.png");
-  background-position: center 543px;
+  background-position: center 533px;
   background-repeat: no-repeat;
-  border: 1px solid black;
 }
 
 // планшетная версия
