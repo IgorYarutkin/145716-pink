@@ -27,7 +27,7 @@
     <div class="page-header__container  page-header__container--page-index">
       <div class="applications">
         <div class="applications__title">Взгляните на жизнь иначе!</div>
-        <button class="applications__download" type="button">Скачать приложение</button>
+        <a class="applications__download" href="#">Скачать приложение</a>
         <a class="applications__item applications__item--apple" href="#"><img src="img/logo-apple.svg" alt="iOS"></a>
         <a class="applications__item applications__item--android" href="#"><img src="img/logo-android.svg" alt="Android"></a>
         <a class="applications__item applications__item--windows-mobile" href="#"><img src="img/logo-microsoft.svg" alt="Windows Mobile"></a>
@@ -87,60 +87,76 @@
       </div>
     </div>
     <div class="plans-wrapper">
-      <div class="plans-wrapper__container slider">
+      <table class="plans">
         <input class="slider__input" type="radio" name="plan" id="plan-input-1">
         <input class="slider__input" type="radio" name="plan" id="plan-input-2" checked>
         <input class="slider__input" type="radio" name="plan" id="plan-input-3">
+        <div class="plans-wrapper__container slider">
 
-        <table class="plans">
-          <col class="plans__column  plans__column--first">
-          <col class="plans__column  plans__column--duplicate">
-          <col class="plans__column  plans__column--marks">
-          <col class="plans__column  plans__column--duplicate">
-          <col class="plans__column  plans__column--marks">
-          <col class="plans__column  plans__column--duplicate">
-          <col class="plans__column  plans__column--marks">
           <thead>
+            <tr>
             <td class="plans__title  plans__title--empty"></td>
-            <td class="plans__title" colspan="2">
-              <h3 class="plans__title-name">База</h3>
-              <span class="plans__title-price">1,99 USD</span>
+            <td class="plans__title">
+              <h3 class="plans__title-name">База
+                <span class="plans__title-price">1,99 USD</span>
+              </h3>
             </td>
-            <td class="plans__title" colspan="2">
-              <h3 class="plans__title-name">Стандарт</h3>
-              <span class="plans__title-price">3,99 USD</span>
+            <td class="plans__title plans__title--hit">
+              <h3 class="plans__title-name">Стандарт
+                <span class="plans__title-price">3,99 USD</span>
+              </h3>
             </td>
-            <td class="plans__title" colspan="2">
-              <h3 class="plans__title-name">Анлим</h3>
-              <span class="plans__title-price">9,99 USD</span>
+            <td class="plans__title">
+              <h3 class="plans__title-name">Анлим
+                <span class="plans__title-price">9,99 USD</span>
+              </h3>
             </td>
+          </tr>
           </thead>
           <tr class="plans__row  plans__row--filter">
-            <td class="plans__cell  plans__cell--name  plans__cell--first">Розовый фильтр</td>
-            <td class="plans__cell plans__cell--name">Розовый фильтр</td>
-            <td class="plans__cell plans__cell--mark"><img class="plans__mark plans__mark--mark-yes" src="img/icon-yes.svg" alt="mark-yes" width="31" height="21"></td>
-            <td class="plans__cell plans__cell--name">Розовый фильтр</td>
-            <td class="plans__cell plans__cell--mark"><img class="plans__mark plans__mark--mark-yes" src="img/icon-yes.svg" alt="mark-yes" width="31" height="21"></td>
-            <td class="plans__cell plans__cell--name">Розовый фильтр</td>
-            <td class="plans__cell plans__cell--mark"><img class="plans__mark plans__mark--mark-yes" src="img/icon-yes.svg" alt="mark-yes" width="31" height="21"></td>
+            <td class="plans__cell plans__cell--text">Розовый фильтр</td>
+            <td class="plans__cell">
+              <span class="plans__feature">Розовый фильтр</span>
+              <img class="plans__mark plans__mark--mark-yes" src="img/icon-yes.svg" alt="mark-yes" width="31" height="21">
+            </td>
+            <td class="plans__cell">
+              <span class="plans__feature">Розовый фильтр</span>
+              <img class="plans__mark plans__mark--mark-yes" src="img/icon-yes.svg" alt="mark-yes" width="31" height="21">
+            </td>
+            <td class="plans__cell">
+              <span class="plans__feature">Розовый фильтр</span>
+              <img class="plans__mark plans__mark--mark-yes" src="img/icon-yes.svg" alt="mark-yes" width="31" height="21">
+            </td>
           </tr>
           <tr class="plans__row  plans__row--smiles">
-            <td class="plans__cell plans__cell--name  plans__cell--first">Смайлики</td>
-            <td class="plans__cell plans__cell--name">Смайлики</td>
-            <td class="plans__cell plans__cell--mark"><img class="plans__mark plans__mark--mark-no" src="img/icon-no.svg" alt="mark-no" width="27" height="26"></td>
-            <td class="plans__cell plans__cell--name">Смайлики</td>
-            <td class="plans__cell plans__cell--mark"><img class="plans__mark plans__mark--mark-yes" src="img/icon-yes.svg" alt="mark-yes" width="31" height="21"></td>
-            <td class="plans__cell plans__cell--name">Смайлики</td>
-            <td class="plans__cell plans__cell--mark"><img class="plans__mark plans__mark--mark-yes" src="img/icon-yes.svg" alt="mark-yes" width="31" height="21"></td>
+            <td class="plans__cell plans__cell--text">Смайлики</td>
+            <td class="plans__cell">
+              <span class="plans__feature">Смайлики</span>
+              <img class="plans__mark plans__mark--mark-no" src="img/icon-no.svg" alt="mark-yes" width="27" height="26">
+            </td>
+            <td class="plans__cell">
+              <span class="plans__feature">Смайлики</span>
+              <img class="plans__mark plans__mark--mark-yes" src="img/icon-yes.svg" alt="mark-yes" width="31" height="21">
+            </td>
+            <td class="plans__cell">
+              <span class="plans__feature">Смайлики</span>
+              <img class="plans__mark plans__mark--mark-yes" src="img/icon-yes.svg" alt="mark-yes" width="31" height="21">
+            </td>
           </tr>
           <tr class="plans__row plans__row--notes">
-            <td class="plans__cell plans__cell--name  plans__cell--first">Комментарии</td>
-            <td class="plans__cell plans__cell--name">Комментарии</td>
-            <td class="plans__cell plans__cell--mark"><img class="plans__mark plans__mark--mark-no" src="img/icon-no.svg" alt="mark-no" width="27" height="26"></td>
-            <td class="plans__cell plans__cell--name">Комментарии</td>
-            <td class="plans__cell plans__cell--mark"><img class="plans__mark plans__mark--mark-no" src="img/icon-no.svg" alt="mark-no" width="27" height="26"></td>
-            <td class="plans__cell plans__cell--name">Комментарии</td>
-            <td class="plans__cell plans__cell--mark"><img class="plans__mark plans__mark--mark-yes" src="img/icon-yes.svg" alt="mark-yes" width="31" height="21"></td>
+            <td class="plans__cell plans__cell--text">Комментарии</td>
+            <td class="plans__cell">
+              <span class="plans__feature">Комментарии</span>
+              <img class="plans__mark plans__mark--mark-no" src="img/icon-no.svg" alt="mark-yes" width="27" height="26">
+            </td>
+            <td class="plans__cell">
+              <span class="plans__feature">Комментарии</span>
+              <img class="plans__mark plans__mark--mark-no" src="img/icon-no.svg" alt="mark-yes" width="27" height="26">
+            </td>
+            <td class="plans__cell">
+              <span class="plans__feature">Комментарии</span>
+              <img class="plans__mark plans__mark--mark-yes" src="img/icon-yes.svg" alt="mark-yes" width="31" height="21">
+            </td>
           </tr>
         </table>
         <div class="plans__toggle  slider__toggles slider__toggles--plans">

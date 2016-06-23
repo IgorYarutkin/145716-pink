@@ -1,18 +1,19 @@
 .plans-wrapper {
   width: 100%;
   background-color: $grey-light;
+  background-image: url("../img/bg-triangle-white.svg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
 }
 
 .plans-wrapper__container {
   position: relative;
   box-sizing: border-box;
   @include container();
-  padding: 89px 0 33px;
+  padding: 54px 0 33px;
   width: 320px;
-  overflow: hidden;
-  background-image: url("../img/bg-triangle-white.svg");
-  background-position: center -36px;
-  background-repeat: no-repeat;
+  overflow-x: hidden;
 }
 
 
