@@ -4,7 +4,7 @@
 .slider__item {
   display: none;
   &--current {
-    display: block;
+    display: flex;
   }
 }
 .slider__toggles {

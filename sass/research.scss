@@ -5,13 +5,21 @@
 // планшетная версия
 @media #{$tablet} {
   .research {
+    position: relative;
     display: block;
     box-sizing: border-box;
     @include container();
-    padding: 108px 40px 0 350px;
-    width: 700px;
-    height: 445px;
-    border: 1px solid green;
+    padding: 108px (40/660)*100% 100px (300/660)*100% ;
+    min-height: 340px;
+    &::before {
+      position: absolute;
+      content: "";
+      top: 50px;
+      left: (40/660)*100%;
+      width: 240px;
+      height: 277px;
+      background: url("https://placehold.it/240x277/#dedede?text=Timer") top center no-repeat;
+    }
   }
   .research__title {
     margin-bottom: 25px;

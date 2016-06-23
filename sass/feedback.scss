@@ -1,14 +1,14 @@
 .feedback {
+  flex-wrap: wrap;
   text-align: center;
 }
 
 .feedback__author-name {
-    position: absolute;
-    top: 47px ;
-    left: 50%;
-    font-weight: bold;
-    font-size: 18px;
-    transform: translateX(-50%);
+  margin-bottom: 17px;
+  width: 100%;
+  font-weight: bold;
+  font-size: 18px;
+  order: 1;
 }
 
 .feedback__author-details {
@@ -16,8 +16,10 @@
 }
 
 .feedback__text {
+  width: 100%;
   line-height: 29px;
-    color: $grey-text;
+  color: $grey-text;
+  order: 2;
 }
 
 // планшетная версия
