@@ -47,21 +47,19 @@
   .menu {
     position: static;
     display: block;
-    margin-top: -22px; // не понял почему?
-    width: 755px;
+    width: 620px;
     background: none;
   }
   .menu__list {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
     flex-wrap: wrap;
-    font-size: 0;
   }
   .menu__item {
-    margin-right: 75px;
+    margin-top: -7px;
     font-size: 18px;
     font-weight: normal;
+    text-transform: none;
     box-shadow: none;
   }
 }

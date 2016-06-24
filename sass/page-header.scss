@@ -105,19 +105,16 @@
 // десктопная версия
 @media #{$desktop} {
   .page-header__top-container {
-    padding-left: 130px;
-    padding-right: 130px;
-    width: 1200px;
-    height: 105px;
+    padding: 28px 10px 25px;
+    width: 960px;
   }
   .page-header__button {
     display: none;
   }
   .page-header__container {
-    width: 1200px;
+    width: 960px;
     &--page-index {
-      padding: 130px;
-      min-height: 850px;
+      padding: 0px (10/960)*100% 0px;
       &::after {
         bottom: 0;
         left: 475px;

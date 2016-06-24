@@ -50,7 +50,6 @@
   margin-top: 55px;
   margin-bottom: 80px;
   width: 300px;
-  height: 400px;
   background-color: transparent;
   z-index: 2;
   }
@@ -72,5 +71,23 @@
     margin-top: 20px;
     width: auto;
     font-size: 18px;
+  }
+}
+
+// десктопная версия
+@media #{$desktop} {
+  .applications {
+    margin-top: 109px;
+  }
+  .applications__title {
+    font-size: 50px;
+    line-height: 60px;
+  }
+  .applications__download {
+    margin: 51px 0 75px;
+    font-size: 21px;
+  }
+  .applications__description {
+    margin-top: 40px;
   }
 }
