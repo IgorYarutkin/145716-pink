@@ -114,13 +114,14 @@
   .page-header__container {
     width: 960px;
     &--page-index {
-      padding: 0px (10/960)*100% 0px;
+      padding: 0px (10/960)*100% 10px;
       &::after {
         bottom: 0;
         left: 475px;
         width: 580px;
         height: 642px;
         background-size: auto 642px;
+        transform: translateX(-134px);
       }
     }
   }

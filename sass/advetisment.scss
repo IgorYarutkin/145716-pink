@@ -33,13 +33,15 @@
 // десктопная версия
 @media #{$desktop} {
   .advetisment {
-    width: 1200px;
+    width: 940px;
+    padding: 62px 10px 85px;
   }
   .advetisment__text {
     line-height: 65px;
     font-size: 50px;
   }
   .advetisment__text span {
-    line-height: 65px;
+    margin-top: -2px;
+    line-height: 62px;
   }
 }

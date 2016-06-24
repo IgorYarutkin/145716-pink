@@ -43,9 +43,12 @@
 // десктопная версия
 @media #{$desktop} {
   .profit-list__container {
-    padding: 270px 130px 20px;
-    width: 1200px;
-    font-size: 0;
-    background-image: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 350px 10px 20px;
+    width: 940px;
+    &::after {
+      display: none;
+    }
   }
 }

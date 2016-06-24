@@ -40,15 +40,28 @@
 // десктопная версия
 @media #{$desktop} {
   .research {
-    padding: 135px 130px 100px 500px;
-    width: 1200px;
+    padding: 109px 50px 115px 375px;
+    width: 960px;
     background-color: $grey-light;
+    &::before {
+      top: 19px;
+      left: 9px;
+      width: 298px;
+      height: 345px;
+      background-size: 298px 345px;
+    }
   }
   .research__title {
+    margin-bottom: 24px;
     font-size: 30px;
   }
+  .research__title br {
+    display: none;
+  }
   .research__text {
+    margin-bottom: 34px;
     font-size: 18px;
+    line-height: 30px;
   }
   .research__link {
     font-size: 18px;
