@@ -87,6 +87,9 @@
   .page-footer__map {
     height: 375px;
     background: url("../img/bg-map-tablet@1x.jpg") top center no-repeat;
+    &::before {
+      top: 0;
+    }
   }
   .page-footer__bottom {
     padding: 35px (20/660)*100%;
@@ -97,7 +100,16 @@
   .page-footer__logo,
   .page-footer__copyright {
     margin: 0;
-    width: 30%;
+    width: 150px;
+  }
+  .page-footer__htmlacademy-logo {
+    position: static;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: auto;
+    margin-top: 10px;
+    margin-right: -39px;
   }
 }
 
