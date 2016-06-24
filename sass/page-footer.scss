@@ -44,8 +44,7 @@
   display: flex;
   justify-content: space-between;
   padding: 35px (40/700)*100%;
-  width: auto;
-  border: 1px solid red;
+  width: 100%;
   &--page-index {
   display: none;
   }
@@ -68,27 +67,29 @@
 // планшетная версия
 @media #{$tablet} {
   .page-footer {
-
+    &--page-index {
+      padding-top: 46x;
+    }
   }
   .page-footer__top {
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
-    width: 700px;
+    width: 660px;
     font-size: 40px;
     line-height: 45px;
   }
   .page-footer__title {
-    width: 460px;
+    width: 100%;
+    line-height: 47px;
+    margin-bottom: 43px;
   }
   .page-footer__map {
-    width: 700px;
     height: 375px;
     background: url("../img/bg-map-tablet@1x.jpg") top center no-repeat;
   }
   .page-footer__bottom {
-    width: 700px;
+    padding: 35px (20/660)*100%;
     &--page-index {
     display: flex;
     }
@@ -96,7 +97,7 @@
   .page-footer__logo,
   .page-footer__copyright {
     margin: 0;
-    width: 206px;
+    width: 30%;
   }
 }
 
@@ -124,5 +125,8 @@
   }
   .page-footer__logo {
     margin-right: 200px;
+  }
+  .page-footer__htmlacademy-logo {
+    position: static;
   }
 }

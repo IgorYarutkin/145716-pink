@@ -9,25 +9,27 @@
     display: block;
     box-sizing: border-box;
     @include container();
-    padding: 108px (40/660)*100% 100px (300/660)*100% ;
+    padding: 100px (20/660)*100% 100px 50% ;
     min-height: 340px;
     &::before {
       position: absolute;
       content: "";
-      top: 50px;
-      left: (40/660)*100%;
+      top: 58px;
+      left: (20/660)*100%;
       width: 240px;
       height: 277px;
       background: url("https://placehold.it/240x277/#dedede?text=Timer") top center no-repeat;
     }
   }
   .research__title {
-    margin-bottom: 25px;
+    margin-bottom: 14px;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 30px;
+    line-height: 33px;
   }
   .research__text {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    padding-right: 5px;
   }
   .research__link {
     color: $red-text;

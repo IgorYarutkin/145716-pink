@@ -10,7 +10,8 @@
   background-color: rgba(0, 0, 0, 0.3);
   &--no-js {
     background-color: $grey-dark;
-    box-shadow: 0 1px #000;
+    box-shadow: 0 1px #000,
+      inset 0 2px rgba(255, 255, 255, 0.15);
   }
   &--menu-open {
     background-color: $grey-dark;
@@ -36,8 +37,9 @@
   border: none;
   background: url("../img/icon-menu-burger.svg") no-repeat top center;
   &--menu-open {
-    background: url("../img/icon-menu-cross.svg") no-repeat top center;
+    margin-left: auto;
     margin-right: -14px;
+    background: url("../img/icon-menu-cross.svg") no-repeat top center;
   }
 }
 
@@ -71,12 +73,18 @@
     box-shadow: none;
   }
   .page-header__top-container {
-    padding: 40px (30/700)*100%;
-    width: 700px;
-    height: 110px;
+    margin-bottom: 0;
+    padding: 28px (20/660)*100% 34px;
+  }
+  .page-header__logo {
+    width: 147px;
+    height: 40px;
+  }
+  .page-header__button {
+    margin-top: 15px;
   }
   .page-header__container {
-    padding: 40px (30/700)*100%;
+    padding: 40px (20/660)*100%;
     min-height: 326px;
     &--page-index {
       min-height: 618px;
@@ -87,6 +95,8 @@
         width: 485px;
         height: 542px;
         background-size: auto 542px;
+        background-image: url("../img/iphone-hand-tablet@1x.png");
+        transform: translateX(-171px);
       }
     }
   }

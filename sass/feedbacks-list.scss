@@ -9,11 +9,7 @@
 // планшетная версия
 @media #{$tablet} {
   .feedbacks-list {
-    padding-top: 30px;
-    width: 700px;
-    &::after {
-      width: 700px;
-    }
+    padding: 24px (20/660)*100% 6px;
   }
 }
 

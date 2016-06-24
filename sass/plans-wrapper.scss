@@ -20,11 +20,9 @@
 // планшетная версия
 @media #{$tablet} {
   .plans-wrapper__container {
-    padding: 35px 40px 65px;
-    width: 700px;
-    &::before {
-      width: 700px;
-    }
+    padding: 85px (20/660)*100% 5px;
+    width: 660px;
+
   }
 }
 

@@ -46,21 +46,31 @@
 
 // планшетная версия
 @media #{$tablet} {
-
   .applications {
-  margin-top: 170px;
+  margin-top: 55px;
   margin-bottom: 80px;
   width: 300px;
   height: 400px;
   background-color: transparent;
   z-index: 2;
   }
-
   .applications__title {
     display: block;
+    width: 247px;
     font-weight: 300;
     font-size: 40px;
+    line-height: 47px;
     text-align: center;
   }
-
+  .applications__download {
+    margin: 31px 0px 55px;
+  }
+  .applications__item {
+    width: 27%;
+  }
+  .applications__description {
+    margin-top: 20px;
+    width: auto;
+    font-size: 18px;
+  }
 }

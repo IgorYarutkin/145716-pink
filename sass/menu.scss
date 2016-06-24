@@ -15,7 +15,6 @@
   }
 }
 
-
 .menu__list {
     display: block;
     margin: 0;
@@ -39,6 +38,7 @@
 @media #{$tablet} {
   .menu {
     top: 111px;
+    font-size: 18px;
   }
 }
 

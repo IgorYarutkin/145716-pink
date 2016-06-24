@@ -1,7 +1,7 @@
 .advetisment {
   box-sizing: border-box;
   @include container();
-  padding: 38px 20px 5px;
+  padding: 38px (20/320)*100% 5px;
   width: 320px;
   font-weight: 300;
   font-size: 24px;
@@ -20,7 +20,13 @@
 // планшетная версия
 @media #{$tablet} {
   .advetisment {
-    width: 700px;
+    padding: 58px (20/660)*100% 47px;
+    width: 660px;
+    font-size: 40px;
+  }
+  .advetisment__text span {
+    margin-top: 11px;
+    line-height: 46px;
   }
 }
 

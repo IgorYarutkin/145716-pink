@@ -24,15 +24,21 @@
 
 // планшетная версия
 @media #{$tablet} {
+  .feedback__text {
+    font-size: 18px;
+    order: 1;
+  }
   .feedback__author-name {
-    position: static;
-    margin-top: 20px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    font-size: 20px;
     text-align: center;
-    transform: none;
+    order: 2;
   }
   .feedback__author-details {
     display: block;
-    margin-top: 10px;
+    width: 100%;
+    order: 3;
     text-align: center;
   }
 }
