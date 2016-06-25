@@ -7,13 +7,13 @@
   width: 100%;
   text-align: center;
   &--page-index {
-    padding: 44px 0 0;
   }
 }
 
 .page-footer__top {
   @include container();
   margin-bottom: 20px;
+  padding: 44px 0 0;
   font-weight: 300;
   font-size: 24px;
   text-align: center;
@@ -68,21 +68,22 @@
 @media #{$tablet} {
   .page-footer {
     &--page-index {
-      padding-top: 43px;
     }
   }
   .page-footer__top {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    padding-top: 43px;
     width: 660px;
     font-size: 40px;
     line-height: 45px;
   }
   .page-footer__title {
-    width: 100%;
-    line-height: 47px;
     margin-bottom: 43px;
+    width: 100%;
+    font-size: 40px;
+    line-height: 47px;
   }
   .page-footer__map {
     height: 375px;
@@ -116,29 +117,43 @@
 // десктопная версия
 @media #{$desktop} {
   .page-footer__top {
-    align-content: stretch;
-    width: 1200px;
+    justify-content: space-between;
+    margin-bottom: 0;
+    padding: 68px 10px 24px;
+    width: 940px;
   }
   .page-footer__title {
+    margin-bottom: 59px;
     width: 100%;
+    font-size: 50px;
+    line-height: 56px;
   }
   .page-footer__map {
-    width: 1200px;
-    height: 500px;
+    width: 100%;
+    height: 488px;
     background-image: url("../img/bg-map-desktop@1x.jpg");
     &::before {
-      content: "";
-      display: table;
-      clear: both;
+      height: 100px;
+      background-size: cover;
     }
   }
+  .page-footer__map .ymaps-2-1-41-controls-pane {
+    top: 45px !important;
+  }
   .page-footer__bottom {
-    width: 1200px;
+    padding: 65px 10px;
+    width: 960px;
   }
   .page-footer__logo {
     margin-right: 200px;
   }
+  .page-footer__copyright {
+    width: 200px;
+    font-size: 18px;
+  }
   .page-footer__htmlacademy-logo {
     position: static;
+    margin-right: -22px;
+    margin-top: 12px;
   }
 }

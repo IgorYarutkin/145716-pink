@@ -44,7 +44,18 @@
   .contact {
     align-content: stretch;
     margin-right: 0;
-    width: 313px;
-    vertical-align: top;
+    width: 280px;
+    &--phone {
+      order: 1;
+    }
+    &--address {
+      order: 2;
+    }
+    &--email {
+      order: 3;
+    }
+  }
+  .contact__title {
+    margin-bottom: 17px;
   }
 }

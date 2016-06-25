@@ -42,3 +42,17 @@
     text-align: center;
   }
 }
+
+// десктопная версия
+@media #{$desktop} {
+  .feedback {
+    width: 690px;
+  }
+  .feedback__author-name {
+    margin-top: 43px;
+    font-size: 24px;
+  }
+  .feedback__author-details {
+    font-size: 18px;
+  }
+}
