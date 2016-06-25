@@ -1,5 +1,4 @@
 .page-footer {
-  // position: relative;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -40,28 +39,7 @@
   }
 }
 .page-footer__bottom {
-  @include container();
-  display: flex;
-  justify-content: space-between;
-  padding: 35px (40/700)*100%;
-  width: 100%;
-  &--page-index {
   display: none;
-  }
-}
-.page-footer__logo {
-    display: block;
-    width: 146px;
-    height: 40px;
-}
-
-.page-footer__htmlacademy-logo {
-  position: relative;
-  top: 30px;
-  left: 0;
-}
-.page-footer__copyright {
-  font-size: 14px;
 }
 
 // планшетная версия
@@ -93,67 +71,61 @@
     }
   }
   .page-footer__bottom {
-    padding: 35px (20/660)*100%;
-    &--page-index {
+    @include container();
     display: flex;
-    }
+    justify-content: space-between;
+    padding: 35px (15/660)*100% 35px (20/660)*100%;
+    width: 100%;
   }
-  .page-footer__logo,
   .page-footer__copyright {
-    margin: 0;
+    margin-top: 12px;
     width: 150px;
+    text-align: right;
   }
   .page-footer__htmlacademy-logo {
-    position: static;
-    top: 0;
-    left: 0;
-    width: 40px;
+    margin-left: 7px;
+    width: 39px;
     height: auto;
-    margin-top: 10px;
-    margin-right: -39px;
+    vertical-align: middle;
   }
-}
 
 // десктопная версия
 @media #{$desktop} {
   .page-footer__top {
     justify-content: space-between;
     margin-bottom: 0;
-    padding: 68px 10px 24px;
-    width: 940px;
+    padding: 66px 10px 36px;
+    width: 960px;
   }
   .page-footer__title {
     margin-bottom: 59px;
     width: 100%;
     font-size: 50px;
-    line-height: 56px;
+    line-height: 58px;
   }
   .page-footer__map {
     width: 100%;
     height: 488px;
     background-image: url("../img/bg-map-desktop@1x.jpg");
     &::before {
-      height: 100px;
-      background-size: cover;
+      height: 72px;
+      background-size: 940px 72px;
     }
   }
-  .page-footer__map .ymaps-2-1-41-controls-pane {
-    top: 45px !important;
-  }
   .page-footer__bottom {
-    padding: 65px 10px;
+    padding: 53px 4px 36px 10px;
     width: 960px;
   }
-  .page-footer__logo {
-    margin-right: 200px;
-  }
   .page-footer__copyright {
-    width: 200px;
+    margin-top: 12px;
+    width: auto;
     font-size: 18px;
+    text-align: right;
   }
   .page-footer__htmlacademy-logo {
-    position: static;
-    margin-right: -22px;
-    margin-top: 12px;
+    margin-left: 7px;
+    width: 39px;
+    height: auto;
+    vertical-align: middle;
   }
-}
+}}
