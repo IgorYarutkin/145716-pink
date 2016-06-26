@@ -79,6 +79,9 @@
     margin-top: 5px;
     padding-left: 20px;
     height: 60px;
+    &[placeholder] {
+      font-size: 18px;
+    }
   }
   &--checkbox {
     display: none;
