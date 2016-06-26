@@ -1,11 +1,10 @@
 .description {
   box-sizing: border-box;
   @include container();
-  padding: 55px 20px 15px;
-  width: 320px;
-  line-height: 24px;
+  padding: 49px (20/320)*100% 15px;
+  width: 100%;
+  line-height: 28px;
   text-align: center;
-  border: 1px solid blue;
   &--fill-form {
     display: none;
   }

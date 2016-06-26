@@ -48,7 +48,6 @@
   position: relative;
   box-sizing: border-box;
   padding: 20px (20/320)*100%;
-  min-height: 171px;
   &--page-index {
     min-height: 392px;
     &::after {
@@ -61,6 +60,9 @@
       background: url("../img/iphone-hand-mobile@1x.png") no-repeat;
       transform: translateX(-160px);
    }
+  }
+  &--page-form {
+    padding: 26px (20/320)*100% 50px;
   }
 }
 
