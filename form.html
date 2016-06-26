@@ -7,11 +7,16 @@
   </head>
   <body>
     <header class="page-header">
-      <div class="page-header__top">
-        <div class="page-header__top-container">
-        <a class="page-header__logo" href="index.html"><img src="img/logo-pink-white-mobile.svg" alt="Pink" width="74" height="23"></a>
+      <div class="page-header__top page-header__top--page-form">
+        <div class="page-header__top-container  page-header__top-container--page-form">
+        <a class="page-header__logo-link" href="index.html">
+          <picture>
+            <source media="(min-width:660px)" srcset="img/logotype-white-tablet.png">
+            <img class="page-header__logo" src="img/logo-pink-white-mobile.svg" alt="Pink" width="74" height="23">
+          </picture>
+        </a>
         <button class="page-header__button" type="button"></button>
-      <nav class="menu">
+      <nav class="menu menu--page-form">
         <ul class="menu__list">
           <li class="menu__item"><a href="index.html" class="menu__link">Главная</span></li>
           <li class="menu__item"><a href="photo.html" class="menu__link">Фотографии</a></li>
@@ -22,7 +27,7 @@
       </div>
       </div>
       <div class="page-header__container  page-header__container--page-form">
-      <div class="page-title">
+      <div class="page-title page-title--page-form">
         <h1 class="page-title__description">Конкурс на самое безбашеное путешествие с Пинк</h1>
       </div>
     </div>
@@ -37,21 +42,22 @@
           </p>
 
           <fieldset class="form__group  form__group--name">
-            <div class="form__group-container">
-            <div class="form__input-wrapper">
+            <div class="form__group-container  form__group-container--name">
+            <div class="form__input-wrapper  form__input-wrapper--name">
               <label class="form__field-name" for="surname">Фамилия</label>
               <input class="form__input form__input--text" id="surname" name="surname" type="text" placeholder="Укажите фамилию" required>
             </div>
-            <div class="form__input-wrapper">
+            <div class="form__input-wrapper  form__input-wrapper--name">
               <label class="form__field-name" for="first-name">Имя</label>
               <input class="form__input form__input--text" id="first-name" name="first-name" type="text" placeholder="Введите ваше имя" required>
             </div>
-            <div class="form__input-wrapper">
+            <div class="form__input-wrapper  form__input-wrapper--name">
               <label class="form__field-name" for="middle-name">Отчество</label>
               <input class="form__input form__input--text" id="middle-name" name="middle-name" type="text" placeholder="Ну и отчество тоже">
             </div>
             </div>
           </fieldset>
+          <div class="form__inner">
           <fieldset class="form__group form__group--achivements">
             <legend class="form__legend  form__legend--achivements">Ваши безбашенные достижения&nbsp;в&nbsp;путешествии</legend>
             <div class="form__group-container form__group-container--achivements">
@@ -82,6 +88,7 @@
           </div>
           </fieldset>
           <fieldset class="form__group  form__group--contacts">
+            <legend class="form__legend  form__legend--contacts">Контактная информация</legend>
             <div class="form__group-container form__group-container--contacts">
               <div class="form__input-wrapper  form__input-wrapper--contacts">
                 <label class="form__field-name" for="tel">Номерок телефончика</label>
@@ -118,6 +125,7 @@
               </div>
             </div>
           </fieldset>
+        </div>
           <div class="form__group-container form__group-container--submit">
             <a class="form__submit  button" type="submit">Отправить форму</a>
             <p class="form__note"><span>*</span> — обязательные поля</p>

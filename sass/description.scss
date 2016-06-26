@@ -16,14 +16,14 @@
 // планшетная версия
 @media #{$tablet} {
   .description {
-    padding: 100px 60px 2px;
-    width: 620px;
+    padding: 94px (60/660)*100% 2px;
     font-size: 18px;
     &--fill-form {
       display: block;
+      margin-top: 3px;
+      margin-bottom: 60px;
       text-align: center;
       font-size: 18px;
-      margin-bottom: 60px;
     }
     &--page-photo {
       padding: 100px 105px 80px;

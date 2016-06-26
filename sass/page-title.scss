@@ -17,9 +17,11 @@
 @media #{$tablet} {
   .page-title {
     padding: 90px 85px 145px;
-    width: 700px;
-    background-size: auto 728px;
     background-position: center top;
+    &--page-form {
+      padding: 27px (10/660)*100% 40px;
+      background-size: cover;
+    }
     &--page-index {
       height: 728px;
       &::after {
