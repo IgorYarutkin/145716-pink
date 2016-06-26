@@ -2,6 +2,7 @@
   box-sizing: border-box;
   display: block;
   padding: 17px 0;
+  width: 100%;
   color: #fff;
   font-size: 18px;
   line-height: 30px;
@@ -10,4 +11,5 @@
   text-transform: uppercase;
   text-decoration: none;
   background-color: $green;
+  border: none;
 }
