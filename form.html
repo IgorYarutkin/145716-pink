@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Пинк - Конкурс</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
@@ -91,12 +92,12 @@
             <legend class="form__legend  form__legend--contacts">Контактная информация</legend>
             <div class="form__group-container form__group-container--contacts">
               <div class="form__input-wrapper  form__input-wrapper--contacts">
-                <label class="form__field-name" for="tel">Номерок телефончика</label>
+                <label class="form__field-name" for="tel"><span>Номерок телефончика</span><span>Номер телефона</span></label>
                 <input class="form__input form__input--text" id="tel" name="surname" type="tel" placeholder="Номер, пожалуйста" required>
               </div>
               <div class="form__input-wrapper  form__input-wrapper--contacts">
-                <label class="form__field-name" for="e-mail">Адресок почты</label>
-                <input class="form__input form__input--text" id="e-mail" name="surname" type="email" placeholder="E-mail, пожалуйста" required>
+                <label class="form__field-name" for="e-mail"><span>Адресок</span><span>Адрес</span> почты</label>
+                <input class="form__input form__input--text" id="e-mail" name="surname" type="email" placeholder="E-mail, пожалуйста" required data-placeholder="E-mail, давай">
               </div>
             </div>
           </fieldset>
@@ -135,13 +136,13 @@
     </main>
     <footer class="page-footer">
       <div class="page-footer__bottom">
-        <img class="page-footer__logo" src="../img/logo-pink-blue-mobile.svg" alt="Pink" width="146" height="40">
-        <div class="social">
+        <img class="page-footer__logo" src="img/logo-pink-blue-mobile.svg" alt="Pink" width="146" height="40">
+        <div class="social  social--page-form">
         <a href="#" class="social__item  social__item--twitter">twitter</a>
         <a href="#" class="social__item  social__item--facebook">facebook</a>
         <a href="#" class="social__item  social__item--youtube">youtube</a>
         </div>
-        <a href="https://htmlacademy.ru" class="page-footer__copyright">Разработано<img class="page-footer__htmlacademy-logo" src="img/htmlacademy.svg" alt="HTML Academy" width="60" height="60"></a>
+        <a href="https://htmlacademy.ru" class="page-footer__copyright page-footer__copyright--page-form">Разработано<img class="page-footer__htmlacademy-logo" src="img/htmlacademy.svg" alt="HTML Academy" width="60" height="60"></a>
       </div>
     </footer>
     <div class="modal-upload modal-upload--success visually-hidden">

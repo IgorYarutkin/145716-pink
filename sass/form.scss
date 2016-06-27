@@ -72,9 +72,13 @@
   line-height: 32px;
   text-transform: uppercase;
 }
+.form__field-name span:last-child {
+  display: none;
+}
 .form__input {
   box-sizing: border-box;
   width: 100%;
+  border: 2px solid $grey-line;
   &--text {
     margin-top: 5px;
     padding-left: 20px;
@@ -149,6 +153,7 @@
   height: 200px;
   font-size: 18px;
   line-height: 30px;
+  border: 2px solid $grey-line;
 }
 .form__submit {
   margin-bottom: 37px;
@@ -178,12 +183,14 @@
     }
     &--achivements {
       order: 3;
+      margin-bottom: 58px;
     }
     &--contacts {
       order: 2;
+      margin-bottom: 60px;
     }
     &--application {
-      margin-bottom: 100px;
+      margin-bottom: 56px;
       order: 1;
     }
     &--comments {
@@ -195,6 +202,24 @@
     background-color: #fff;
     &--name {
       padding: 5px (20/660)*100% 0px;
+    }
+    &--contacts {
+      padding-top: 36px;
+    }
+    &--achivements {
+      padding-bottom: 28px;
+    }
+    &--application {
+      padding-bottom: 41px;
+    }
+    &--comments {
+      padding-top: 37px;
+      padding-bottom: 34px;
+    }
+    &--submit {
+      display: flex;
+      justify-content: space-between;
+      padding: 66px (20/660)*100% 0px;
     }
   }
   .form__legend {
@@ -212,10 +237,23 @@
       padding-top: 24px;
       padding-bottom: 14px;
     }
+    &--contacts {
+      flex-wrap: wrap;
+      padding-bottom: 23px;
+    }
+  }
+  .form__input-wrapper--contacts .form__input--text {
+    margin-bottom: 11px;
   }
   .form__field-name {
     margin-left: 0;
     margin-right: 22px;
+  }
+  .form__field-name span:first-child {
+    display: none;
+  }
+  .form__field-name span:last-child {
+    display: inline;
   }
   .form__radio-name {
     padding-left: 58px;
@@ -227,5 +265,27 @@
   .form__input--radio:checked + .form__radio-name::after {
     top: 35px;
     left: 10px;
+  }
+  .form__input-wrapper--contacts  .form__field-name  {
+    order: 2;
+    margin-left: 18px;
+    margin-right: 0;
+  }
+  .form__input-wrapper--contacts  .form__input--text  {
+    width: 100%;
+    order: 1;
+  }
+  .form__checkbox-name {
+    padding-left: 58px;
+  }
+  .form__textarea {
+    height: 192px;
+  }
+  .form__submit {
+    width: 48.4%;
+    margin-bottom: 0;
+  }
+  .form__note {
+    padding-top: 22px;
   }
 }
