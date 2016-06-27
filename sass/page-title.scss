@@ -45,9 +45,8 @@
 // десктопная версия
 @media #{$desktop} {
   .page-title {
-    padding: 80px 80px 110px;
-    width: 1200px;
-    background-size: 1200px auto;
+    padding: 80px 80px 0px;
+    background-size: 960px auto;
     &::after {
       top: 225px;
       left: 500px;
@@ -55,6 +54,9 @@
     &--page-index {
       height: 852px;
       background-position: bottom center;
+    }
+    &--page-form {
+      padding: 20px 80px 60px;
     }
   }
   .page-title__description {

@@ -49,5 +49,8 @@
 @media #{$desktop} {
   .social {
     width: auto;
+    &--page-form {
+      margin-top: 0;
+    }
   }
 }

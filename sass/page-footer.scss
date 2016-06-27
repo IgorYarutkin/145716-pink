@@ -132,6 +132,10 @@
   .page-footer__bottom {
     padding: 53px 4px 36px 10px;
     width: 960px;
+    &--page-form {
+      align-items: flex-start;
+      padding: 67px 4px 20px 10px;
+    }
   }
   .page-footer__copyright {
     margin-top: 12px;

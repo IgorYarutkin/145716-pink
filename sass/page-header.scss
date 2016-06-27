@@ -90,9 +90,9 @@
   }
   .page-header__container {
     padding: 40px (20/660)*100%;
-    min-height: 326px;
     &--page-index {
       min-height: 618px;
+      padding: 40px (20/660)*100%;
       &::after {
         top: auto;
         bottom: 0;
@@ -117,6 +117,7 @@
     display: none;
   }
   .page-header__container {
+    padding-top: 44px;
     width: 960px;
     &--page-index {
       padding: 0px (10/960)*100% 10px;

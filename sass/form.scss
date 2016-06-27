@@ -162,8 +162,11 @@
   text-align: center;
   text-transform: uppercase;
 }
-.form__note span {
+.form__note span:first-of-type {
   color: $red-text;
+}
+.form__note span:last-of-type {
+  display: none;
 }
 
 
@@ -179,29 +182,31 @@
     border: 2px solid $grey-line;
     &--name {
       margin-bottom: 6px;
+      width: 100%;
       border: none;
+      order: 1;
     }
     &--achivements {
-      order: 3;
+      order: 4;
       margin-bottom: 58px;
     }
     &--contacts {
-      order: 2;
+      order: 3;
       margin-bottom: 60px;
     }
     &--application {
       margin-bottom: 56px;
-      order: 1;
+      order: 2;
     }
     &--comments {
-      order: 4;
+      order: 5;
     }
   }
   .form__group-container {
     padding: 21px (60/620)*100% 0px;
     background-color: #fff;
     &--name {
-      padding: 5px (20/660)*100% 0px;
+      padding: 5px 0 0;
     }
     &--contacts {
       padding-top: 36px;
@@ -240,6 +245,15 @@
     &--contacts {
       flex-wrap: wrap;
       padding-bottom: 23px;
+      &::before {
+        position: absolute;
+        content: "";
+        top: 5px;
+        right: 0;
+        width: 60px;
+        height: 60px;
+        background-color: $grey-line;
+      }
     }
   }
   .form__input-wrapper--contacts .form__input--text {
@@ -287,5 +301,114 @@
   }
   .form__note {
     padding-top: 22px;
+  }
+}
+
+// десктопная версия
+@media #{$desktop} {
+  .form__inner {
+    @include container();
+    padding: 70px 10px 0px;
+    width: 960px;
+    justify-content: space-between;
+  }
+  .form__group {
+    &--name {
+      margin-bottom: 0px;
+      width: 46.2%;
+      order: 1;
+    }
+    &--achivements {
+      order: 4;
+      margin-top: 57px;
+      margin-bottom: 0px;
+    }
+    &--contacts {
+      order: 3;
+      margin-top: 56px;
+      margin-bottom: 0px;
+    }
+    &--application {
+      margin-bottom: 0px;
+      width: 46%;
+      order: 2;
+    }
+    &--comments {
+      margin-top: 57px;
+      order: 5;
+    }
+  }
+  .form__group-container {
+    &--name {
+      padding-top: 11px;
+    }
+    &--application {
+      padding-top: 24px;
+      padding-left: 76px;
+    }
+    &--contacts {
+      display: flex;
+      justify-content: space-between;
+      padding: 32px 59px 0px;
+    }
+    &--achivements {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      padding: 21px 30px 36px 60px;
+    }
+    &--comments {
+      padding: 37px 60px 26px;
+    }
+    &--submit {
+      padding: 66px 10px 0px;
+      width: 960px;
+    }
+  }
+  .form__group-container--name .form__input-wrapper--name:last-of-type {
+    padding-bottom: 0;
+  }
+  .form__group-container--contacts .form__input-wrapper--contacts {
+    padding-bottom: 11px;
+  }
+  .form__input-wrapper {
+    &--contacts {
+      width: 46%;
+    }
+    &--checkbox {
+      width: 310px;
+    }
+    &--shark {
+      order: 1;
+    }
+    &--norris {
+      order: 2;
+    }
+    &--tower {
+      order: 3;
+    }
+    &--beach {
+      order: 4;
+    }
+    &--souvenirs {
+      order: 5;
+    }
+    &--hotel {
+      order: 6;
+    }
+  }
+  .form__group-container--achivements .form__input-wrapper--checkbox:nth-child(6n+5),
+  .form__group-container--achivements .form__input-wrapper--checkbox:nth-child(6n+6) {
+    width: 225px;
+  }
+  .form__textarea {
+    height: 126px;
+  }
+  .form__submit {
+    width: 300px;
+  }
+  .form__note span:last-of-type {
+    display: inline;
   }
 }
