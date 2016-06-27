@@ -53,6 +53,9 @@
   &--comments {
     padding-top: 56px;
   }
+  &--contacts {
+    display: none;
+  }
 }
 .form__input-wrapper {
   position: relative;
@@ -231,6 +234,9 @@
     padding-top: 0;
     width: auto;
     background-color: #fff;
+    &--contacts {
+      display: table;
+    }
   }
   .form__input-wrapper {
     display: flex;

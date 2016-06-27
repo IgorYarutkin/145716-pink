@@ -1,22 +1,21 @@
-.post-container {
+.post-list {
   @include container();
-  width: 320px;
+  padding: 0 (20/320)*100%;
+  width: 100%;
 }
 
 // планшетная версия
 @media #{$tablet} {
-  .post-container {
+  .post-list {
     padding: 0 40px;
     width: 700px;
-    font-size: 0;
-    box-shadow: 0 0 2px red;
   }
 }
 
 
 // десктопная версия
 @media #{$desktop} {
-  .post-container {
+  .post-list {
   padding: 0 130px;
   width: 1200px;
   }

@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Пинк - Фотографии пользователей</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
@@ -21,8 +22,8 @@
       </nav>
     </div>
     </div>
-    <div class="page-header__container">
-      <div class="page-title">
+    <div class="page-header__container  page-header__container--page-photo">
+      <div class="page-title  page-title--page-photo">
         <h1 class="page-title__description">Фотографии пользователей</h1>
       </div>
     </div>
@@ -30,10 +31,9 @@
 
     <main>
       <p class="description  description--page-photo">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
-      <div class="post-container">
       <article class="post post--first">
-        <a class="post__link" href="#"><img src="../img/panorama-mobile@1x.jpg" alt="panorama" class="post__photo post__photo--first" width="320" height="137"></a>
-        <div class="post__inner">
+        <a class="post__link" href="#"><img src="img/panorama-mobile@1x.jpg" alt="panorama" class="post__photo post__photo--first" width="320" height="137"></a>
+        <div class="post__container">
           <div class="post__header">
             <span class="post__author">Анна</span>
             <span class="post__time">(5 минут назад)</span>
@@ -45,9 +45,10 @@
           </div>
         </div>
       </article>
+      <div class="post-list">
       <article class="post">
-        <div class="post__inner">
-        <a class="post__link" href="#"><img src="../img/photo-1-mobile@1x.jpg" alt="photo" class="post__photo" width="280" height="180"></a>
+        <a class="post__link" href="#"><img src="img/photo-1-mobile@1x.jpg" alt="photo" class="post__photo" width="280" height="180"></a>
+        <div class="post__container">
           <div class="post__header">
             <span class="post__author">Левон</span>
             <span class="post__time">(5 часов назад)</span>
@@ -60,8 +61,8 @@
         </div>
       </article>
       <article class="post">
-        <div class="post__inner">
-        <a class="post__link" href="#"><img src="../img/photo-2-mobile@1x.jpg" alt="photo" class="post__photo" width="280" height="180"></a>
+        <a class="post__link" href="#"><img src="img/photo-2-mobile@1x.jpg" alt="photo" class="post__photo" width="280" height="180"></a>
+        <div class="post__container">
           <div class="post__header">
             <span class="post__author">Антон</span>
             <span class="post__time">(12 часов назад)</span>
@@ -74,8 +75,8 @@
         </div>
       </article>
       <article class="post">
-        <div class="post__inner">
-        <a class="post__link" href="#"><img src="../img/photo-3-mobile@1x.jpg" alt="photo" class="post__photo" width="280" height="180"></a>
+        <a class="post__link" href="#"><img src="img/photo-3-mobile@1x.jpg" alt="photo" class="post__photo" width="280" height="180"></a>
+        <div class="post__container">
           <div class="post__header">
             <span class="post__author">Борис</span>
             <span class="post__time">(20 часов назад)</span>
@@ -88,8 +89,8 @@
         </div>
       </article>
       <article class="post">
-        <div class="post__inner">
-        <a class="post__link" href="#"><img src="../img/photo-4-mobile@1x.jpg" alt="photo" class="post__photo" width="280" height="180"></a>
+        <a class="post__link" href="#"><img src="img/photo-4-mobile@1x.jpg" alt="photo" class="post__photo" width="280" height="180"></a>
+        <div class="post__container">
           <div class="post__header">
             <span class="post__author">Сергей</span>
             <span class="post__time">(25 часов назад)</span>
@@ -102,8 +103,8 @@
         </div>
       </article>
       <article class="post">
-        <div class="post__inner">
-        <a class="post__link" href="#"><img src="../img/photo-5-mobile@1x.jpg" alt="photo" class="post__photo" width="280" height="180"></a>
+        <a class="post__link" href="#"><img src="img/photo-5-mobile@1x.jpg" alt="photo" class="post__photo" width="280" height="180"></a>
+        <div class="post__container">
           <div class="post__header">
             <span class="post__author">Максим</span>
             <span class="post__time">(40 часов назад)</span>
@@ -116,8 +117,8 @@
         </div>
       </article>
       <article class="post">
-        <div class="post__inner">
-        <a class="post__link" href="#"><img src="../img/photo-6-mobile@1x.jpg" alt="photo" class="post__photo" width="280" height="180"></a>
+        <a class="post__link" href="#"><img src="img/photo-6-mobile@1x.jpg" alt="photo" class="post__photo" width="280" height="180"></a>
+        <div class="post__container">
           <div class="post__header">
             <span class="post__author">Надежда</span>
             <span class="post__time">(45 часов назад)</span>
@@ -133,7 +134,7 @@
       <p class="description  description--upload">Затмите их всех!<br>Выкладывайте все, что накопилось в телефоне!</p>
       <section class="upload">
         <div class="upload__inner">
-          <img src="../img/photo-7-mobile@1x.jpg" alt="upload-photo" class="upload__photo" width="280" height="374">
+          <img src="img/photo-7-mobile@1x.jpg" alt="upload-photo" class="upload__photo" width="280" height="374">
           <div class="upload__filter-list">
             <button class="upload__filter upload__filter--crop upload__filter--active" type="button"></button>
             <div class="range range--crop">
@@ -162,7 +163,7 @@
     </main>
     <footer class="page-footer">
       <div class="page-footer__bottom">
-      <img class="page-footer__logo" src="../img/logo-pink-blue-mobile.svg" alt="Pink" width="146" height="40">
+      <img class="page-footer__logo" src="img/logo-pink-blue-mobile.svg" alt="Pink" width="146" height="40">
       <div class="social">
         <a href="#" class="social__item  social__item--twitter">twitter</a>
         <a href="#" class="social__item  social__item--facebook">facebook</a>
