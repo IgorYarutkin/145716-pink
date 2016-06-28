@@ -18,10 +18,15 @@
     }
   }
 }
+.post__wrapper {
+  @include container();
+  padding: 0 (20/320)*100%;
+  width: 100%;
+}
 .post__container {
   box-sizing: border-box;
   @include container();
-  padding: 0 (18/320)*100% 25px;
+  padding: 0 (18/320)*100% 40px;
   width: 100%;
   background: $grey-light;
 }
@@ -37,7 +42,7 @@
   }
 }
 .post__header {
-  padding: 23px 0 10px;
+  padding: 18px 0 0 2px;
 }
 .post__author {
   font-weight: bold;
@@ -48,22 +53,23 @@
   text-transform: uppercase;
 }
 .post__text {
-  padding-bottom: 20px;
+  padding-bottom: 9px;
+  padding-left: 1px;
 }
 .post__likes-container {
   position: relative;
 }
 .post__like-it {
-  margin-right: 20px;
+  margin-right: 16px;
   width: 13px;
   height: 12px;
   background-color: $grey-light;
   border: 1px solid transparent;
   &::after {
     position: absolute;
-    content: '';
-    top: 0;
-    left: 0;
+    content: "";
+    top: 8px;
+    left: 1px;
     width: 13px;
     height: 12px;
     background: url("../img/icon-heart.svg") center no-repeat;
@@ -71,6 +77,8 @@
 }
 .post__likes-text {
   color: $red-text;
+  font-size: 12px;
+  text-transform: uppercase;
 }
 
 // планшетная версия

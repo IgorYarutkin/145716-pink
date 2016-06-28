@@ -33,16 +33,18 @@
       <p class="description  description--page-photo">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
       <article class="post post--first">
         <a class="post__link" href="#"><img src="img/panorama-mobile@1x.jpg" alt="panorama" class="post__photo post__photo--first" width="320" height="137"></a>
-        <div class="post__container">
-          <div class="post__header">
-            <span class="post__author">Анна</span>
-            <span class="post__time">(5 минут назад)</span>
-          </div>
-          <p class="post__text">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую транслацию в перископе, задавайте свои вопросы!</p>
-          <div class="post__likes-container">
-            <button class="post__like-it" type="button"></button>
-            <span class="post__likes-text">Нравится: 215</span>
-          </div>
+        <div class="post__wrapper">
+        <div class="post__container  post__container--first">
+            <div class="post__header  post__header--first">
+              <span class="post__author">Анна</span>
+              <span class="post__time">(5 минут назад)</span>
+            </div>
+            <p class="post__text  post__text--first">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую транслацию в перископе, задавайте свои вопросы!</p>
+            <div class="post__likes-container  post__likes-container--first">
+              <button class="post__like-it" type="button"></button>
+              <span class="post__likes-text">Нравится: 215</span>
+            </div>
+        </div>
         </div>
       </article>
       <div class="post-list">
@@ -156,9 +158,11 @@
             <div class="range__axis"></div>
             <div class="range__dot"></div>
           </div>
-          <button class="upload__start" type="button">Запостить</button>
-          <button class="upload__cancel" type="button">Отмена</button>
         </div>
+          <div class="upload__bottom">
+            <button class="upload__start" type="button">Запостить</button>
+            <button class="upload__cancel" type="button">Отмена</button>
+          </div>
       </section>
     </main>
     <footer class="page-footer">

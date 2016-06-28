@@ -9,7 +9,8 @@
     display: none;
   }
   &--upload {
-    padding-bottom: 50px;
+    padding: 25px (24/320)*100% 41px (20/320)*100%;
+    line-height: 30px;
   }
   &--page-photo {
     padding: 49px 11% 51px;
