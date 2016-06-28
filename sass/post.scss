@@ -26,9 +26,10 @@
   background: $grey-light;
 }
 .post__link {
-  font-size: 0;
+
 }
 .post__photo {
+  display: block;
   width: 100%;
   height: auto;
   &--first {

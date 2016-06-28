@@ -231,11 +231,21 @@
     }
   }
   .form__legend {
+    margin: -10px auto 10px;
     padding-top: 0;
-    width: auto;
     background-color: #fff;
+    &--application {
+      width: 328px;
+    }
     &--contacts {
-      display: table;
+      display: block;
+      width: 203px;
+    }
+    &--achivements {
+      width: 380px;
+    }
+    &--comments {
+      width: 190px;
     }
   }
   .form__input-wrapper {
