@@ -23,6 +23,10 @@
     background-position: top center;
     background-repeat: no-repeat;
     transform: translateX(-50%);
+    @media #{$retina} {
+      background-image: url("../img/iphone-screen-mobile@2x.png");
+      background-size: 157px 320px;
+    }
   }
 }
 

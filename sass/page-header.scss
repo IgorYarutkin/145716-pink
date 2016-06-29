@@ -5,7 +5,7 @@
   background-position: 50% -6px;
   background-repeat: no-repeat;
   @media #{$retina} {
-    background-image: url('../img/bg-back-mobile@2x.jpg');
+    background-image: url("../img/bg-back-mobile@2x.jpg");
   }
 }
 .page-header__top {
@@ -27,7 +27,7 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 5px;
-  padding: 20px (20/320)*100%;
+  padding: 18px (20/320)*100%;
   z-index: 1;
 }
 .page-header__logo {
@@ -35,22 +35,37 @@
   height: 23px;
 }
 .page-header__button {
+  padding: 0;
   width: 50px;
   height: 24px;
   border: none;
+  background-color: transparent;
   &--menu-open {
-    margin-left: auto;
-    margin-right: -14px;
+    width: 24px;
   }
 }
-.icon-hamburger--path-1 {
-  fill: #000;
+.page-header__icon-hamburger {
+  display: block;
+  fill: #fff;
 }
-.icon-hamburger--path-2 {
-  fill: red;
+.page-header__icon-cross {
+  display: none;
+  fill: #fff;
 }
-
-
+.page-header__button--menu-open .page-header__icon-hamburger {
+  display: none;
+}
+.page-header__button--menu-open .page-header__icon-cross {
+  display: block;
+}
+.page-header__button:hover .page-header__icon-hamburger,
+.page-header__button:hover .page-header__icon-cross {
+  fill: $red-text;
+}
+.page-header__button:active .page-header__icon-hamburger,
+.page-header__button:active .page-header__icon-cross {
+  fill: rgba(210, 40, 86, 0.3);
+}
 .page-header__container {
   @include container();
   position: relative;
