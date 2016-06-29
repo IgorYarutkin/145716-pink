@@ -6,7 +6,7 @@
   background-repeat: no-repeat;
   @media #{$retina} {
     background-image: url('../img/bg-back-mobile@2x.jpg');
-    height: 456px;
+    height: 461px;
   }
 }
 .page-header__top {
@@ -51,7 +51,7 @@
   @include container();
   position: relative;
   box-sizing: border-box;
-  padding: 20px (20/320)*100%;
+  padding: 20px 0 0;
   &--page-index {
     min-height: 392px;
     &::after {
