@@ -6,7 +6,6 @@
   background-repeat: no-repeat;
   @media #{$retina} {
     background-image: url('../img/bg-back-mobile@2x.jpg');
-    height: 461px;
   }
 }
 .page-header__top {
@@ -39,13 +38,18 @@
   width: 50px;
   height: 24px;
   border: none;
-  background: url("../img/icon-menu-burger.svg") no-repeat top center;
   &--menu-open {
     margin-left: auto;
     margin-right: -14px;
-    background: url("../img/icon-menu-cross.svg") no-repeat top center;
   }
 }
+.icon-hamburger--path-1 {
+  fill: #000;
+}
+.icon-hamburger--path-2 {
+  fill: red;
+}
+
 
 .page-header__container {
   @include container();
