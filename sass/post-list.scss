@@ -7,8 +7,12 @@
 // планшетная версия
 @media #{$tablet} {
   .post-list {
-    padding: 0 40px;
-    width: 700px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: stretch;
+    align-content: stretch;
+    padding: 0 (20/660)*100%;
   }
 }
 
@@ -16,7 +20,7 @@
 // десктопная версия
 @media #{$desktop} {
   .post-list {
-  padding: 0 130px;
-  width: 1200px;
+  padding: 0 10px;
+  width: 960px;
   }
 }

@@ -1,6 +1,6 @@
 .range {
+  position: relative;
   &--main {
-    position: relative;
     margin: 0px auto;
     width: 236px;
     height: 15px;
@@ -27,22 +27,40 @@
   border-radius: 50%;
 }
 
-// планшетная версия
+/**************************************************************************************************
+********** планшетная версия
+**************************************************************************************************/
 @media #{$tablet} {
   .range {
-    display: inline-block;
-    width: 200px;
-    height: 70px;
+    display: block;
+    margin-top: 10px;
+    width: 74.1%;
     &--main {
       display: none;
     }
   }
+  .range--crop .range__dot {
+    right: 41px;
+  }
+  .range--fill .range__dot {
+    right: 162px;
+  }
+  .range--contrast .range__dot {
+    right: 91px;
+  }
 }
 
-// десктопная версия
+/**************************************************************************************************
+********** десктопная версия
+**************************************************************************************************/
 @media #{$desktop} {
   .range {
+    margin-top: 20px;
     width: 280px;
+    &--contrast {
+      margin-top: 15px;
+    }
   }
+
 
 }

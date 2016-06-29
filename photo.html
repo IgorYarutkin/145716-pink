@@ -10,17 +10,22 @@
     <header class="page-header">
       <div class="page-header__top">
         <div class="page-header__top-container">
-        <img class="page-header__logo" src="img/logo-pink-white-mobile.svg" alt="Pink" width="74" height="23">
-        <button class="page-header__button" type="button"></button>
-      <nav class="menu visually-hidden">
-        <ul class="menu__list">
-          <li class="menu__item"><a href="index.html" class="menu__link">Главная</span></li>
-          <li class="menu__item"><span class="menu__link">Фотографии</span></li>
-          <li class="menu__item"><a href="form.html" class="menu__link">Конкурс</span></li>
-          <li class="menu__item"><a href="https://htmlacademy.ru" class="menu__link">HTML Academy</a></li>
-        </ul>
-      </nav>
-    </div>
+          <a class="page-header__logo-link" href="index.html">
+            <picture>
+              <source media="(min-width:660px)" srcset="img/logotype-white-tablet.png">
+              <img class="page-header__logo" src="img/logo-pink-white-mobile.svg" alt="Pink" width="74" height="23">
+            </picture>
+          </a>
+          <button class="page-header__button" type="button"></button>
+          <nav class="menu visually-hidden">
+            <ul class="menu__list">
+              <li class="menu__item"><a href="index.html" class="menu__link">Главная</span></li>
+              <li class="menu__item"><span class="menu__link">Фотографии</span></li>
+              <li class="menu__item"><a href="form.html" class="menu__link">Конкурс</span></li>
+              <li class="menu__item"><a href="https://htmlacademy.ru" class="menu__link">HTML Academy</a></li>
+            </ul>
+          </nav>
+        </div>
     </div>
     <div class="page-header__container  page-header__container--page-photo">
       <div class="page-title  page-title--page-photo">
@@ -32,7 +37,12 @@
     <main>
       <p class="description  description--page-photo">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
       <article class="post post--first">
-        <a class="post__link" href="#"><img src="img/panorama-mobile@1x.jpg" alt="panorama" class="post__photo post__photo--first" width="320" height="137"></a>
+        <a class="post__link" href="#">
+          <picture>
+            <source media="(min-width:660px)" srcset="img/panorama-tablet@1x.png">
+            <img src="img/panorama-mobile@1x.jpg" alt="panorama" class="post__photo post__photo--first" width="320" height="137">
+          </picture>
+        </a>
         <div class="post__wrapper">
         <div class="post__container  post__container--first">
             <div class="post__header  post__header--first">
@@ -41,7 +51,7 @@
             </div>
             <p class="post__text  post__text--first">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую транслацию в перископе, задавайте свои вопросы!</p>
             <div class="post__likes-container  post__likes-container--first">
-              <button class="post__like-it" type="button"></button>
+              <button class="post__like-it  post__like-it--first" type="button"></button>
               <span class="post__likes-text">Нравится: 215</span>
             </div>
         </div>
@@ -136,33 +146,43 @@
       <p class="description  description--upload">Затмите их всех!<br>Выкладывайте все, что накопилось в телефоне!</p>
       <section class="upload">
         <div class="upload__inner">
+          <div class="upload__wrapper-block">
           <img src="img/photo-7-mobile@1x.jpg" alt="upload-photo" class="upload__photo" width="280" height="374">
-          <div class="upload__filter-list">
-            <button class="upload__filter upload__filter--crop upload__filter--active" type="button"></button>
-            <div class="range range--crop">
-              <div class="range__axis"></div>
-              <div class="range__dot"></div>
-            </div>
-            <button class="upload__filter upload__filter--fill" type="button"></button>
-            <div class="range range--fill">
-              <div class="range__axis"></div>
-              <div class="range__dot"></div>
-            </div>
-            <button class="upload__filter upload__filter--contrast" type="button"></button>
-            <div class="range range--contrast">
-              <div class="range__axis"></div>
-              <div class="range__dot"></div>
-            </div>
           </div>
+          <div class="upload__wrapper-block upload__wrapper-block--controls">
+            <div class="upload__filter-list">
+              <div class="upload__filter-wrapper">
+                <button class="upload__filter upload__filter--crop upload__filter--active" type="button"></button>
+                <div class="range range--crop">
+                  <div class="range__axis"></div>
+                  <div class="range__dot"></div>
+                </div>
+              </div>
+              <div class="upload__filter-wrapper">
+                <button class="upload__filter upload__filter--fill" type="button"></button>
+                <div class="range range--fill">
+                  <div class="range__axis"></div>
+                  <div class="range__dot"></div>
+                </div>
+              </div>
+              <div class="upload__filter-wrapper  upload__filter-wrapper--contrast">
+                <button class="upload__filter upload__filter--contrast" type="button"></button>
+                <div class="range range--contrast">
+                  <div class="range__axis"></div>
+                  <div class="range__dot"></div>
+                </div>
+              </div>
+            </div>
           <div class="range range--main">
             <div class="range__axis"></div>
             <div class="range__dot"></div>
           </div>
-        </div>
           <div class="upload__bottom">
             <button class="upload__start" type="button">Запостить</button>
             <button class="upload__cancel" type="button">Отмена</button>
           </div>
+          </div>
+        </div>
       </section>
     </main>
     <footer class="page-footer">
