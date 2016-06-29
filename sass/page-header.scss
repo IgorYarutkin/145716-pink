@@ -8,54 +8,64 @@
 .page-header__top {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.3);
-}
-.page-header__top-container {
-  position: relative;
-  @include container();
-  padding: 20px;
-  width: 320px;
-  height: 64px;
-  z-index: 1;
-  outline: 1px solid yellow;  // для сетки
-}
-.page-header__top--menu-open {
-  background-color: $grey-dark;
-  box-shadow: 0 1px #000;
-}
-.page-header__container {
-  @include container();
-  position: relative;
-  box-sizing: border-box;
-  padding: 20px;
-  width: 320px;
-  border: 1px solid red; // для сетки
-  min-height: 171px;
-  &--page-index {
-    min-height: 392px;
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: 287px;
-      left: 0;
-      width: 258px;
-      height: 286px;
-      background: url("../img/iphone-hand-mobile@1x.png") no-repeat;
-   }
+  &--no-js {
+    background-color: $grey-dark;
+    box-shadow: 0 1px #000,
+      inset 0 2px rgba(255, 255, 255, 0.15);
+  }
+  &--menu-open {
+    background-color: $grey-dark;
+    box-shadow: 0 1px #000,
+      inset 0 2px rgba(255, 255, 255, 0.15);
   }
 }
+.page-header__top-container {
+  @include container();
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  padding: 20px (20/320)*100%;
+  z-index: 1;
+}
 .page-header__logo {
-  float: left;
   width: 74px;
   height: 23px;
 }
 .page-header__button {
-  float: right;
   width: 50px;
   height: 24px;
   border: none;
   background: url("../img/icon-menu-burger.svg") no-repeat top center;
   &--menu-open {
+    margin-left: auto;
+    margin-right: -14px;
     background: url("../img/icon-menu-cross.svg") no-repeat top center;
+  }
+}
+
+.page-header__container {
+  @include container();
+  position: relative;
+  box-sizing: border-box;
+  padding: 20px (20/320)*100%;
+  &--page-index {
+    min-height: 392px;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 100px;
+      left: 50%;
+      width: 258px;
+      height: 286px;
+      background: url("../img/iphone-hand-mobile@1x.png") no-repeat;
+      transform: translateX(-160px);
+   }
+  }
+  &--page-form {
+    padding: 21px (20/320)*100% 50px;
+  }
+  &--page-photo {
+    padding-bottom: 80px;
   }
 }
 
@@ -64,24 +74,41 @@
   .page-header {
     background-size: cover;
   }
+  .page-header__top {
+    box-shadow: none;
+  }
   .page-header__top-container {
-    padding: 40px;
-    width: 700px;
-    height: 110px;
+    margin-bottom: 0;
+    padding: 25px (20/660)*100% 34px;
+    &--page-form {
+      padding-bottom: 38px;
+    }
+  }
+  .page-header__logo {
+    width: 147px;
+    height: 40px;
+  }
+  .page-header__button {
+    margin-top: 15px;
   }
   .page-header__container {
-    padding: 40px;
-    width: 700px;
-    min-height: 326px;
+    padding: 40px (20/660)*100%;
     &--page-index {
       min-height: 618px;
+      padding: 40px (20/660)*100%;
       &::after {
+        top: auto;
         bottom: 0;
-        left: 190px;
+        left: 50%;
         width: 485px;
         height: 542px;
         background-size: auto 542px;
+        background-image: url("../img/iphone-hand-tablet@1x.png");
+        transform: translateX(-171px);
       }
+    }
+    &--page-photo {
+      padding: 42px (20/660)*100% 102px;
     }
   }
 }
@@ -89,25 +116,24 @@
 // десктопная версия
 @media #{$desktop} {
   .page-header__top-container {
-    padding-left: 130px;
-    padding-right: 130px;
-    width: 1200px;
-    height: 105px;
+    padding: 28px 10px 25px;
+    width: 960px;
   }
   .page-header__button {
     display: none;
   }
   .page-header__container {
-    width: 1200px;
+    padding-top: 44px;
+    width: 960px;
     &--page-index {
-      padding: 130px;
-      min-height: 850px;
+      padding: 0px (10/960)*100% 10px;
       &::after {
         bottom: 0;
         left: 475px;
         width: 580px;
         height: 642px;
         background-size: auto 642px;
+        transform: translateX(-134px);
       }
     }
   }

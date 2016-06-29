@@ -1,14 +1,14 @@
 .feedback {
+  flex-wrap: wrap;
   text-align: center;
 }
 
 .feedback__author-name {
-    position: absolute;
-    top: 40px ;
-    left: 50%;
-    font-weight: bold;
-    font-size: 18px;
-    transform: translateX(-50%);
+  margin-bottom: 17px;
+  width: 100%;
+  font-weight: bold;
+  font-size: 18px;
+  order: 1;
 }
 
 .feedback__author-details {
@@ -16,20 +16,43 @@
 }
 
 .feedback__text {
-    color: $grey-text;
+  width: 100%;
+  line-height: 29px;
+  color: $grey-text;
+  order: 2;
 }
 
 // планшетная версия
 @media #{$tablet} {
+  .feedback__text {
+    font-size: 18px;
+    order: 1;
+  }
   .feedback__author-name {
-    position: static;
-    margin-top: 20px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    font-size: 20px;
     text-align: center;
-    transform: none;
+    order: 2;
   }
   .feedback__author-details {
     display: block;
-    margin-top: 10px;
+    width: 100%;
+    order: 3;
     text-align: center;
+  }
+}
+
+// десктопная версия
+@media #{$desktop} {
+  .feedback {
+    width: 690px;
+  }
+  .feedback__author-name {
+    margin-top: 43px;
+    font-size: 24px;
+  }
+  .feedback__author-details {
+    font-size: 18px;
   }
 }

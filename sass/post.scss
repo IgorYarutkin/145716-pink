@@ -1,23 +1,48 @@
 .post {
   box-sizing: border-box;
-  width: 320px;
-  border: 1px solid yellow;
+  &--first {
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "Панорама дня";
+      top: 0;
+      left: 50%;
+      box-sizing: border-box;
+      padding: 5px 20px;
+      width: 140px;
+      height: 37px;
+      color: #fff;
+      font-size: 12px;
+      text-transform: uppercase;
+      background-color: $red-text;
+    }
+  }
 }
-.post__inner {
-  box-sizing: border-box;
-  padding: 0 20px 25px;
+.post__wrapper {
   @include container();
-  width: 280px;
+  padding: 0 (20/320)*100%;
+  width: 100%;
+}
+.post__container {
+  box-sizing: border-box;
+  @include container();
+  padding: 0 (18/320)*100% 40px;
+  width: 100%;
   background: $grey-light;
 }
+.post__link {
+
+}
 .post__photo {
-  margin-left: -20px;
+  display: block;
+  width: 100%;
+  height: auto;
   &--first {
     margin-left: 0;
   }
 }
 .post__header {
-  padding: 23px 0 10px;
+  padding: 18px 0 0 2px;
 }
 .post__author {
   font-weight: bold;
@@ -28,22 +53,21 @@
   text-transform: uppercase;
 }
 .post__text {
-  padding-bottom: 20px;
-}
-.post__likes-container {
-  position: relative;
+  padding-bottom: 9px;
+  padding-left: 1px;
 }
 .post__like-it {
-  margin-right: 20px;
+  position: relative;
+  margin-right: 16px;
   width: 13px;
   height: 12px;
   background-color: $grey-light;
   border: 1px solid transparent;
   &::after {
     position: absolute;
-    content: '';
-    top: 0;
-    left: 0;
+    content: "";
+    top: 8px;
+    left: 1px;
     width: 13px;
     height: 12px;
     background: url("../img/icon-heart.svg") center no-repeat;
@@ -51,74 +75,113 @@
 }
 .post__likes-text {
   color: $red-text;
+  font-size: 12px;
+  text-transform: uppercase;
 }
 
-// планшетная версия
+/**************************************************************************************************
+********* планшетная версия
+**************************************************************************************************/
 @media #{$tablet} {
   .post {
-    display: inline-block;
-    padding-bottom: 50px;
-    width: 300px;
-    vertical-align: top;
+    margin-bottom: 6px;
+    width: (300/620)*100%;
     font-size: 14px;
     &--first {
-      display: block;
-      width: 620px;
-    }
-    &--first .post__inner {
-      width: 620px;
-    }
-    &:nth-child(2n+2) {
-      margin-right: 20px;
+      margin-bottom: 51px;
+      width: 100%;
+      &::before {
+        top: 56px;
+        left: auto;
+        right: 19px;
+      }
     }
   }
-  .post__inner {
-    position: relative;
-    margin: 0;
-    padding: 0;
-    width: 300px;
+  .post__wrapper {
+    padding: 0 (20/660)*100%;
   }
-  .post--first .post__likes-container {
-    position: absolute;
-    top: 20px;
-    right: 20px;
+
+  .post__container {
+    padding: 0 9% 40px;
+    &--first {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding:22px (28/660)*100% 15px;
+    }
+  }
+  .post__header {
+    padding-top: 24px;
+    &--first {
+      padding-top: 0;
+      order: 1;
+    }
+  }
+  .post__text {
+    &--first {
+      order: 3;
+    }
+  }
+  .post__likes-container {
+    display: flex;
+    justify-content: space-between;
+    &--first {
+      width: 121px;
+      order: 2;
+    }
+  }
+  .post__like-it {
+    left: -3px;
+    margin-right: 0;
+    order: 2;
+    &--first {
+      &::after {
+        top: 6px;
+        left: -2px;
+      }
+    }
+  }
+  .post__likes-text {
+    order: 1;
   }
   .post__photo {
-    margin-left: 0;
-    width: 300px;
+    height: 300px;
     &--first {
-      margin-left: -40px;
-      width: 700px;
-      height: 507px;
+      height: 509px;
     }
   }
-  .post-inner {
-    padding: 30px;
+  .post__container {
+
   }
 }
 
-
-// десктопная версия
+/**************************************************************************************************
+********* десктопная версия
+**************************************************************************************************/
 @media #{$desktop} {
   .post {
-    &:nth-child(2n+2) {
-      margin-right: 0;
+    width: 300px;
+    margin-bottom: 40px;
+    &--first {
+      margin-bottom: 51px;
+      width: 100%;
     }
-    &:nth-child(n+2) {
-      margin-right: 20px;
-    }
-    &:nth-child(3n+4) {
-      margin-right: 0;
-    }
-    &--first .post__inner {
-      width: 940px;
+  }
+  .post__wrapper {
+    padding: 0 10px;
+    width: 960px;
+  }
+  .post__container {
+      &--first {
+        padding: 24px 26px 13px;
     }
   }
   .post__photo {
+    height: 400px;
     &--first {
-    margin-left: -130px;
-    width: 1200px;
-    height: auto;
+      @include container();
+      width: 960px;
+      height: 507px;
     }
   }
 

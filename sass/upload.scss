@@ -1,58 +1,71 @@
 .upload {
   box-sizing: border-box;
-  @include container();
   width: 100%;
-  max-width: 940px;
-  background: $grey-light;
-  border: 1px solid green;  // для сетки
 }
 .upload__inner {
   box-sizing: border-box;
   @include container();
-  padding: 20px;
-  width: 320px;
-  @include clearfix();
+  padding: 20px 20px 20px 18px;
+  background: $grey-light;
+}
+.upload__photo {
+  display: block;
+  @include container();
+  width: 280px;
+  height: 374px;
 }
 .upload__filter-list {
-  padding: 20px 0;
-  font-size: 0;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 12.25% 37px;
 }
 .upload__filter {
   position: relative;
-  display: inline-block;
-  margin-right: 30px;
-  vertical-align: top;
+  width: 48px;
+  height: 48px;
   background-color: $grey-light;
-  border: 1px solid transparent;
-  &:last-child {
-    margin-right: 0;
-  }
+  border: none;
+  padding: 0;
   &::after {
     position: absolute;
     content: "";
-    top: -16px;
-    left: -18px;
+    top: 0px;
+    left: 0px;
     width: 48px;
     height: 48px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   &--crop::after {
-    background: url("../img/icon-editor-crop.svg") center no-repeat;
+    background-image: url("../img/icon-editor-crop.svg");
   }
   &--fill::after {
-    top: -13px;
-    left: -13px;
-    background: url("../img/icon-editor-fill.svg") center no-repeat;
+    background-image: url("../img/icon-editor-fill.svg");
   }
   &--contrast::after {
-    background: url("../img/icon-editor-contrast.svg") center no-repeat;
+    background-image: url("../img/icon-editor-contrast.svg");
+  }
+}
+.upload__bottom {
+  position: relative;
+  margin-top: 23px;
+  padding: 17px (20/320)*100% 42px;
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: -10%;
+    width: 120%;
+    height: 1px;
+    background-color: rgba(40, 54, 69, 0.1);
   }
 }
 .upload__cancel,
 .upload__start {
   box-sizing: border-box;
   width: 100%;
-  height: 50px;
+  height: 54px;
   font-weight: bold;
   font-size: 18px;
   background-color: transparent;
@@ -68,54 +81,138 @@
   border: 3px solid #dddfe0;
 }
 
-// планшетная версия
+/****************************************************************************************************
+***  планшетная версия
+****************************************************************************************************/
+
 @media #{$tablet} {
   .upload__inner {
-    padding: 50px 40px;
-    width: 700px;
+    display: flex;
+    justify-content: flex-start;
+    padding: 57px (20/660)*100% 52px;
+  }
+  .upload__wrapper-block {
+    width: (300/620)*100%;
+    &--controls {
+      flex-grow: 1;
+      width: (274/620)*100%;
+    }
   }
   .upload__photo {
-    float: left;
-    width: 300px;
-    height: 500px;
+    margin: 0;
+    width: 100%;
+    height: auto;
+
   }
   .upload__filter-list {
-    float: right;
-    margin-bottom: 70px;
-    width: 300px;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+  .upload__filter-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    padding: 27px 0 22px 48px;
+    width: 100%;
+    &:first-child {
+      padding-top: 8px;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: 0px;
+      left: 50%;
+      width: 80%;
+      height: 1px;
+      background-color: rgba(40, 54, 69, 0.1);
+      transform: translateX(-50%);
+    }
   }
   .upload__filter {
-    display: inline-block;
-    width: 30px;
-    height: 70px;
+    width: 23px;
+    height: 23px;
+    margin-right: 30px;
+    &::after {
+      width: 23px;
+      height: 23px;
+    }
+    &--contrast {
+      &::after {
+        left: 6px;
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+  .upload__bottom {
+    padding: 44px (13/300)*100% 0px (48/300)*100%;
+    &::before {
+      display: none;
+    }
   }
   .upload__start,
   .upload__cancel {
-    float: left;
-    margin-left: 30px;
-    width: 254px;
+
   }
   .upload__start {
-    margin-bottom: 20px;
+    margin-bottom: 26px;
   }
 }
 
-// десктопная версия
+/****************************************************************************************************
+***  десктопная версия
+****************************************************************************************************/
 @media #{$desktop} {
   .upload__inner {
-    padding: 45px 80px 55px;
+    justify-content: space-between;
+    @include container();
+    padding: 57px 59px 56px 80px;
     width: 940px;
   }
+  .upload__wrapper-block {
+    width: 300px;
+    &--controls {
+      flex-grow: 0;
+      width: 411px;
+    }
+  }
   .upload__filter-list {
-    width: 410px;
+  }
+  .upload__filter-wrapper {
+    padding: 18px 0 13px;
+    &:first-child {
+      padding-top: 0px;
+    }
+    &--contrast {
+      padding-bottom: 20px;
+    }
   }
   .upload__filter {
-    margin-right: 36px;
+    margin-right: 49px;
+    width: 43px;
+    height: 43px;
+    &::after {
+      width: 43px;
+      height: 43px;
+    }
+    &--contrast {
+      margin-right: 60px;
+      width: 32px;
+      height: 32px;
+      &::after {
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+  .upload__bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 124px 0px 0px;
   }
   .upload__start,
   .upload__cancel {
-    float: left;
-    margin-left: 20px;
-    width: 220px;
+    margin-bottom: 0;
+    width: 183px;
   }
 }

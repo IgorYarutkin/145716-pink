@@ -1,42 +1,35 @@
 .plans-wrapper {
   width: 100%;
   background-color: $grey-light;
+  background-image: url("../img/bg-triangle-white.svg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
 }
 
 .plans-wrapper__container {
   position: relative;
   box-sizing: border-box;
   @include container();
-  padding: 66px 0 33px;
+  padding: 85px 0 33px;
   width: 320px;
-  overflow: hidden;
-  &::before {
-    position: absolute;
-    content: "";
-    top: -85px;
-    left: 0;
-    width: 320px;
-    height: 85px;
-    background-color: $grey-light;
-  }
+  overflow-x: hidden;
 }
 
 
 // планшетная версия
 @media #{$tablet} {
   .plans-wrapper__container {
-    padding: 35px 40px 65px;
-    width: 700px;
-    &::before {
-      width: 700px;
-    }
+    padding: 85px (20/660)*100% 70px;
+    width: 660px;
+
   }
 }
 
 // десктопная версия
 @media #{$desktop} {
   .plans-wrapper__container {
-    padding: 65px 130px 85px;
-    width: 1200px;
+    padding: 143px 10px 96px;
+    width: 960px;
   }
 }

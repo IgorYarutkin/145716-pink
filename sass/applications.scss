@@ -1,12 +1,14 @@
 .applications {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;;
+  flex-wrap: wrap;
   box-sizing: border-box;
-  margin-top: 435px;
+  margin-top: 366px;
   width: 100%;
-  height: 267px;  // для сетки
   color: #fff;
   background-color: $grey-black;
-  border: 1px solid yellow;  // для сетки
 }
 
 .applications__title {
@@ -16,35 +18,77 @@
 
 .applications__download {
     box-sizing: border-box;
-    margin: 27px 0px 40px;
+    margin: 29px 0px 41px;
     width: 100%;
     font-weight: bold;
     font-size: 18px;
+    line-height: 50px;
+    text-align: center;
     background-color: inherit;
     border: 3px solid #fff;
+    border-radius: 25px;
 }
-
+.applications__item {
+  width: 28.875%;
+  text-align: center;
+}
+.applications__item--apple img {
+  position: relative;
+  top: -8px;
+}
 .applications__description {
-    font-weight: 300;
+  margin-top: 6px;
+  margin-bottom: 9px;
+  width: 240px;
+  text-align: center;
+  font-weight: 300;
 }
 
 // планшетная версия
 @media #{$tablet} {
-
   .applications {
-  margin-top: 170px;
-  margin-bottom: 80px;
+  margin-top: 55px;
+  margin-bottom: 60px;
   width: 300px;
-  height: 400px;
   background-color: transparent;
   z-index: 2;
   }
-
   .applications__title {
     display: block;
+    width: 247px;
     font-weight: 300;
     font-size: 40px;
+    line-height: 47px;
     text-align: center;
   }
+  .applications__download {
+    margin: 31px 0px 55px;
+  }
+  .applications__item {
+    width: 27%;
+  }
+  .applications__description {
+    margin-top: 20px;
+    width: auto;
+    font-size: 18px;
+  }
+}
 
+// десктопная версия
+@media #{$desktop} {
+  .applications {
+    margin-top: 109px;
+    margin-bottom: 102px;
+  }
+  .applications__title {
+    font-size: 50px;
+    line-height: 60px;
+  }
+  .applications__download {
+    margin: 51px 0 75px;
+    font-size: 21px;
+  }
+  .applications__description {
+    margin-top: 40px;
+  }
 }

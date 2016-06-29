@@ -1,25 +1,23 @@
 .social {
-  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  margin: 39px 0px;
+  width: 100%;
   font-size: 0;
-  text-align: center;
 }
 .social__item {
-  display: inline-block;
   box-sizing: border-box;
-  margin-right: 10px;
   width: 49px;
   height: 49px;
   border: 3px solid rgba(40, 54,69, 0.1);
   border-radius: 50%;
   background-position: center;
   background-repeat: no-repeat;
-  &:last-child {
-    margin-right: 0;
-  }
   &--twitter {
     background-image: url("../img/icon-twitter.svg");
   }
   &--facebook {
+    margin: 0 16px;
     background-image: url("../img/icon-facebook.svg");
   }
   &--youtube {
@@ -27,21 +25,40 @@
   }
 }
 
-
-// планшетная версия
+/***************************************************************************************************
+************ планшетная версия
+****************************************************************************************************/
 @media #{$tablet} {
   .social {
-    display: inline-block;
-    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
     margin-bottom: 0px;
-    width: 206px;
-    vertical-align: middle;
+    padding-top: 3px;
+    width: 30%;
+    &--page-form {
+      margin-top: 19px;
+    }
+  }
+  .social__item {
+    margin: 0 16px;
   }
 }
 
-// десктопная версия
+/***************************************************************************************************
+************ десктопная версия
+****************************************************************************************************/
 @media #{$desktop} {
   .social {
-    margin-right: 200px;
+    width: auto;
+    &--page-form {
+      margin-top: 0;
+    }
+  }
+  .social__item {
+    margin: 0;
+    &--facebook {
+      margin: 0 16px;
+    }
   }
 }

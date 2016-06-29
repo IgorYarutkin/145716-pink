@@ -1,40 +1,47 @@
 .advetisment {
   box-sizing: border-box;
   @include container();
-  padding-top: 50px;
+  padding: 38px (20/320)*100% 5px;
   width: 320px;
   font-weight: 300;
   font-size: 24px;
   text-align: center;
   color: $grey-text;
-  border: 1px solid blue;
 }
 .advetisment__text {
-    line-height: 65px;
+    line-height: 32px;
 }
 .advetisment__text span {
   display: block;
-  line-height: 65px;
+  margin-top: 25px;
+  line-height: 29px;
 }
 
 // планшетная версия
 @media #{$tablet} {
   .advetisment {
-    width: 700px;
+    padding: 58px (20/660)*100% 47px;
+    width: 660px;
+    font-size: 40px;
+  }
+  .advetisment__text span {
+    margin-top: 11px;
+    line-height: 46px;
   }
 }
 
 // десктопная версия
 @media #{$desktop} {
   .advetisment {
-    width: 1200px;
+    width: 940px;
+    padding: 62px 10px 85px;
   }
   .advetisment__text {
-    margin-bottom: 25px;
+    line-height: 65px;
     font-size: 50px;
-    &:nth-child(2) {
-      padding: 0 380px;
-      line-height: 50px;
-    }
+  }
+  .advetisment__text span {
+    margin-top: -2px;
+    line-height: 62px;
   }
 }

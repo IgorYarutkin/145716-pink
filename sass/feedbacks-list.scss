@@ -1,28 +1,50 @@
 .feedbacks-list {
-  position: relative;
   box-sizing: border-box;
   @include container();
-  padding: 93px 20px 50px;
-  width: 320px;
-  border: 1px solid red;
+  padding: 46px (20/320)*100% 31px;
+  width: auto;
+}
+.feedbacks-list__switcher {
+  display: none;
 }
 
 // планшетная версия
 @media #{$tablet} {
   .feedbacks-list {
-    padding-top: 30px;
-    width: 700px;
-    &::after {
-      width: 700px;
-    }
+    padding: 24px (20/660)*100% 6px;
   }
 }
 
 // десктопная версия
 @media #{$desktop} {
   .feedbacks-list {
-    padding: 180px 130px 110px;
-    width: 1200px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 183px 10px 45px;
+    width: 960px;
+    &::before {
+      position: absolute;
+      content: "";
+      top: 71px;
+      left: 445px;
+      width: 79px;
+      height: 63px;
+      background: url("../img/icon-quotes.png") top center no-repeat;
+    }
+  }
+  .feedbacks-list__switcher {
+    display: block;
+    padding-top: 28px;
+    width: 22px;
+    height: 90px;
+    &--left {
+      margin-right: auto;
+    }
+    &--right {
+      margin-left: auto;
+    }
   }
   .feedbacks-list__toggle {
     display: none;

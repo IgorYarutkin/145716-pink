@@ -1,6 +1,13 @@
 .contact {
-  margin-bottom: 35px;
+  margin-bottom: 21px;
   text-align: center;
+  line-height: 27px;
+  &--email {
+    margin-bottom: 26px;
+  }
+  &--address {
+    line-height: 29px;
+  }
 }
 .contact__title {
     display: block;
@@ -20,26 +27,35 @@
 // планшетная версия
 @media #{$tablet} {
   .contact {
-    display: inline-block;
-    width: 300px;
-    vertical-align: top;
+    width: 49%;
+    margin-bottom: 44px;
+    &--phone {
+      margin-right: 0;
+    }
+    &--address {
+      width: 100%;
+      margin-bottom: 11px;
+    }
   }
 }
 
 // десктопная версия
 @media #{$desktop} {
   .contact {
-    width: 280px;
+    align-content: stretch;
+    margin-right: 0;
+    width: 299px;
     &--phone {
-      float: left;
-      margin-left: 40px;
-    }
-    &--email {
-      float: right;
-      margin-right: 40px;
+      order: 1;
     }
     &--address {
-      width: 270px;
+      order: 2;
     }
+    &--email {
+      order: 3;
+    }
+  }
+  .contact__title {
+    margin-bottom: 17px;
   }
 }

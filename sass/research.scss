@@ -6,20 +6,33 @@
 @media #{$tablet} {
   .research {
     display: block;
+    width: 100%;
+  }
+  .research__container {
+    position: relative;
     box-sizing: border-box;
     @include container();
-    padding: 108px 40px 0 350px;
-    width: 700px;
-    height: 445px;
-    border: 1px solid green;
+    padding: 100px (20/660)*100% 100px 50% ;
+    min-height: 340px;
+    &::before {
+      position: absolute;
+      content: "";
+      top: 58px;
+      left: (20/660)*100%;
+      width: 240px;
+      height: 277px;
+      background: url("https://placehold.it/240x277/#dedede?text=Timer") top center no-repeat;
+    }
   }
   .research__title {
-    margin-bottom: 25px;
+    margin-bottom: 14px;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 30px;
+    line-height: 33px;
   }
   .research__text {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    padding-right: 5px;
   }
   .research__link {
     color: $red-text;
@@ -30,15 +43,30 @@
 // десктопная версия
 @media #{$desktop} {
   .research {
-    padding: 135px 130px 100px 500px;
-    width: 1200px;
-    background-color: $grey-light;
+    background-color: $grey-light;    
+  }
+  .research__container {
+    padding: 109px 50px 115px 375px;
+    width: 960px;
+    &::before {
+      top: 19px;
+      left: 9px;
+      width: 298px;
+      height: 345px;
+      background-size: 298px 345px;
+    }
   }
   .research__title {
+    margin-bottom: 24px;
     font-size: 30px;
   }
+  .research__title br {
+    display: none;
+  }
   .research__text {
+    margin-bottom: 34px;
     font-size: 18px;
+    line-height: 30px;
   }
   .research__link {
     font-size: 18px;

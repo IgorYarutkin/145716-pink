@@ -1,36 +1,54 @@
 .profit-list {
   width: 100%;
   background-color: $grey-light;
+  background-image: url("../img/bg-triangle-white.svg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100% auto;
 }
 
 .profit-list__container {
+  position: relative;
   box-sizing: border-box;
   @include container();
-  padding: 50px 20px 280px;
-  width: 320px;
-  background-image: url("../img/iphone-screen-mobile@1x.png");
-  background-position: center 543px;
-  background-repeat: no-repeat;
-  border: 1px solid black;
+  padding: 108px (20/320)*100% 286px;
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 50%;
+    width: 155px;
+    height: 276px;
+    background-image: url("../img/iphone-screen-mobile@1x.png");
+    background-position: top center;
+    background-repeat: no-repeat;
+    transform: translateX(-50%);
+  }
 }
 
 // планшетная версия
 @media #{$tablet} {
   .profit-list__container {
-    padding-left: 350px;
-    padding-bottom: 0;
-    width: 700px;
-    background-position: 40px 47px;
-    background-size: 263px auto;
+    padding: 75px (20/660)*100% 6px 50%;
+    &::after {
+      left: (20/660)*100%;
+      width: 268px;
+      height: 479px;
+      transform: translateX(0);
+      background-size: 268px auto;
+    }
   }
 }
 
 // десктопная версия
 @media #{$desktop} {
   .profit-list__container {
-    padding: 270px 130px 20px;
-    width: 1200px;
-    font-size: 0;
-    background-image: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 350px 10px 20px;
+    width: 940px;
+    &::after {
+      display: none;
+    }
   }
 }

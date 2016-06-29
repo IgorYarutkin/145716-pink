@@ -3,6 +3,8 @@
 @import 'fonts';
 @import 'mixins';
 @import 'general';
+@import 'slider';
+@import 'button';
 @import 'page-header';
 @import 'menu.scss';
 @import 'applications';
@@ -15,13 +17,13 @@
 @import 'feedback';
 @import 'plans-wrapper';
 @import 'plans';
-@import 'slider';
 @import 'page-footer';
 @import 'contact';
 @import 'form';
 @import 'description';
 @import 'social';
-@import 'post-container';
+@import 'post-list';
 @import 'post';
 @import 'upload';
 @import 'range';
+@import 'modal-upload';

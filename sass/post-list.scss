@@ -1,0 +1,26 @@
+.post-list {
+  @include container();
+  padding: 0 (20/320)*100%;
+  width: 100%;
+}
+
+// планшетная версия
+@media #{$tablet} {
+  .post-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: stretch;
+    align-content: stretch;
+    padding: 0 (20/660)*100%;
+  }
+}
+
+
+// десктопная версия
+@media #{$desktop} {
+  .post-list {
+  padding: 0 10px;
+  width: 960px;
+  }
+}

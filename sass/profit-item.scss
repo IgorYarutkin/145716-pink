@@ -3,12 +3,12 @@
   text-align: center;
 }
 .profit-item__title {
-  margin-bottom: 25px;
+  margin-bottom: 14px;
   font-weight: bold;
   font-size: 18px;
 }
 .profit-item__text {
-  margin-bottom: 44px;
+  margin-bottom: 29px;
   color: $grey-text;
 }
 
@@ -17,24 +17,38 @@
   .profit-item {
     text-align: left;
   }
+  .profit-item__text {
+    margin-bottom: 33px;
+  }
 }
 
 // десктопная версия
 @media #{$desktop} {
   .profit-item {
-    display: inline-block;
-    margin-right: 20px;
-    width: 290px;
-    vertical-align: top;
+    position: relative;
+    width: 282px;
     text-align: center;
-    &:last-child {
-      margin-right: 0px;
+    &::before {
+      position: absolute;
+      content: "";
+      top: -361px;
+      left: 48px;
+      width: 185px;
+      height: 300px;
+      background-image: url("../img/iphone-screen-mobile@1x.png");
+      background-position: top left;
+      background-size: 185px auto;
+      background-repeat: no-repeat;
     }
   }
   .profit-item__title {
+    padding: 0 30px;
     font-size: 30px;
+    margin-bottom: 34px;
   }
   .profit-item__text {
+    padding: 0 20px;
     font-size: 18px;
+    line-height: 28px;
   }
 }

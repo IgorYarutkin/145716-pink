@@ -2,16 +2,22 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Пинк - Конкурс</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
-      <div class="page-header__top">
-        <div class="page-header__top-container">
-        <a class="page-header__logo" href="index.html"><img src="img/logo-pink-white-mobile.svg" alt="Pink" width="74" height="23"></a>
+      <div class="page-header__top page-header__top--page-form">
+        <div class="page-header__top-container  page-header__top-container--page-form">
+        <a class="page-header__logo-link" href="index.html">
+          <picture>
+            <source media="(min-width:660px)" srcset="img/logotype-white-tablet.png">
+            <img class="page-header__logo" src="img/logo-pink-white-mobile.svg" alt="Pink" width="74" height="23">
+          </picture>
+        </a>
         <button class="page-header__button" type="button"></button>
-      <nav class="menu">
+      <nav class="menu menu--page-form">
         <ul class="menu__list">
           <li class="menu__item"><a href="index.html" class="menu__link">Главная</span></li>
           <li class="menu__item"><a href="photo.html" class="menu__link">Фотографии</a></li>
@@ -21,8 +27,8 @@
       </nav>
       </div>
       </div>
-      <div class="page-header__container">
-      <div class="page-title">
+      <div class="page-header__container  page-header__container--page-form">
+      <div class="page-title page-title--page-form">
         <h1 class="page-title__description">Конкурс на самое безбашеное путешествие с Пинк</h1>
       </div>
     </div>
@@ -36,107 +42,124 @@
             <span class="description--fill-form">Пожалуйста, заполните форму ниже:</span>
           </p>
 
+          <div class="form__inner">
           <fieldset class="form__group  form__group--name">
-            <div class="form__input-wrapper">
+            <div class="form__group-container  form__group-container--name">
+            <div class="form__input-wrapper  form__input-wrapper--name">
               <label class="form__field-name" for="surname">Фамилия</label>
               <input class="form__input form__input--text" id="surname" name="surname" type="text" placeholder="Укажите фамилию" required>
             </div>
-            <div class="form__input-wrapper">
+            <div class="form__input-wrapper  form__input-wrapper--name">
               <label class="form__field-name" for="first-name">Имя</label>
               <input class="form__input form__input--text" id="first-name" name="first-name" type="text" placeholder="Введите ваше имя" required>
             </div>
-            <div class="form__input-wrapper">
+            <div class="form__input-wrapper  form__input-wrapper--name">
               <label class="form__field-name" for="middle-name">Отчество</label>
               <input class="form__input form__input--text" id="middle-name" name="middle-name" type="text" placeholder="Ну и отчество тоже">
             </div>
+            </div>
           </fieldset>
           <fieldset class="form__group form__group--achivements">
-            <legend class="form__legend">Ваши безбашенные достижения&nbsp;в&nbsp;путешествии</legend>
-            <div class="form__input-wrapper">
+            <div class="form__legend  form__legend--achivements">Ваши безбашенные достижения&nbsp;в&nbsp;путешествии</div>
+            <div class="form__group-container form__group-container--achivements">
+            <div class="form__input-wrapper  form__input-wrapper--checkbox  form__input-wrapper--shark">
               <input class="form__input form__input--checkbox" type="checkbox" name="achievments" id="shark" checked>
               <label for="shark" class="form__checkbox-name">Сделал селфи с акулой</label>
             </div>
-            <div class="form__input-wrapper">
+            <div class="form__input-wrapper  form__input-wrapper--checkbox form__input-wrapper--beach">
               <input class="form__input form__input--checkbox" type="checkbox" name="achievments" id="burn" checked>
               <label for="burn" class="form__checkbox-name">Обгорел на пляже</label>
             </div>
-            <div class="form__input-wrapper">
+            <div class="form__input-wrapper  form__input-wrapper--checkbox  form__input-wrapper--norris">
               <input class="form__input form__input--checkbox" type="checkbox" name="achievments" id="Norris">
               <label for="Norris" class="form__checkbox-name">Видел Чака Норриса</label>
             </div>
-            <div class="form__input-wrapper">
+            <div class="form__input-wrapper  form__input-wrapper--checkbox  form__input-wrapper--souvenirs">
               <input class="form__input form__input--checkbox" type="checkbox" name="achievments" id="souvenirs">
               <label for="souvenirs" class="form__checkbox-name">Накупил сувениров</label>
             </div>
-            <div class="form__input-wrapper">
+            <div class="form__input-wrapper  form__input-wrapper--checkbox  form__input-wrapper--tower">
               <input class="form__input form__input--checkbox" type="checkbox" name="achievments" id="tower" checked>
               <label for="tower" class="form__checkbox-name">Удержал башню</label>
             </div>
-            <div class="form__input-wrapper">
+            <div class="form__input-wrapper  form__input-wrapper--checkbox  form__input-wrapper--hotel">
               <input class="form__input form__input--checkbox" type="checkbox" name="achievments" id="destruction">
               <label for="destruction" class="form__checkbox-name">Разгромил отель</label>
             </div>
+          </div>
           </fieldset>
           <fieldset class="form__group  form__group--contacts">
-            <div class="form__input-wrapper  form__input-wrapper--contacts">
-              <label class="form__field-name" for="tel">Номерок телефончика</label>
-              <input class="form__input form__input--text" id="tel" name="surname" type="tel" placeholder="Номер, пожалуйста" required>
-            </div>
-            <div class="form__input-wrapper  form__input-wrapper--contacts">
-              <label class="form__field-name" for="e-mail">Адресок почты</label>
-              <input class="form__input form__input--text" id="e-mail" name="surname" type="email" placeholder="E-mail, пожалуйста" required>
+            <div class="form__legend  form__legend--contacts">Контактная информация</div>
+            <div class="form__group-container form__group-container--contacts">
+              <div class="form__input-wrapper  form__input-wrapper--contacts">
+                <label class="form__field-name" for="tel"><span>Номерок телефончика</span><span>Номер телефона</span></label>
+                <input class="form__input form__input--text" id="tel" name="surname" type="tel" placeholder="Номер, пожалуйста" required>
+              </div>
+              <div class="form__input-wrapper  form__input-wrapper--contacts">
+                <label class="form__field-name" for="e-mail"><span>Адресок</span><span>Адрес</span> почты</label>
+                <input class="form__input form__input--text" id="e-mail" name="surname" type="email" placeholder="E-mail, пожалуйста" required data-placeholder="E-mail, давай">
+              </div>
             </div>
           </fieldset>
           <fieldset class="form__group  form__group--application">
-            <legend class="form__legend">С каким приложением путешествовали?</legend>
-            <div class="form__input-wrapper">
-              <input class="form__input form__input--radio" type="radio" id="iOS">
-              <label for="iOS" class="form__radio-name">Pink для iOS</label>
-            </div>
-            <div class="form__input-wrapper">
-              <input class="form__input form__input--radio" type="radio" id="android">
-              <label for="android" class="form__radio-name">Pink для Android</label>
-            </div>
-            <div class="form__input-wrapper">
-              <input class="form__input form__input--radio" type="radio" id="windows-phone">
-              <label for="windows-phone" class="form__radio-name">Windows Phone</label>
+            <div class="form__legend  form__legend--application">С каким приложением путешествовали?</div>
+            <div class="form__group-container form__group-container--application">
+              <div class="form__input-wrapper  form__input-wrapper--radio">
+                <input class="form__input form__input--radio" type="radio" id="iOS" checked>
+                <label for="iOS" class="form__radio-name">Pink для iOS</label>
+              </div>
+              <div class="form__input-wrapper  form__input-wrapper--radio">
+                <input class="form__input form__input--radio" type="radio" id="android">
+                <label for="android" class="form__radio-name">Pink для Android</label>
+              </div>
+              <div class="form__input-wrapper  form__input-wrapper--radio">
+                <input class="form__input form__input--radio" type="radio" id="windows-phone">
+                <label for="windows-phone" class="form__radio-name">Windows Phone</label>
+              </div>
             </div>
           </fieldset>
           <fieldset class="form__group  form__group--comments">
-            <legend class="form__legend">Опишите свои эмоции</legend>
-            <div class="form__input-wrapper">
-              <textarea class="form__textarea" name="emotions" id="emotions" cols="30" rows="10" >Можно прям в красках, не стесняясь в выражениях</textarea>
+            <div class="form__legend  form__legend--comments">Опишите свои эмоции</div>
+            <div class="form__group-container form__group-container--comments">
+              <div class="form__input-wrapper">
+                <textarea class="form__textarea" name="emotions" id="emotions" cols="30" rows="8" >Можно прям в красках, не стесняясь в выражениях</textarea>
+              </div>
             </div>
           </fieldset>
-          <div class="form__input-wrapper  form__input-wrapper--submit">
-            <button class="form__submit  button" type="submit">Отправить форму</button>
-            <p class="form__note">* — обязательные поля</p>
+        </div>
+          <div class="form__group-container form__group-container--submit">
+            <a class="form__submit  button" type="submit">Отправить форму</a>
+            <p class="form__note"><span>*</span> — обязательные <span>для заполнения </span>поля</p>
           </div>
         </form>
       </div>
     </main>
     <footer class="page-footer">
-      <div class="page-footer__bottom">
-        <img class="page-footer__logo" src="../img/logo-pink-blue-mobile.svg" alt="Pink" width="146" height="40">
-        <div class="social">
+      <div class="page-footer__bottom  page-footer__bottom--page-form">
+        <img class="page-footer__logo" src="img/logo-pink-blue-mobile.svg" alt="Pink" width="146" height="40">
+        <div class="social  social--page-form">
         <a href="#" class="social__item  social__item--twitter">twitter</a>
         <a href="#" class="social__item  social__item--facebook">facebook</a>
         <a href="#" class="social__item  social__item--youtube">youtube</a>
         </div>
-        <a href="https://htmlacademy.ru" class="page-footer__copyright">Разработано<img class="page-footer__htmlacademy-logo" src="img/htmlacademy.svg" alt="HTML Academy" width="60" height="60"></a>
+        <a href="https://htmlacademy.ru" class="page-footer__copyright page-footer__copyright--page-form">Разработано<img class="page-footer__htmlacademy-logo" src="img/htmlacademy.svg" alt="HTML Academy" width="60" height="60"></a>
       </div>
     </footer>
     <div class="modal-upload modal-upload--success visually-hidden">
       <h3 class="modal-upload__title">Ваша заявка отправлена</h3>
       <p class="modal-upload__text">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
       <div class="modal-upload__inner">
-        <button class="modal-upload__close button" type="button">Закрыть окно</button>
+        <div class="modal-upload__container">
+          <button class="modal-upload__close button" type="button">Закрыть окно</button>
+        </div>
       </div>
     </div>
     <div class="modal-upload modal-upload--error visually-hidden">
       <h3 class="modal-upload__title">Что-то пошло не так!</h3>
       <p class="modal-upload__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+      <div class="modal-upload__container  modal-upload__container--error">
         <button class="modal-upload__close button" type="button">Ок</button>
+      </div>
     </div>
   </body>
 </html>

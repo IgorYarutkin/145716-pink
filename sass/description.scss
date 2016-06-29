@@ -1,55 +1,62 @@
 .description {
   box-sizing: border-box;
   @include container();
-  padding: 55px 20px 15px;
-  width: 320px;
-  line-height: 24px;
+  padding: 49px (20/320)*100% 15px;
+  width: 100%;
+  line-height: 28px;
   text-align: center;
-  border: 1px solid blue;
   &--fill-form {
     display: none;
   }
   &--upload {
-    padding-bottom: 50px;
+    padding: 25px (24/320)*100% 41px (20/320)*100%;
+    line-height: 30px;
+  }
+  &--page-photo {
+    padding: 49px 11% 51px;
   }
 }
 
-// планшетная версия
+/*****************************************************************************************************
+********* планшетная версия
+*****************************************************************************************************/
 @media #{$tablet} {
   .description {
-    padding: 100px 60px 2px;
-    width: 620px;
+    padding: 94px (60/660)*100% 2px;
     font-size: 18px;
     &--fill-form {
       display: block;
+      margin-top: 3px;
+      margin-bottom: 60px;
       text-align: center;
       font-size: 18px;
-      margin-bottom: 60px;
     }
     &--page-photo {
-      padding: 100px 105px 80px;
-      width: 700px;
+      padding: 93px (105/660)*100% 78px;
+      line-height: 29px;
     }
     &--upload {
-      padding: 75px 80px;
-      width: 700px;
+      padding: 69px (80/660)*100%;
     }
   }
 }
 
-// десктопная версия
+/*****************************************************************************************************
+********* десктопная версия
+*****************************************************************************************************/
 @media #{$desktop} {
   .description {
     width: 940px;
     &--page-photo {
-      padding: 100px 280px 80px;
-      width: 1200px;
+      padding: 92px 180px 88px;
+      width: 960px;
     }
     &--fill-form {
       display: inline;
     }
     &--upload {
-      width: 1200px;
+      padding: 27px 0px 66px;
+      width: 960px;
     }
   }
 }

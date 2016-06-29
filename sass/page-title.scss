@@ -1,7 +1,10 @@
 .page-title {
-  box-sizing: border-box;
-  @include container();
-  padding: 40px 50px 85px;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 30px;
+  &--page-photo {
+    padding-top: 6px;
+  }
 }
 .page-title__description {
   font-weight: 300;
@@ -13,13 +16,21 @@
   }
 }
 
-// планшетная версия
+/****************************************************************************************************
+******    планшетная версия
+****************************************************************************************************/
 @media #{$tablet} {
   .page-title {
     padding: 90px 85px 145px;
-    width: 700px;
-    background-size: auto 728px;
     background-position: center top;
+    &--page-form {
+      padding: 27px (10/660)*100% 40px;
+      background-size: cover;
+    }
+    &--page-photo {
+      padding: 27px (10/660)*100% 40px;
+      background-size: cover;
+    }
     &--page-index {
       height: 728px;
       &::after {
@@ -40,12 +51,13 @@
   }
 }
 
-// десктопная версия
+/****************************************************************************************************
+******    десктопная версия
+****************************************************************************************************/
 @media #{$desktop} {
   .page-title {
-    padding: 80px 80px 110px;
-    width: 1200px;
-    background-size: 1200px auto;
+    padding: 80px 80px 0px;
+    background-size: 960px auto;
     &::after {
       top: 225px;
       left: 500px;
@@ -53,6 +65,12 @@
     &--page-index {
       height: 852px;
       background-position: bottom center;
+    }
+    &--page-form {
+      padding: 20px 80px 60px;
+    }
+    &--page-photo {
+      padding: 19px 125px 0px;
     }
   }
   .page-title__description {

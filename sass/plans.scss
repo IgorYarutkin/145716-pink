@@ -1,52 +1,119 @@
 .plans {
-  width: 1190px;
+  width: 840px;
   background-color: #fff;
-  transform: translateX(-550px);
+  transform: translateX(-260px);
+}
+td {
+  box-sizing: border-box;
+  font-size: 0;
+  text-transform: uppercase;
+  border: 2px solid $grey-line;
+}
+.plans__title {
+  color: #fff;
+  text-align: center;
+  background-color: $grey-text;
+  &--empty {
+    display: none;
+  }
+}
+.plans__title-name {
+  padding: 20px;
+  padding-bottom: 24px;
+  font-size: 18px;
+  font-weight: bold;
+  &--hit {
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 74px;
+      height: 73px;
+      background-image: url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEoAAABJCAMAAACtmkDtAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABpFBMVEUAAADSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFbSKFYAAAAFTzxhAAAAinRSTlMAATKp9v7NVggdu+ZJG5r04mcMxNE/AqBjNrT9ykoSsfBRJ53z1w0qwNhCCfsFN75B+FkwpPXPWwogvEYWmOdoM8LOBKJhNa/5y1AXtetNItxlL8HVQAOeZkStLNNdJb3dQxGZ7cMGpl6s91S56ZvhZFNi2wfjRQs9YE/a1lfg6mnMX1JL3tLJ1PpSKofHAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAixJREFUWMOt2HtT00AUBfBATYsgLYWSVrYIalvAVgSUh4JQWqnGB+ADjQg+EbUKVsEnoojvfGpnmOGPztB7ztLcD/Cbs5vc3ZsYhlQ1tb4DLlOmP1AnSsbBegpy3YZDMmQ0BkOc1BRulqXaFjJTpBVksqKk5MYAdLhNUY6Kt1sydaSDjNR5FKzu2PEEJyVjKVnq6iYz9ZwAmdLBDCeFwidlqfcUmSnehzL5SKl/AEinzwxy0tDwiCydPUdmahoFmcbOc2eBOz4BMmUnyUw51Hf5C6RkTsmQVbh4iYKUfRm8T1eukpmuTYPVzQTJvpu9Dvruxk0y0605kOn2HVLKOPL5ZPXWk48ufhdkSs2TmQYDQLoXJXd8YRHcLfcfkJkePgKZHj/p56QlJy1LhadkJj/qu+VnpGQ+lyEr+6JIQcr/EkwYja/ITCvtYHXGKjlhvA6nEEVmWkA7zlMlLFGUskdrPKISbwiIopJv4Y6T1BrqO5pKTKx7RNno9KWpzDAtyZQ5NDDiEfXuPQ/JVIPzwSMq91EHEqlPelJFStnTeY+opc+aUEVqo8T1Haa+9GlDFaiio7tPlag4exZAqri5L2kPKrKo9Y4L1FetvpOob1saZ4FIfSfuO45S2/uXyihl/1j2iFr5WQVURv1y9Ptub+o3f7cAyixVKe1S6g/65qQpcsIgqL9TzR5R9IQBqU56wkCUxoQBqH8aE4ZYZm4zXb2yU+Po3yFf6N8hX/8BI352Z6q/2McAAAAASUVORK5CYII=");
+      background-position: top left;
+      background-repeat: no-repeat;
+    }
+    &::after {
+      position: absolute;
+      content: "хит";
+      width: 74px;
+      height: 74px;
+      top: 8px;
+      left: 4px;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: bold;
+      transform: rotate(-45deg);
+    }
+  }
+}
+.plans__title-price {
+  display: block;
+  margin-top: 7px;
+  font-size: 24px;
+  font-weight: 300;
+}
+.plans__feature {
+  display: inline-block;
+  width: 206px;
+  font-size: 14px;
 }
 .plans__cell {
-  &--name {
-    width: 230px;
-  }
-  &--mark {
-    width: 90px;
-  }
-}
-
-.plans__title {
-  text-align: center;
-  color: #fff;
-  text-transform: uppercase;
-  background-color: $grey-dark;
-  &--empty {
-    background-color: $grey-light;
+  padding: 15px 20px 12px;
+  line-height: 15px;
+  &--text {
+    display: none;
   }
 }
-
-
 .plans__toggle {
-  height: 100px;
-  background-color: $grey-light;
+  padding-top: 40px;
 }
 
 // планшетная версия
 @media #{$tablet} {
   .plans {
     width: 620px;
-    transform: translateX(0px);
+    transform: none;
+  }
+  .plans__title {
+    &--empty {
+      display: table-cell;
+      background-color: $grey-light;
+      border-top: none;
+      border-left: none;
+    }
+  }
+  .plans__title-name {
+    padding: 15px 0px 12px 7px;
+    line-height: 22px;
+    &--hit {
+      &::before {
+        background-position: -7px -7px;
+      }
+      &::after {
+        top: 0;
+        left: 3px;
+      }
+    }
+  }
+  .plans__title-price {
+    font-size: 18px;
   }
   .plans__cell {
-    &--name {
-      width: 0px;
-      transform: translateX(-4000px);
+    padding: 8px 24px 5px 64px;
+    width: 153px;
+    &--text {
+      display: table-cell;
+      padding-left: 16px;
+      padding-right: 8px;
+      font-size: 14px;
+      text-transform: none;
     }
-    &--first {
-      width: 156px;
-      transform: translateX(0px);
-    }
-    &--mark {
-      width: 153px;
-      transform: translateX(-40px);
-    }
+  }
+  .plans__feature {
+    display: none;
   }
   .plans__toggle {
     display: none;
@@ -57,5 +124,20 @@
 @media #{$desktop} {
   .plans {
     width: 940px;
+  }
+  .plans__title-name {
+    padding: 20px 0px 27px;
+  }
+  .plans__title-price {
+    font-size: 24px;
+  }
+  .plans__cell {
+    padding: 18px 5px 8px 102px;
+    width: 235px;
+    &--text {
+      padding-left: 21px;
+      padding-top: 7px;
+      font-size: 18px;
+    }
   }
 }
