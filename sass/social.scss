@@ -23,6 +23,13 @@
   &--youtube {
     background-image: url("../img/icon-youtube.svg");
   }
+  &:hover {
+    border: 3px solid $grey-text;
+  }
+  &:active {
+    border: 3px solid $grey-text;
+    opacity: 0.1;
+  }
 }
 
 /***************************************************************************************************

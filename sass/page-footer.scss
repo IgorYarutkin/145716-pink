@@ -50,16 +50,34 @@
   }
 }
 .page-footer__logo {
+  display: none;
   fill: $grey-text;
+  &--mobile {
+    display: block;
+  }
+}
+.page-footer__logo-glasses{
+  fill: $red-text;
 }
 .page-footer__logo:hover .page-footer__logo-letter {
   fill: $red-text;
+}
+.page-footer__logo:active .page-footer__logo-glasses,
+.page-footer__logo:active .page-footer__logo-letter {
+  fill: rgba(210, 40, 86, 0.3);
 }
 .page-footer__htmlacademy-logo {
   margin-left: 12px;
   width: 40px;
   height: auto;
   vertical-align: middle;
+  fill: $red-text;
+}
+.page-footer__copyright:hover .page-footer__htmlacademy-logo {
+  fill: $grey-text;
+}
+.page-footer__copyright:active .page-footer__htmlacademy-logo {
+  opacity: 0.3;
 }
 
 /******************************************************************************************
@@ -160,6 +178,24 @@
     &--page-photo {
       padding: 96px 4px 20px 10px;
     }
+  }
+  .page-footer__logo {
+    &--mobile {
+      display: none;
+    }
+    &--desktop {
+      display: block;
+      &:hover {
+        fill: $red-text;
+      }
+    }
+  }
+  .page-footer__logo .page-footer__logo-glasses {
+    fill: $red-text;
+  }
+  .page-footer__logo:active .page-footer__logo-glasses,
+  .page-footer__logo:active .page-footer__logo-letter {
+    fill: rgba(210, 40, 86, 0.3);
   }
   .page-footer__copyright {
     margin-top: 12px;
