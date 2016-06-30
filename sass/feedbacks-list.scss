@@ -31,7 +31,10 @@
       left: 445px;
       width: 79px;
       height: 63px;
-      background: url("../img/icon-quotes.png") top center no-repeat;
+      background-image: url("../img/icon-quotes.svg");
+      background-position: top center;
+      background-repeat: no-repeat;
+      background-size: 79px auto;
     }
   }
   .feedbacks-list__switcher {

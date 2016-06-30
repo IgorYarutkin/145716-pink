@@ -60,13 +60,15 @@
   }
 }
 
-// десктопная версия
+/****************************************************************************************
+******** десктопная версия
+/****************************************************************************************/
 @media #{$desktop} {
   .research {
     background-color: $grey-light;
   }
   .research__container {
-    padding: 109px 50px 115px 375px;
+    padding: 112px 50px 115px 377px;
     width: 960px;
     &::before {
       top: 19px;
@@ -74,6 +76,16 @@
       width: 298px;
       height: 345px;
       background-size: 298px 345px;
+    }
+    &::after {
+      top: 89px;
+      left: 34px;
+      padding-top: 91px;
+      padding-left: 41px;
+      width: 180px;
+      height: 129px;
+      font-size: 120px;
+      border: 16px solid $red-text;
     }
   }
   .research__title {

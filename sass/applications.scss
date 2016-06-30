@@ -81,7 +81,7 @@
   }
   .applications__title {
     display: block;
-    width: 247px;
+    padding: 0 30px;
     font-weight: 300;
     font-size: 40px;
     line-height: 47px;
@@ -97,11 +97,14 @@
   }
 }
 
-// десктопная версия
+/******************************************************************************************
+*******     десктопная версия
+******************************************************************************************/
 @media #{$desktop} {
   .applications {
     margin-top: 109px;
     margin-bottom: 102px;
+    width: 300px;
   }
   .applications__title {
     font-size: 50px;
@@ -112,6 +115,6 @@
     font-size: 21px;
   }
   .applications__description {
-    margin-top: 40px;
+    margin-top: 47px;
   }
 }

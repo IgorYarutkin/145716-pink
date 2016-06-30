@@ -121,6 +121,9 @@
     width: 100%;
     font-size: 50px;
     line-height: 58px;
+    &--page-index {
+      margin-bottom: 55px;
+    }
   }
   .page-footer__map {
     width: 100%;
@@ -132,10 +135,15 @@
     }
   }
   .page-footer__bottom {
-    padding: 101px 4px 36px 10px;
     width: 960px;
+    &--page-index {
+      padding: 54px 4px 36px 10px;
+    }
     &--page-form {
       align-items: flex-start;
+      padding: 67px 4px 20px 10px;
+    }
+    &--page-photo {
       padding: 67px 4px 20px 10px;
     }
   }
