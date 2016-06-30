@@ -2,7 +2,9 @@
   display: none;
 }
 
-// планшетная версия
+/*******************************************************************************************
+**********  планшетная версия
+********************************************************************************************/
 @media #{$tablet} {
   .research {
     display: block;
@@ -18,10 +20,28 @@
       position: absolute;
       content: "";
       top: 58px;
-      left: (20/660)*100%;
+      left: 20px;
       width: 240px;
       height: 277px;
-      background: url("https://placehold.it/240x277/#dedede?text=Timer") top center no-repeat;
+      background-image: url("../img/icon-timer.svg");
+      background-position: top center;
+      background-repeat: no-repeat;
+      background-size: 240px auto;
+    }
+    &::after {
+      position: absolute;
+      content: "24";
+      top: 115px;
+      left: 39px;
+      padding-top: 72px;
+      padding-left: 32px;
+      width: 145px;
+      height: 106px;
+      color: $red-text;
+      font-size: 96px;
+      font-weight: bold;
+      border: 12px solid $red-text;
+      border-radius: 50%;
     }
   }
   .research__title {
@@ -43,7 +63,7 @@
 // десктопная версия
 @media #{$desktop} {
   .research {
-    background-color: $grey-light;    
+    background-color: $grey-light;
   }
   .research__container {
     padding: 109px 50px 115px 375px;

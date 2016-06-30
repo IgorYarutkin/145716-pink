@@ -42,6 +42,19 @@
     width: 44px;
   }
 }
+.applications__item--apple img {
+  width: 46px;
+  height: 57px;
+}
+.applications__item--android img {
+  width: 42px;
+  height: 47px;
+}
+.applications__item--windows-mobile img {
+  width: 44px;
+  height: 42px;
+}
+
 .application__icon-logo-apple {
   width: 47px;
   height: 57px;
@@ -54,12 +67,15 @@
   font-weight: 300;
 }
 
-// планшетная версия
+/*******************************************************************************************
+********* планшетная версия
+*******************************************************************************************/
 @media #{$tablet} {
   .applications {
   margin-top: 55px;
   margin-bottom: 60px;
-  width: 300px;
+  padding: 0;
+  width: (300/660)*100%;
   background-color: transparent;
   z-index: 2;
   }
@@ -73,9 +89,6 @@
   }
   .applications__download {
     margin: 31px 0px 55px;
-  }
-  .applications__item {
-    width: 27%;
   }
   .applications__description {
     margin-top: 20px;

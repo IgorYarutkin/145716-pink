@@ -30,7 +30,9 @@
   }
 }
 
-// планшетная версия
+/*****************************************************************************************
+******** планшетная версия
+******************************************************************************************/
 @media #{$tablet} {
   .profit-list__container {
     padding: 75px (20/660)*100% 6px 50%;
@@ -39,7 +41,11 @@
       width: 268px;
       height: 479px;
       transform: translateX(0);
+      background-image: url("../img/iphone-screen-3-tablet@1x.png");
       background-size: 268px auto;
+      @media #{$retina} {
+        background-image: url("../img/iphone-screen-3-tablet@2x.png");
+      }
     }
   }
 }
