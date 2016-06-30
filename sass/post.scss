@@ -118,6 +118,7 @@
     &--first {
       display: flex;
       justify-content: space-between;
+      flex-direction: row;
       flex-wrap: wrap;
       padding:22px (28/660)*100% 15px;
     }
@@ -172,14 +173,14 @@
 @media #{$desktop} {
   .post {
     width: 300px;
-    margin-bottom: 40px;
+    margin-bottom: 56px;
     &--first {
       margin-bottom: 51px;
       width: 100%;
       &::before {
-        top: 0;
+        top: 55;
         left: 50%;
-        transform: translateX(0px);
+        transform: translateX(330px);
       }
     }
   }
@@ -188,6 +189,7 @@
     width: 960px;
   }
   .post__container {
+    padding-bottom: 23px;
       &--first {
         padding: 24px 26px 13px;
     }
