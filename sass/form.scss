@@ -159,6 +159,7 @@
   border: 2px solid $grey-line;
 }
 .form__submit {
+  @include container();
   margin-bottom: 37px;
 }
 .form__note {
