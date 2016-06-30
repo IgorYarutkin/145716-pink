@@ -49,14 +49,14 @@
   }
 }
 .upload__bottom {
+  position: relative;
   margin-top: 42px;
   padding: 17px 0 21px;
   &::before {
     position: absolute;
     content: "";
-    top: 0;
-    left: -10%;
-    width: 120%;
+    left: -20px;
+    right: -20px;
     height: 1px;
     background-color: rgba(40, 54, 69, 0.1);
   }

@@ -1,4 +1,22 @@
+"use strict";
+
 (function() {
+  var pageHeaderTop = document.querySelector(".page-header__top");
+  var menu = document.querySelector(".menu");
+  var menuButton = document.querySelector(".page-header__button");
+
+  var onStart = function() {
+    pageHeaderTop.classList.remove("page-header__top--no-js");
+    menu.classList.remove("menu--no-js");
+  }
+
+  var checkButton = function() {
+    pageHeaderTop.classList.toggle("page-header__top--menu-open");
+    menu.classList.toggle("menu--open");
+  }
+
+  onStart();
+  menuButton.addEventListener("click", checkButton);
 
 })();
 

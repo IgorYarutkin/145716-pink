@@ -12,7 +12,9 @@
   color: $grey-text;
 }
 
+/************************************************************************
 // планшетная версия
+************************************************************************/
 @media #{$tablet} {
   .profit-item {
     text-align: left;
@@ -22,7 +24,9 @@
   }
 }
 
+/************************************************************************
 // десктопная версия
+************************************************************************/
 @media #{$desktop} {
   .profit-item {
     position: relative;
@@ -42,7 +46,7 @@
     &--mood {
       &::before {
         background-image: url("../img/iphone-screen-1-desktop@1x.png");
-        @media #{$retina} {
+        @media #{$retina-desktop} {
           background-image: url("../img/iphone-screen-1-desktop@2x.png");
         }
       }
@@ -51,7 +55,7 @@
       &::before {
         left: 52px;
         background-image: url("../img/iphone-screen-2-desktop@1x.png");
-        @media #{$retina} {
+        @media #{$retina-desktop} {
           background-image: url("../img/iphone-screen-2-desktop@2x.png");
         }
       }
@@ -60,7 +64,7 @@
       &::before {
         left: 53px;
         background-image: url("../img/iphone-screen-3-desktop@1x.png");
-        @media #{$retina} {
+        @media #{$retina-desktop} {
           background-image: url("../img/iphone-screen-3-desktop@2x.png");
         }
       }

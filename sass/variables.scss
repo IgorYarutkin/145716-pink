@@ -9,4 +9,6 @@ $green: #2aab6d;
 $font: 'Open Sans', Arial, sans-serif;
 $tablet: "(min-width: 660px)";
 $desktop: "(min-width: 960px)";
-$retina: "(min-resolution: 144dpi), (min-resolution: 1.5dppx)"
+$retina: "(min-resolution: 144dpi), (min-resolution: 1.5dppx)";
+$retina-tablet: "(min-resolution: 144dpi) and (min-width: 660px), (min-resolution: 1.5dppx) and (min-width: 660px)";
+$retina-desktop: "(min-resolution: 144dpi) and (min-width: 960px), (min-resolution: 1.5dppx) and (min-width: 960px)";

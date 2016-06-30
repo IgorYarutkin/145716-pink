@@ -169,7 +169,7 @@
         background-size: cover;
         background-position: top center;
         background-repeat: no-repeat;
-        @media #{$retina} {
+        @media #{$retina-tablet} {
           background-image: url("../img/iphone-hand-tablet@2x.png");
         }
       }
@@ -220,7 +220,7 @@
         width: 720px;
         height: 642px;
         background-image: url("../img/iphone-hand-desktop@1x.png");
-        @media #{$retina} {
+        @media #{$retina-desktop} {
           background-image: url("../img/iphone-hand-desktop@2x.png");
         }
       }

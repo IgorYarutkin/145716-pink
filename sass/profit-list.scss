@@ -43,7 +43,7 @@
       transform: translateX(0);
       background-image: url("../img/iphone-screen-3-tablet@1x.png");
       background-size: 268px auto;
-      @media #{$retina} {
+      @media #{$retina-tablet} {
         background-image: url("../img/iphone-screen-3-tablet@2x.png");
       }
     }
