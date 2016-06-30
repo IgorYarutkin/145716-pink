@@ -235,6 +235,7 @@
       padding-bottom: 34px;
     }
     &--submit {
+      @include container();
       display: flex;
       justify-content: space-between;
       padding: 66px (20/660)*100% 0px;
