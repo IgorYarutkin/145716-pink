@@ -79,15 +79,14 @@
       content: "";
       position: absolute;
       top: 100px;
-      left: 50%;
+      left: 0;
       width: 258px;
       height: 286px;
       background-image: url("../img/iphone-hand-mobile@1x.png");
       background-repeat: no-repeat;
       background-size: 258px 286px;
-      transform: translateX(-160px);
       @media #{$retina} {
-        background-image: url('../img/iphone-hand-mobile@2x.png');
+        background-image: url("../img/iphone-hand-mobile@2x.png");
       }
    }
   }
@@ -130,14 +129,16 @@
       &::after {
         top: auto;
         bottom: 0px;
-        left: 50%;
+        left: 25px;
         width: 609px;
         height: 545px;
         background-image: url("../img/iphone-hand-tablet@1x.png");
         background-size: cover;
         background-position: top center;
         background-repeat: no-repeat;
-        transform: translateX(-305px);
+        @media #{$retina} {
+          background-image: url("../img/iphone-hand-tablet@2x.png");
+        }
       }
     }
     &--page-photo {
@@ -146,7 +147,9 @@
   }
 }
 
-// десктопная версия
+/*******************************************************************************************
+*****  десктопная версия
+*******************************************************************************************/
 @media #{$desktop} {
   .page-header__top-container {
     padding: 28px 10px 25px;
@@ -162,11 +165,13 @@
       padding: 0px (10/960)*100% 10px;
       &::after {
         bottom: 0;
-        left: 475px;
-        width: 580px;
+        left: 191px;
+        width: 720px;
         height: 642px;
-        background-size: auto 642px;
-        transform: translateX(-134px);
+        background-image: url("../img/iphone-hand-desktop@1x.png");
+        @media #{$retina} {
+          background-image: url("../img/iphone-hand-desktop@2x.png");
+        }
       }
     }
   }
