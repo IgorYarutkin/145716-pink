@@ -15,16 +15,28 @@
     font-size: 18px;
 }
 
-.contact__link,
 .contact__text {
     font-weight: 300;
     font-size: 24px;
     color: $red-text;
 }
+.contact__link {
+    font-weight: 300;
+    font-size: 24px;
+    color: $red-text;
+    &:hover {
+      color: $grey-text;
+      text-decoration: underline;
+    }
+    &:active {
+      color: rgba(40, 54, 69, 0.3);
+      text-decoration: none;
+    }
+}
 
-
-
-// планшетная версия
+/*****************************************************************************
+*******       планшетная версия
+*****************************************************************************/
 @media #{$tablet} {
   .contact {
     width: 49%;

@@ -23,6 +23,13 @@
   &--youtube {
     background-image: url("../img/icon-youtube.svg");
   }
+  &:hover {
+    border: 3px solid $grey-text;
+  }
+  &:active {
+    border: 3px solid $grey-text;
+    opacity: 0.1;
+  }
 }
 
 /***************************************************************************************************
@@ -41,7 +48,7 @@
     }
   }
   .social__item {
-    margin: 0 16px;
+    margin: 0 6px;
   }
 }
 

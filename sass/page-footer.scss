@@ -45,17 +45,44 @@
   &--page-index {
     display: none;
   }
+  &--page-form {
+    padding: 0;
+  }
+}
+.page-footer__logo {
+  display: none;
+  fill: $grey-text;
+  &--mobile {
+    display: block;
+  }
+}
+.page-footer__logo-glasses{
+  fill: $red-text;
+}
+.page-footer__logo:hover .page-footer__logo-letter {
+  fill: $red-text;
+}
+.page-footer__logo:active .page-footer__logo-glasses,
+.page-footer__logo:active .page-footer__logo-letter {
+  fill: rgba(210, 40, 86, 0.3);
 }
 .page-footer__htmlacademy-logo {
   margin-left: 12px;
   width: 40px;
   height: auto;
   vertical-align: middle;
+  fill: $red-text;
+}
+.page-footer__copyright:hover .page-footer__htmlacademy-logo {
+  fill: $grey-text;
+}
+.page-footer__copyright:active .page-footer__htmlacademy-logo {
+  opacity: 0.3;
 }
 
-/***************************************************************************************************
+/******************************************************************************************
 ************ планшетная версия
-****************************************************************************************************/
+******************************************************************************************/
 @media #{$tablet} {
   .page-footer {
     &--page-index {
@@ -88,8 +115,12 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 35px (15/660)*100% 35px (20/660)*100%;
+    padding: 35px (15/660)*100%;
     width: 100%;
+    &--page-form {
+      align-items: center;
+      padding: 70px (15/660)*100%;
+    }
   }
   .page-footer__copyright {
     margin-top: 12px;
@@ -105,6 +136,7 @@
     height: auto;
     vertical-align: middle;
   }
+}
 
 /***************************************************************************************************
 ************ десктопная версия
@@ -121,6 +153,9 @@
     width: 100%;
     font-size: 50px;
     line-height: 58px;
+    &--page-index {
+      margin-bottom: 55px;
+    }
   }
   .page-footer__map {
     width: 100%;
@@ -132,12 +167,35 @@
     }
   }
   .page-footer__bottom {
-    padding: 101px 4px 36px 10px;
     width: 960px;
+    &--page-index {
+      padding: 54px 4px 36px 10px;
+    }
     &--page-form {
       align-items: flex-start;
       padding: 67px 4px 20px 10px;
     }
+    &--page-photo {
+      padding: 96px 4px 20px 10px;
+    }
+  }
+  .page-footer__logo {
+    &--mobile {
+      display: none;
+    }
+    &--desktop {
+      display: block;
+      &:hover {
+        fill: $red-text;
+      }
+    }
+  }
+  .page-footer__logo .page-footer__logo-glasses {
+    fill: $red-text;
+  }
+  .page-footer__logo:active .page-footer__logo-glasses,
+  .page-footer__logo:active .page-footer__logo-letter {
+    fill: rgba(210, 40, 86, 0.3);
   }
   .page-footer__copyright {
     margin-top: 12px;
@@ -151,4 +209,4 @@
     height: auto;
     vertical-align: middle;
   }
-}}
+}

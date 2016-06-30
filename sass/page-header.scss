@@ -2,8 +2,11 @@
   width: 100%;
   background-color: $grey-black;
   background-image: url('../img/bg-back-mobile@1x.jpg');
-  background-position: 50% -6px;
+  background-position: top center;
   background-repeat: no-repeat;
+  @media #{$retina} {
+    background-image: url("../img/bg-back-mobile@2x.jpg");
+  }
 }
 .page-header__top {
   width: 100%;
@@ -24,52 +27,97 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 5px;
-  padding: 20px (20/320)*100%;
+  padding: 18px (20/320)*100%;
   z-index: 1;
 }
 .page-header__logo {
   width: 74px;
   height: 23px;
+  &--mobile {
+    display: block;
+    fill: #fff;
+    &:hover {
+      fill: $red-text;
+    }
+    &:active {
+      fill: rgba(255, 255, 255, 0.3);
+    }
+  }
+  &--tablet {
+    display: none;
+  }
+  &--desktop {
+    display: none;
+  }
 }
 .page-header__button {
+  margin-right: 0;
+  margin-left: auto;
+  padding: 0;
   width: 50px;
   height: 24px;
   border: none;
-  background: url("../img/icon-menu-burger.svg") no-repeat top center;
+  background-color: transparent;
   &--menu-open {
-    margin-left: auto;
-    margin-right: -14px;
-    background: url("../img/icon-menu-cross.svg") no-repeat top center;
+    width: 24px;
   }
 }
-
+.page-header__icon-hamburger {
+  display: block;
+  fill: #fff;
+}
+.page-header__icon-cross {
+  display: none;
+  fill: #fff;
+}
+.page-header__button--menu-open .page-header__icon-hamburger {
+  display: none;
+}
+.page-header__button--menu-open .page-header__icon-cross {
+  display: block;
+}
+.page-header__button:hover .page-header__icon-hamburger,
+.page-header__button:hover .page-header__icon-cross {
+  fill: $red-text;
+}
+.page-header__button:active .page-header__icon-hamburger,
+.page-header__button:active .page-header__icon-cross {
+  fill: rgba(210, 40, 86, 0.3);
+}
 .page-header__container {
   @include container();
   position: relative;
   box-sizing: border-box;
-  padding: 20px (20/320)*100%;
+  padding: 20px 0 0;
   &--page-index {
     min-height: 392px;
     &::after {
       content: "";
       position: absolute;
       top: 100px;
-      left: 50%;
+      left: 0;
       width: 258px;
       height: 286px;
-      background: url("../img/iphone-hand-mobile@1x.png") no-repeat;
-      transform: translateX(-160px);
+      background-image: url("../img/iphone-hand-mobile@1x.png");
+      background-repeat: no-repeat;
+      background-size: 258px 286px;
+      @media #{$retina} {
+        background-image: url("../img/iphone-hand-mobile@2x.png");
+      }
    }
   }
   &--page-form {
     padding: 21px (20/320)*100% 50px;
   }
   &--page-photo {
-    padding-bottom: 80px;
+    padding: 16px 20px 0;
+    min-height: 162px;
   }
 }
 
-// планшетная версия
+/*******************************************************************************************
+****  планшетная версия
+*******************************************************************************************/
 @media #{$tablet} {
   .page-header {
     background-size: cover;
@@ -87,6 +135,22 @@
   .page-header__logo {
     width: 147px;
     height: 40px;
+    &--mobile {
+      display: none;
+    }
+    &--tablet {
+      display: block;
+      fill: #fff;
+      &:hover {
+        fill: $red-text;
+      }
+      &:active {
+        fill: rgba(255, 255, 255, 0.3);
+      }
+    }
+    &--desktop {
+      display: none;
+    }
   }
   .page-header__button {
     margin-top: 15px;
@@ -94,17 +158,20 @@
   .page-header__container {
     padding: 40px (20/660)*100%;
     &--page-index {
-      min-height: 618px;
       padding: 40px (20/660)*100%;
       &::after {
         top: auto;
-        bottom: 0;
-        left: 50%;
-        width: 485px;
-        height: 542px;
-        background-size: auto 542px;
+        bottom: 0px;
+        left: 25px;
+        width: 609px;
+        height: 545px;
         background-image: url("../img/iphone-hand-tablet@1x.png");
-        transform: translateX(-171px);
+        background-size: cover;
+        background-position: top center;
+        background-repeat: no-repeat;
+        @media #{$retina-tablet} {
+          background-image: url("../img/iphone-hand-tablet@2x.png");
+        }
       }
     }
     &--page-photo {
@@ -113,11 +180,31 @@
   }
 }
 
-// десктопная версия
+/*******************************************************************************************
+*****  десктопная версия
+*******************************************************************************************/
 @media #{$desktop} {
   .page-header__top-container {
     padding: 28px 10px 25px;
     width: 960px;
+  }
+  .page-header__logo {
+    &--mobile {
+      display: none;
+    }
+    &--tablet {
+      display: none;
+    }
+    &--desktop {
+      display: block;
+      fill: #fff;
+      &:hover {
+        fill: $red-text;
+      }
+      &:active {
+        fill: rgba(255, 255, 255, 0.3);
+      }
+    }
   }
   .page-header__button {
     display: none;
@@ -129,11 +216,13 @@
       padding: 0px (10/960)*100% 10px;
       &::after {
         bottom: 0;
-        left: 475px;
-        width: 580px;
+        left: 191px;
+        width: 720px;
         height: 642px;
-        background-size: auto 642px;
-        transform: translateX(-134px);
+        background-image: url("../img/iphone-hand-desktop@1x.png");
+        @media #{$retina-desktop} {
+          background-image: url("../img/iphone-hand-desktop@2x.png");
+        }
       }
     }
   }

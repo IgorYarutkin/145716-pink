@@ -17,7 +17,7 @@
 .upload__filter-list {
   display: flex;
   justify-content: space-between;
-  padding: 40px 12.25% 37px;
+  padding: 40px 12.25% 30px;
 }
 .upload__filter {
   position: relative;
@@ -45,18 +45,18 @@
   }
   &--contrast::after {
     background-image: url("../img/icon-editor-contrast.svg");
+    background-size: 30px auto;
   }
 }
 .upload__bottom {
   position: relative;
-  margin-top: 23px;
-  padding: 17px (20/320)*100% 42px;
+  margin-top: 42px;
+  padding: 17px 0 21px;
   &::before {
     position: absolute;
     content: "";
-    top: 0;
-    left: -10%;
-    width: 120%;
+    left: -20px;
+    right: -20px;
     height: 1px;
     background-color: rgba(40, 54, 69, 0.1);
   }
@@ -72,7 +72,7 @@
   border-radius: 25px;
 }
 .upload__start {
-  margin-bottom: 10px;
+  margin-bottom: 13px;
   color: $red-text;
   border: 3px solid $red-text;
 }
@@ -145,6 +145,7 @@
     }
   }
   .upload__bottom {
+    margin-top: 26px;
     padding: 44px (13/300)*100% 0px (48/300)*100%;
     &::before {
       display: none;
