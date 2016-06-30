@@ -30,7 +30,7 @@
     padding-top: 18px;
   }
   &--submit {
-  padding-top: 28px;
+  padding-top: 24px;
   padding-bottom: 57px;
   }
 
@@ -172,8 +172,9 @@
   display: none;
 }
 
-
-// планшетная версия
+/**************************************************************************************
+********   планшетная версия
+**************************************************************************************/
 @media #{$tablet}  {
   .form__inner {
     display: flex;
@@ -184,21 +185,21 @@
     width: 100%;
     border: 2px solid $grey-line;
     &--name {
-      margin-bottom: 6px;
+      margin-bottom: 14px;
       width: 100%;
       border: none;
       order: 1;
     }
     &--achivements {
       order: 4;
-      margin-bottom: 58px;
+      margin-bottom: 65px;
     }
     &--contacts {
       order: 3;
-      margin-bottom: 60px;
+      margin-bottom: 67px;
     }
     &--application {
-      margin-bottom: 56px;
+      margin-bottom: 66px;
       order: 2;
     }
     &--comments {
@@ -212,16 +213,18 @@
       padding: 5px 0 0;
     }
     &--contacts {
-      padding-top: 36px;
+      padding-top: 24px;
     }
     &--achivements {
+      padding-top: 12px;
       padding-bottom: 28px;
     }
     &--application {
+      padding-top: 12px;
       padding-bottom: 41px;
     }
     &--comments {
-      padding-top: 37px;
+      padding-top: 28px;
       padding-bottom: 34px;
     }
     &--submit {
@@ -269,7 +272,16 @@
         width: 60px;
         height: 60px;
         background-color: $grey-line;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 20px auto;
       }
+    }
+    &--phone::before {
+      background-image: url("../img/icon-phone.svg");
+    }
+    &--email::before {
+      background-image: url("../img/icon-mail.svg");
     }
   }
   .form__input-wrapper--contacts .form__input--text {
@@ -320,7 +332,9 @@
   }
 }
 
-// десктопная версия
+/****************************************************************************************
+***** десктопная версия
+****************************************************************************************/
 @media #{$desktop} {
   .form__inner {
     @include container();
@@ -336,21 +350,22 @@
     }
     &--achivements {
       order: 4;
-      margin-top: 57px;
+      margin-top: 65px;
       margin-bottom: 0px;
     }
     &--contacts {
       order: 3;
-      margin-top: 56px;
+      margin-top: 63px;
       margin-bottom: 0px;
     }
     &--application {
-      margin-bottom: 0px;
+      margin-top: 8px;
+      margin-bottom: 0;
       width: 46%;
       order: 2;
     }
     &--comments {
-      margin-top: 57px;
+      margin-top: 65px;
       order: 5;
     }
   }
@@ -359,23 +374,23 @@
       padding-top: 11px;
     }
     &--application {
-      padding-top: 24px;
+      padding-top: 15px;
       padding-left: 76px;
     }
     &--contacts {
       display: flex;
       justify-content: space-between;
-      padding: 32px 59px 0px;
+      padding: 23px 59px 0px;
     }
     &--achivements {
       display: flex;
       flex-direction: row;
       justify-content: flex-start;
       flex-wrap: wrap;
-      padding: 21px 30px 36px 60px;
+      padding: 14px 30px 33px 60px;
     }
     &--comments {
-      padding: 37px 60px 26px;
+      padding: 26px 60px;
     }
     &--submit {
       padding: 66px 10px 0px;

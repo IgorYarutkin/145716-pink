@@ -45,6 +45,9 @@
   &--page-index {
     display: none;
   }
+  &--page-form {
+    padding: 0;
+  }
 }
 .page-footer__htmlacademy-logo {
   margin-left: 12px;
@@ -88,8 +91,12 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 35px (15/660)*100% 35px (20/660)*100%;
+    padding: 35px (15/660)*100%;
     width: 100%;
+    &--page-form {
+      align-items: center;
+      padding: 70px (15/660)*100%;
+    }
   }
   .page-footer__copyright {
     margin-top: 12px;
@@ -105,6 +112,7 @@
     height: auto;
     vertical-align: middle;
   }
+}
 
 /***************************************************************************************************
 ************ десктопная версия
@@ -159,4 +167,4 @@
     height: auto;
     vertical-align: middle;
   }
-}}
+}
