@@ -33,6 +33,22 @@
 .page-header__logo {
   width: 74px;
   height: 23px;
+  &--mobile {
+    display: block;
+    fill: #fff;
+    &:hover {
+      fill: $red-text;
+    }
+    &:active {
+      fill: rgba(255, 255, 255, 0.3);
+    }
+  }
+  &--tablet {
+    display: none;
+  }
+  &--desktop {
+    display: none;
+  }
 }
 .page-header__button {
   margin-right: 0;
@@ -119,6 +135,22 @@
   .page-header__logo {
     width: 147px;
     height: 40px;
+    &--mobile {
+      display: none;
+    }
+    &--tablet {
+      display: block;
+      fill: #fff;
+      &:hover {
+        fill: $red-text;
+      }
+      &:active {
+        fill: rgba(255, 255, 255, 0.3);
+      }
+    }
+    &--desktop {
+      display: none;
+    }
   }
   .page-header__button {
     margin-top: 15px;
@@ -155,6 +187,24 @@
   .page-header__top-container {
     padding: 28px 10px 25px;
     width: 960px;
+  }
+  .page-header__logo {
+    &--mobile {
+      display: none;
+    }
+    &--tablet {
+      display: none;
+    }
+    &--desktop {
+      display: block;
+      fill: #fff;
+      &:hover {
+        fill: $red-text;
+      }
+      &:active {
+        fill: rgba(255, 255, 255, 0.3);
+      }
+    }
   }
   .page-header__button {
     display: none;

@@ -30,15 +30,15 @@
     text-align: center;
     box-shadow: 0 1px #000,
       inset 0 2px rgba(255, 255, 255, 0.15);
+    &:hover {
+      color: $red-text;
+    }
+    &:active {
+      color: rgba(210, 40, 86, 0.3);
+    }
 }
 .menu__link {
     text-align: center;
-}
-.menu__link:hover {
-  color: $red-text;
-}
-.menu__link:active {
-  color: rgba(210, 40, 86, 0.3);
 }
 
 /******************************************************************************************
@@ -70,10 +70,43 @@
     flex-wrap: wrap;
   }
   .menu__item {
+    position: relative;
     margin-top: -7px;
     font-size: 18px;
     font-weight: normal;
     text-transform: none;
     box-shadow: none;
+    &::after {
+      display: none;
+      position: absolute;
+      content: "";
+      bottom: 12px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #fff;
+    }
+    &:hover {
+      color: #fff;
+      &::after {
+        display: block;
+      }
+      &:active {
+        color: rgba(255, 255, 255, 0.3);
+        &::after {
+          display: none;
+        }
+      }
+    }
+    &--active {
+      &:hover {
+        color: $red-text;
+        &::after {
+          background-color: $red-text;
+        }
+      }
+    }
   }
+
+
 }

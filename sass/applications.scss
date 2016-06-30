@@ -28,6 +28,13 @@
     background-color: inherit;
     border: 3px solid #fff;
     border-radius: 25px;
+    &:hover {
+      background-color: #fff;
+      color: $red-text;
+    }
+    &:active {
+      color: rgba(210, 40, 86, 0.3);
+    }
 }
 .applications__item {
   &--apple {
