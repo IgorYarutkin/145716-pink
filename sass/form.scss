@@ -91,6 +91,7 @@
     }
     &:focus {
       outline: none;
+      border: 2px solid $red-text;
     }
   }
   &--checkbox {
@@ -180,6 +181,7 @@
   border: 2px solid $grey-line;
   &:focus {
     outline: none;
+    border: 2px solid $red-text;
   }
   &:hover {
     border: 2px solid $grey-text;
@@ -301,10 +303,10 @@
       &::before {
         position: absolute;
         content: "";
-        top: 5px;
-        right: 0;
-        width: 60px;
-        height: 60px;
+        top: 7px;
+        right: 2px;
+        width: 58px;
+        height: 56px;
         background-color: $grey-line;
         background-position: center;
         background-repeat: no-repeat;
