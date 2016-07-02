@@ -2,7 +2,7 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
   &--first {
     position: relative;
     &::before {
@@ -67,6 +67,7 @@
   display: flex;
   justify-content: flex-start;
   margin-top: auto;
+  font-size: 0;
 }
 .post__like-it {
   position: relative;
@@ -96,7 +97,7 @@
 **************************************************************************************************/
 @media #{$tablet} {
   .post {
-    margin-bottom: 6px;
+    margin-bottom: 19px;
     width: (300/620)*100%;
     font-size: 14px;
     &--first {
@@ -114,7 +115,7 @@
   }
 
   .post__container {
-    padding: 0 9% 40px;
+    padding: 0 9% 27px;
     &--first {
       display: flex;
       justify-content: space-between;
@@ -131,6 +132,7 @@
     }
   }
   .post__text {
+    min-height: 47px;
     &--first {
       order: 3;
     }
@@ -192,6 +194,11 @@
     padding-bottom: 23px;
       &--first {
         padding: 24px 26px 13px;
+    }
+  }
+  .post__text {
+    &--first {
+      min-height: 0;
     }
   }
   .post__photo {

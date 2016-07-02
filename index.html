@@ -200,26 +200,40 @@
       </div>
     </div>
     <div class="feedbacks-list  slider">
-      <input class="slider__input" type="radio" name="feedback" checked>
-      <input class="slider__input" type="radio" name="feedback">
-      <input class="slider__input" type="radio" name="feedback">
-      <button class="feedbacks-list__switcher feedbacks-list__switcher--left slider__arrow slider__arrow--left" type="button"><img src="img/icon-review-arrow-left.svg" alt="Влево" width="22" height="41"></button>
-      <div class="feedback slider__item--current">
+      <input class="slider__input" id="feedback-input-1" type="radio" name="feedback" checked>
+      <input class="slider__input" id="feedback-input-2" type="radio" name="feedback">
+      <input class="slider__input" id="feedback-input-3" type="radio" name="feedback">
+      <button class="feedbacks-list__switcher feedbacks-list__switcher--left" type="button">
+        <svg class="feedbacks-list__arrow  feedbacks-list__arrow--left" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        	 width="21.706px" height="41.719px" viewBox="0 0 21.706 41.719" enable-background="new 0 0 21.706 41.719" xml:space="preserve">
+        <path d="M2.045,20.859L21.458,1.446c0.331-0.331,0.331-0.867,0-1.198c-0.33-0.331-0.867-0.331-1.197,0L0.248,20.261
+        	c-0.331,0.33-0.331,0.867,0,1.197l20.013,20.013c0.164,0.165,0.382,0.248,0.599,0.248s0.434-0.083,0.599-0.248
+        	c0.331-0.331,0.331-0.867,0-1.198L2.045,20.859z"/>
+        </svg>
+      </button>
+      <div class="feedback  feedback--active">
         <p class="feedback__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
         <div class="feedback__author-name">Николай Петров</div>
         <div class="feedback__author-details">25 лет, водитель трамвая</div>
       </div>
-      <div class="feedback  slider__item">
+      <div class="feedback">
         <p class="feedback__text"></p>
         <div class="feedback__author-name"></div>
         <div class="feedback__author-details"></div>
       </div>
-      <div class="feedback  slider__item">
+      <div class="feedback">
         <p class="feedback__text"></p>
         <div class="feedback__author-name"></div>
         <div class="feedback__author-details"></div>
       </div>
-      <button class="feedbacks-list__switcher feedbacks-list__switcher--right slider__arrow slider__arrow--right" type="button"><img src="img/icon-review-arrow-right.svg" alt="Вправо" width="22" height="41"></div>
+      <button class="feedbacks-list__switcher feedbacks-list__switcher--right" type="button">
+        <svg class="feedbacks-list__arrow  feedbacks-list__arrow--right" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        	 width="21.706px" height="41.719px" viewBox="0 0 21.706 41.719" enable-background="new 0 0 21.706 41.719" xml:space="preserve">
+        <path d="M19.661,20.859L0.248,1.446c-0.331-0.331-0.331-0.867,0-1.198c0.33-0.331,0.867-0.331,1.197,0l20.013,20.012
+        	c0.33,0.33,0.33,0.867,0,1.197L1.445,41.471c-0.164,0.165-0.382,0.248-0.599,0.248s-0.434-0.083-0.599-0.248
+        	c-0.331-0.331-0.331-0.867,0-1.198L19.661,20.859z"/>
+        </svg>
+      </button>
       <div class="feedbacks-list__toggle  slider__toggles slider__toggles--feedbaks">
         <label class="slider__toggle" for="feedback-input-1">1</label>
         <label class="slider__toggle" for="feedback-input-2">2</label>
@@ -439,6 +453,7 @@
   </main>
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
   <script src="js/app.js"></script>
+
 </body>
 
 </html>
