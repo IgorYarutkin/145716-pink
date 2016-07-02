@@ -50,10 +50,12 @@
   }
 }
 .page-footer__logo {
-  display: none;
   fill: $grey-text;
   &--mobile {
     display: block;
+  }
+  &--desktop {
+    display: none;
   }
 }
 .page-footer__logo-glasses{
