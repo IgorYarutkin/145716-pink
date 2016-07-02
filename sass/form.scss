@@ -30,7 +30,7 @@
     padding-top: 18px;
   }
   &--submit {
-  padding-top: 24px;
+  padding-top: 27px;
   padding-bottom: 57px;
   }
 
@@ -89,6 +89,9 @@
     &[placeholder] {
       font-size: 18px;
     }
+    &:focus {
+      outline: none;
+    }
   }
   &--checkbox {
     display: none;
@@ -117,6 +120,12 @@
     background-color: #fff;
     border: 2px solid $grey-line;
   }
+  &:hover::before {
+    border: 2px solid $grey-text;
+  }
+  &:active::before {
+    border: 2px solid $red-text;
+  }
 }
 .form__input--checkbox:checked + .form__checkbox-name::after {
   position: absolute;
@@ -144,6 +153,12 @@
     border: 2px solid $grey-line;
     border-radius: 50%;
   }
+  &:hover::before {
+    border: 2px solid $grey-text;
+  }
+  &:active::before {
+    border: 2px solid $red-text;
+  }
 }
 .form__input--radio:checked + .form__radio-name::after {
   position: absolute;
@@ -163,10 +178,21 @@
   font-size: 18px;
   line-height: 30px;
   border: 2px solid $grey-line;
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    border: 2px solid $grey-text;
+  }
+  &:active {
+    border: 2px solid $red-text;
+  }
 }
 .form__submit {
-  @include container();
-  margin-bottom: 37px;
+  margin: 0 0 37px;
+  &:disabled {
+    background-color: $grey-line;
+  }
 }
 .form__note {
   text-align: center;

@@ -1,6 +1,10 @@
 .feedback {
+  display: none;
   flex-wrap: wrap;
   text-align: center;
+  &--active {
+    display: flex;
+  }
 }
 
 .feedback__author-name {
