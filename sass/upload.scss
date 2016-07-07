@@ -5,7 +5,7 @@
 .upload__inner {
   box-sizing: border-box;
   @include container();
-  padding: 20px 20px 20px 18px;
+  padding: 18px 20px;
   background: $grey-light;
 }
 .upload__photo {
@@ -15,13 +15,23 @@
   height: 374px;
 }
 .upload__filter-list {
+  position: relative;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
-  padding: 36px 8.25% 30px;
+  padding: 40px 33px 67px;
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: -20px;
+    right: -20px;
+    height: 2px;
+    background-color: $grey-text;
+    opacity: 0.1;
+  }
 }
 .upload__filter {
-  position: relative;
   width: 48px;
   height: 48px;
   background-color: $grey-light;
@@ -36,14 +46,7 @@
   width: 100%;
   height: 100%;
   fill: rgba(40, 54, 69, 0.3);
-  &--crop {
-    order: 1;
-  }
-  &--fill {
-    order: 2;
-  }
   &--contrast {
-    order: 3;
     width: 32px;
     height: auto;
   }
@@ -55,18 +58,7 @@
   fill: $red-text;
 }
 .upload__bottom {
-  position: relative;
-  margin-top: 13px;
-  padding: 17px 0 21px;
-  &::before {
-    position: absolute;
-    content: "";
-    top: -23px;
-    left: -20px;
-    right: -20px;
-    height: 1px;
-    background-color: rgba(40, 54, 69, 0.1);
-  }
+  padding: 38px 0 21px;
 }
 .upload__cancel,
 .upload__start {

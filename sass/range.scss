@@ -6,10 +6,11 @@
     display: none;
   }
   &--active {
-    display: block;
-    order: 4;
-    margin: 40px auto 0;
-    width: 236px;
+    position: absolute;
+    content: "";
+    bottom: 22px;
+    right: 22px;
+    width: 240px;
     height: 15px;
   }
 }
