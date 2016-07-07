@@ -72,22 +72,11 @@
 *******************************************************************************************/
 @media #{$desktop} {
   .range {
-    margin-top: 20px;
     width: 288px;
-    &::before {
-      left: -93px;
-      right: -30px;
-    }
-    &--fill {
-      &::before {
-        bottom: 20px;
-      }
-    }
+    margin-right: 0;
+    margin-top: 9px;
     &--contrast {
-      margin-top: 13px;
-      &::before {
-        bottom: 14px;
-      }
+      margin-top: 3px;
     }
   }
   .range--crop .range__dot {
