@@ -17,9 +17,9 @@
 .upload__filter-list {
   position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
-  padding: 40px 33px 67px;
+  padding: 40px 21px 67px;
   &::after {
     position: absolute;
     content: "";
@@ -38,6 +38,9 @@
   border: none;
   padding: 0;
   outline: none;
+  &--contrast {
+    width: 32px;
+  }
 }
 .upload__filter--active .upload__filter-icon {
   fill: $red-text;
@@ -125,22 +128,30 @@
 
   }
   .upload__filter-list {
+    padding: 7px 0 0 48px;
+    &::after {
+      display: none;
+    }
+  }
+  .upload__filter-wrapper {
+    display: flex;
     justify-content: space-between;
-    padding: 8px 17px 0 46px;
+    width: 100%;
+    border-bottom: 1px solid black;
+    padding: 25px 0;
+    &--crop {
+      margin-top: -26px;
+    }
   }
   .upload__filter {
-    margin: 0 25px 50px 0;
     width: 23px;
     height: 23px;
     &--crop {
-      order: 1;
     }
     &--fill {
-      order: 3;
     }
     &--contrast {
-      order: 5;
-      margin: 0 20px 50px 7px;
+      margin-left: 6px;
       width: 15px;
       height: 15px;
     }
@@ -153,7 +164,7 @@
   }
   .upload__bottom {
     margin-top: -2px;
-    padding: 48px (13/300)*100% 0px (48/300)*100%;
+    padding: 72px (13/300)*100% 0px (48/300)*100%;
     &::before {
       display: none;
     }

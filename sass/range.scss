@@ -36,38 +36,31 @@
 @media #{$tablet} {
   .range {
     display: block;
-    margin: 9px 0 0;
-    width: 79%;
-    &::before {
-      position: absolute;
-      content: "";
-      bottom: -23px;
-      left: -60px;
-      right: -12px;
-      height: 1px;
-      background-color: rgba(40, 54, 69, 0.1);
+    margin-right: 17px;
+    padding-top: 10px;
+    width: 75%;
+    &--active {
+      position: relative;
+      top: 0;
+      left: 0;
     }
+
     &--crop {
-      order: 2;
     }
     &--fill {
-      order: 4;
-      &::before {
-        bottom: 26px;
-      }
     }
     &--contrast {
-      order: 6;
-      &::before {
-        bottom: 21px;
-      }
     }
+  }
+  .range__dot {
+    top: 4px;
   }
   .range--crop .range__dot {
     right: 41px;
   }
   .range--fill .range__dot {
-    right: 162px;
+    right: auto;
+    left: 26px;
   }
   .range--contrast .range__dot {
     right: 91px;
