@@ -45,7 +45,6 @@
       top: 0;
       left: 0;
     }
-
     &--crop {
     }
     &--fill {
@@ -66,6 +65,9 @@
   }
   .range--contrast .range__dot {
     right: 91px;
+  }
+  .range--active .range__dot {
+    background-color: $red-text;
   }
 }
 
