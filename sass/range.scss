@@ -10,9 +10,10 @@
     position: absolute;
     content: "";
     bottom: 22px;
-    right: 22px;
+    right: 50%;
     width: 240px;
     height: 15px;
+    transform: translateX(50%);
   }
 }
 .range__axis {
@@ -29,6 +30,10 @@
   background-color: #fff;
   border: 2px solid $red-text;
   border-radius: 50%;
+  cursor: pointer;
+  &:active {
+    background-color: $red-text;
+  }
 }
 
 /********************************************************************************************
@@ -44,6 +49,7 @@
       position: relative;
       top: 0;
       left: 0;
+      transform: none;
     }
     &--crop {
     }
@@ -65,9 +71,6 @@
   }
   .range--contrast .range__dot {
     right: 91px;
-  }
-  .range--active .range__dot {
-    background-color: $red-text;
   }
 }
 

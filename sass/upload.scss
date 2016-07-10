@@ -68,6 +68,9 @@
 .upload__filter:hover .upload__filter-icon--active {
   fill: $red-text;
 }
+.upload__filter:active .upload__filter-icon {
+  fill: $red-text;
+}
 .upload__bottom {
   padding: 38px 0 21px;
 }
@@ -172,6 +175,10 @@
       width: 100%;
     }
   }
+  .upload__filter:hover .upload__filter-icon {
+    fill: $red-text;
+  }
+
   .upload__bottom {
     margin-top: -2px;
     padding: 72px (13/300)*100% 0px (48/300)*100%;
