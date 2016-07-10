@@ -6,6 +6,7 @@
     display: none;
   }
   &--active {
+    display: block;
     position: absolute;
     content: "";
     bottom: 22px;
@@ -50,6 +51,7 @@
     &--fill {
     }
     &--contrast {
+      margin-top: -5px;
     }
   }
   .range__dot {
@@ -87,7 +89,7 @@
     right: 17px;
   }
   .range--contrast .range__dot {
-    right: 105px;
+    right: 113px;
   }
 
 
