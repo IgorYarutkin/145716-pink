@@ -1,14 +1,19 @@
 .range {
   position: relative;
-  &--main {
-    margin: 0px auto;
-    width: 236px;
-    height: 15px;
-  }
   &--crop,
   &--fill,
   &--contrast {
     display: none;
+  }
+  &--active {
+    display: block;
+    position: absolute;
+    content: "";
+    bottom: 22px;
+    right: 50%;
+    width: 240px;
+    height: 15px;
+    transform: translateX(50%);
   }
 }
 .range__axis {
@@ -25,6 +30,10 @@
   background-color: #fff;
   border: 2px solid $red-text;
   border-radius: 50%;
+  cursor: pointer;
+  &:active {
+    background-color: $red-text;
+  }
 }
 
 /********************************************************************************************
@@ -33,17 +42,32 @@
 @media #{$tablet} {
   .range {
     display: block;
-    margin-top: 10px;
-    width: 74.1%;
-    &--main {
-      display: none;
+    margin-right: 17px;
+    padding-top: 10px;
+    width: 75%;
+    &--active {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: none;
     }
+    &--crop {
+    }
+    &--fill {
+    }
+    &--contrast {
+      margin-top: -5px;
+    }
+  }
+  .range__dot {
+    top: 4px;
   }
   .range--crop .range__dot {
     right: 41px;
   }
   .range--fill .range__dot {
-    right: 162px;
+    right: auto;
+    left: 26px;
   }
   .range--contrast .range__dot {
     right: 91px;
@@ -55,10 +79,11 @@
 *******************************************************************************************/
 @media #{$desktop} {
   .range {
-    margin-top: 20px;
-    width: 280px;
+    width: 288px;
+    margin-right: 0;
+    margin-top: 9px;
     &--contrast {
-      margin-top: 15px;
+      margin-top: 3px;
     }
   }
   .range--crop .range__dot {
@@ -69,7 +94,7 @@
     right: 17px;
   }
   .range--contrast .range__dot {
-    right: 105px;
+    right: 113px;
   }
 
 

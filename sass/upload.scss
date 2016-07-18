@@ -5,7 +5,7 @@
 .upload__inner {
   box-sizing: border-box;
   @include container();
-  padding: 20px 20px 20px 18px;
+  padding: 18px 20px;
   background: $grey-light;
 }
 .upload__photo {
@@ -15,26 +15,48 @@
   height: 374px;
 }
 .upload__filter-list {
+  position: relative;
   display: flex;
-  justify-content: space-between;
-  padding: 40px 12.25% 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 40px 21px 67px;
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: -20px;
+    right: -20px;
+    height: 2px;
+    background-color: $grey-text;
+    opacity: 0.1;
+  }
+}
+.upload__filter-wrapper {
+  &--contrast {
+    width: 48px;
+  }
 }
 .upload__filter {
-  position: relative;
   width: 48px;
   height: 48px;
   background-color: $grey-light;
   border: none;
   padding: 0;
   outline: none;
+  &--fill {
+    margin: 0 35px;
+  }
+  &--contrast {
+    width: 32px;
+  }
+}
+.upload__filter--active .upload__filter-icon {
+  fill: $red-text;
 }
 .upload__filter-icon {
   width: 100%;
   height: 100%;
   fill: rgba(40, 54, 69, 0.3);
-  &--active {
-    fill: $red-text;
-  }
   &--contrast {
     width: 32px;
     height: auto;
@@ -46,18 +68,11 @@
 .upload__filter:hover .upload__filter-icon--active {
   fill: $red-text;
 }
+.upload__filter:active .upload__filter-icon {
+  fill: $red-text;
+}
 .upload__bottom {
-  position: relative;
-  margin-top: 42px;
-  padding: 17px 0 21px;
-  &::before {
-    position: absolute;
-    content: "";
-    left: -20px;
-    right: -20px;
-    height: 1px;
-    background-color: rgba(40, 54, 69, 0.1);
-  }
+  padding: 38px 0 21px;
 }
 .upload__cancel,
 .upload__start {
@@ -100,9 +115,9 @@
   }
 }
 
-/****************************************************************************************************
+/********************************************************************************************
 ***  планшетная версия
-****************************************************************************************************/
+**********************************************************************************************/
 
 @media #{$tablet} {
   .upload__inner {
@@ -124,46 +139,50 @@
 
   }
   .upload__filter-list {
-    flex-wrap: wrap;
-    padding: 0;
+    justify-content: space-between;
+    padding: 7px 0 0 48px;
+    &::after {
+      display: none;
+    }
   }
   .upload__filter-wrapper {
-    position: relative;
     display: flex;
-    justify-content: flex-start;
-    padding: 27px 0 22px 48px;
+    justify-content: space-between;
     width: 100%;
-    &:first-child {
-      padding-top: 8px;
-    }
-    &::after {
-      position: absolute;
-      content: "";
-      bottom: 0px;
-      left: 50%;
-      width: 80%;
-      height: 1px;
-      background-color: rgba(40, 54, 69, 0.1);
-      transform: translateX(-50%);
+    border-bottom: 1px solid rgba(40, 54, 69, 0.1);
+    padding: 25px 0;
+    &--crop {
+      padding-top: 0;
     }
   }
   .upload__filter {
     width: 23px;
     height: 23px;
-    margin-right: 30px;
+    cursor: default;
+    &--crop {
+    }
+    &--fill {
+      margin: 0;
+    }
     &--contrast {
+      margin: -2px 0 2px 6px;
       width: 15px;
       height: 15px;
     }
   }
   .upload__filter-icon {
+    fill: $red-text;
     &--contrast {
       width: 100%;
     }
   }
+  .upload__filter:hover .upload__filter-icon {
+    fill: $red-text;
+  }
+
   .upload__bottom {
-    margin-top: 26px;
-    padding: 48px (13/300)*100% 0px (48/300)*100%;
+    margin-top: -2px;
+    padding: 72px (13/300)*100% 0px (48/300)*100%;
     &::before {
       display: none;
     }
@@ -195,6 +214,7 @@
     }
   }
   .upload__filter-list {
+    padding: 0 31px 0 0;
   }
   .upload__filter-wrapper {
     padding: 18px 0 13px;
@@ -206,11 +226,9 @@
     }
   }
   .upload__filter {
-    margin-right: 49px;
     width: 43px;
     height: 43px;
     &--contrast {
-      margin-right: 60px;
       width: 32px;
       height: 32px;
     }
@@ -224,7 +242,7 @@
   .upload__bottom {
     display: flex;
     justify-content: space-between;
-    padding: 119px 0px 0px;
+    padding: 144px 0px 0px;
   }
   .upload__start,
   .upload__cancel {

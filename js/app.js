@@ -13,6 +13,7 @@
   var checkButton = function() {
     pageHeaderTop.classList.toggle("page-header__top--menu-open");
     menu.classList.toggle("menu--open");
+    menuButton.classList.toggle("page-header__button--menu-open");
   }
 
   onStart();
