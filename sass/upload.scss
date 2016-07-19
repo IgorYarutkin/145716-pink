@@ -157,6 +157,7 @@
     }
   }
   .upload__filter-icon {
+    fill: $red-text;
     &--contrast {
       width: 100%;
     }
@@ -215,12 +216,12 @@
       height: 32px;
     }
   }
-  .upload__filter-icon {
-    fill: $red-text;
+/*  .upload__filter-icon {
     &--contrast {
       width: 100%;
     }
   }
+*/
   .upload__bottom {
     display: flex;
     justify-content: space-between;
