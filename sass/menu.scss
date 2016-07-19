@@ -9,6 +9,7 @@
   z-index: 3;
   &--no-js {
     display: block;
+    position: static;
   }
   &--open {
     display: block;
