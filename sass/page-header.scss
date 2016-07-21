@@ -36,7 +36,7 @@
 .page-header__top-container.page-header__top-container--no-js {
   flex-wrap: wrap;
   margin-bottom: 0;
-  padding: 6px 0 0 0;
+  padding: 20px 0 0 0;
 }
 .page-header__logo {
   width: 74px;
@@ -162,10 +162,6 @@
     &--page-form {
       padding: 14px (20/660)*100% 44px;
     }
-  }
-  .page-header__top-container.page-header__top-container--no-js {
-    margin-bottom: 0;
-    padding: 20px 0 0 0;
   }
   .page-header__logo {
     width: 147px;
