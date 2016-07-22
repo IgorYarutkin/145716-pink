@@ -86,6 +86,12 @@
     font-weight: normal;
     text-transform: none;
     box-shadow: none;
+    &:first-child {
+      box-shadow: none;
+    }
+    &:last-child {
+      box-shadow: none;
+    }
     &::after {
       display: none;
       position: absolute;
