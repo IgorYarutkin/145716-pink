@@ -1,13 +1,19 @@
 "use strict";
 
 (function() {
+  var pageHeader = document.querySelector('.page-header');
   var pageHeaderTop = document.querySelector(".page-header__top");
+  var pageHeaderTopContainer = document.querySelector('.page-header__top-container');
+  var pageHeaderContainer = document.querySelector('.page-header__container');
   var menu = document.querySelector(".menu");
   var menuButton = document.querySelector(".page-header__button");
 
   var onStart = function() {
     pageHeaderTop.classList.remove("page-header__top--no-js");
     menu.classList.remove("menu--no-js");
+    pageHeader.classList.remove('page-header--no-js');
+    pageHeaderTopContainer.classList.remove('page-header__top-container--no-js');
+    pageHeaderContainer.classList.remove('page-header__container--no-js');
   }
 
   var checkButton = function() {
