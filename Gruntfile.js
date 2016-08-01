@@ -98,6 +98,7 @@ module.exports = function(grunt) {
           src: [
             "fonts/**/*.{woff,woff2}",
             "img/**",
+            "!img/**/*.svg",
             "js/**",
             "*.html"
           ],
@@ -110,12 +111,51 @@ module.exports = function(grunt) {
           src: ["*.html"],
           dest: "build"
         }]
+      },
+      js: {
+        files: {
+          "js/app.js": "build/js/app.js"
+        }
       }
     },
 
     clean: {
       build: ["build"]
+    },
+
+    svgmin: {
+        options: {
+            plugins: [
+                {
+                  removeViewBox: false
+                },
+                {
+                  removeUselessStrokeAndFill: false
+                }
+            ]
+        },
+        dist: {
+          files: [
+            {
+              expand: true,
+              cwd: 'img/',
+              src: '**/*.svg',
+              dest: 'build/img/',
+              ext: '.svg'
+            },
+          ],
+        }
+    },
+
+    svgstore: {
+      options: {},
+      default : {
+        files: {
+          'build/img/map.svg': ['build/img/svg-inline/*.svg'],
+        },
+      },
     }
+
   });
 
   grunt.registerTask("serve", ["browserSync", "watch"]);
@@ -126,6 +166,8 @@ module.exports = function(grunt) {
     "sass",
     "postcss",
     "csso",
-    "imagemin"
+    // "imagemin",
+    "svgmin",
+    "svgstore"
   ]);
 };

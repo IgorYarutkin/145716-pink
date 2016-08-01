@@ -66,6 +66,7 @@
 .post__likes-container {
   display: flex;
   justify-content: flex-start;
+  align-items: center;
   margin-top: auto;
   font-size: 0;
 }
@@ -79,7 +80,7 @@
   &::after {
     position: absolute;
     content: "";
-    top: 8px;
+    top: -1px;
     left: 1px;
     width: 13px;
     height: 12px;
@@ -150,7 +151,6 @@
     order: 2;
     &--first {
       &::after {
-        top: 6px;
         left: -2px;
       }
     }

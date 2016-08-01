@@ -78,21 +78,23 @@
 .page-header__top-container.page-header__top-container--no-js .page-header__button {
   margin-right: (20/320)*100%;
 }
+.page-header__icon-hamburger,
+.page-header__icon-cross {
+  width: 100%;
+  height: 100%;
+  fill: #fff;
+}
 .page-header__icon-hamburger {
   display: block;
-  fill: #fff;
 }
 .page-header__icon-cross {
   display: none;
-  fill: #fff;
 }
 .page-header__top-container.page-header__top-container--no-js .page-header__icon-hamburger {
   display: none;
 }
 .page-header__top-container.page-header__top-container--no-js .page-header__icon-cross {
-  display: block;
-  margin-right: 0;
-  margin-left: auto;
+  display: none;
 }
 .page-header__button--menu-open .page-header__icon-hamburger {
   display: none;
