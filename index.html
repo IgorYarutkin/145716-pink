@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML Academy: Пинк Главная страница</title>
+  <link href="css/style.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <header class="page-header  page-header--no-js">
+    <div class="page-header__top  page-header__top--no-js">
+      <div class="page-header__top-container page-header__top-container--no-js">
+        <svg role="img" title="logo-pink-white-mobile" class="page-header__logo  page-header__logo--mobile" width="74" height="23";>
+          <use xlink:href="img/map.svg#logo-pink-white-mobile"/>
+        </svg>
+        <svg role="img" title="logo-pink-white-tablet" class="page-header__logo  page-header__logo--tablet">
+          <use xlink:href="img/map.svg#logo-pink-white-tablet"/>
+        </svg>
+        <svg role="img" title="logo-pink-white-desktop" class="page-header__logo  page-header__logo--desktop">
+          <use xlink:href="img/map.svg#logo-pink-white-desktop"/>
+        </svg>
+        <button class="page-header__button" type="button">
+          <svg role="img" title="icon-menu-burger" class="page-header__icon-hamburger">
+            <use xlink:href="img/map.svg#icon-menu-burger"/>
+          </svg>
+          <svg role="img" title="icon-menu-cross" class="page-header__icon-cross">
+            <use xlink:href="img/map.svg#icon-menu-cross"/>
+          </svg>
+        </button>
+        <nav class="menu  menu--no-js">
+          <ul class="menu__list">
+            <li class="menu__item  menu__item--active"><span class="menu__link">Главная</span></li>
+            <li class="menu__item"><a href="photo.html" class="menu__link">Фотографии</a></li>
+            <li class="menu__item"><a href="form.html" class="menu__link">Конкурс</a></li>
+            <li class="menu__item"><a href="https://htmlacademy.ru" class="menu__link">HTML Academy</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="page-header__container  page-header__container--no-js  page-header__container--page-index">
+      <div class="applications">
+        <div class="applications__title">Взгляните на жизнь иначе!</div>
+        <a class="applications__download" href="#">Скачать приложение</a>
+        <a class="applications__item applications__item--apple" href="#"><img src="img/logo-apple.svg" alt="iOS" width="46" height="57"></a>
+        <a class="applications__item applications__item--android" href="#"><img src="img/logo-android.svg" alt="Android"  width="42" height="47"></a>
+        <a class="applications__item applications__item--windows-mobile" href="#"><img src="img/logo-microsoft.svg" alt="Windows Mobile" width="44" height="42"></a>
+        <p class="applications__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="advetisment">
+      <p class="advetisment__text">Устали от серости мегаполиса?<span>Нам есть, что вам<br>предложить!</span></p>
+    </div>
+    <div class="profit-list">
+      <div class="profit-list__container">
+        <div class="profit-item  profit-item--mood">
+          <h2 class="profit-item__title">Поднимает настроение</h2>
+          <p class="profit-item__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+        </div>
+        <div class="profit-item  profit-item--changes">
+          <h2 class="profit-item__title">Меняет мир вокруг</h2>
+          <p class="profit-item__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+        </div>
+        <div class="profit-item  profit-item--friends">
+          <h2 class="profit-item__title">Заводит новых друзей</h2>
+          <p class="profit-item__text">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+        </div>
+      </div>
+    </div>
+    <div class="research">
+      <div class="research__container">
+        <div class="research__title">Эффект <br>на 24 часа!</div>
+        <p class="research__text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+        <a href="#" class="research__link">Узнать больше об исследовании</a>
+      </div>
+    </div>
+    <div class="feedbacks-list  slider">
+      <input class="slider__input" id="feedback-input-1" type="radio" name="feedback" checked>
+      <input class="slider__input" id="feedback-input-2" type="radio" name="feedback">
+      <input class="slider__input" id="feedback-input-3" type="radio" name="feedback">
+      <button class="feedbacks-list__switcher feedbacks-list__switcher--left" type="button">
+        <svg role="img" title="icon-review-arrow-left" class="feedbacks-list__arrow  feedbacks-list__arrow--left">
+          <use xlink:href="img/map.svg#icon-review-arrow-left"/>
+        </svg>
+      </button>
+      <div class="feedback  feedback--active">
+        <p class="feedback__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+        <div class="feedback__author-name">Николай Петров</div>
+        <div class="feedback__author-details">25 лет, водитель трамвая</div>
+      </div>
+      <div class="feedback">
+        <p class="feedback__text"></p>
+        <div class="feedback__author-name"></div>
+        <div class="feedback__author-details"></div>
+      </div>
+      <div class="feedback">
+        <p class="feedback__text"></p>
+        <div class="feedback__author-name"></div>
+        <div class="feedback__author-details"></div>
+      </div>
+      <button class="feedbacks-list__switcher feedbacks-list__switcher--right" type="button">
+        <svg role="img" title="icon-review-arrow-right" class="feedbacks-list__arrow  feedbacks-list__arrow--right">
+          <use xlink:href="img/map.svg#icon-review-arrow-right"/>
+        </svg>
+      </button>
+      <div class="feedbacks-list__toggle  slider__toggles slider__toggles--feedbaks">
+        <label class="slider__toggle" for="feedback-input-1">1</label>
+        <label class="slider__toggle" for="feedback-input-2">2</label>
+        <label class="slider__toggle" for="feedback-input-3">3</label>
+      </div>
+    </div>
+    <div class="plans-wrapper">
+      <div class="plans-wrapper__container slider">
+        <input class="slider__input" type="radio" name="plan" id="plan-input-1">
+        <input class="slider__input" type="radio" name="plan" id="plan-input-2" checked>
+        <input class="slider__input" type="radio" name="plan" id="plan-input-3">
+        <table class="plans">
+          <thead>
+            <tr>
+            <td class="plans__title  plans__title--empty"></td>
+            <td class="plans__title">
+              <h3 class="plans__title-name">База
+                <span class="plans__title-price">1,99 USD</span>
+              </h3>
+            </td>
+            <td class="plans__title">
+              <h3 class="plans__title-name  plans__title-name--hit">Стандарт
+                <span class="plans__title-price">3,99 USD</span>
+              </h3>
+            </td>
+            <td class="plans__title">
+              <h3 class="plans__title-name">Анлим
+                <span class="plans__title-price">9,99 USD</span>
+              </h3>
+            </td>
+          </tr>
+          </thead>
+          <tr class="plans__row  plans__row--filter">
+            <td class="plans__cell plans__cell--text">Розовый фильтр</td>
+            <td class="plans__cell">
+              <span class="plans__feature">Розовый фильтр</span>
+              <img class="plans__mark plans__mark--mark-yes" src="img/icon-yes.svg" alt="mark-yes" width="31" height="21">
+            </td>
+            <td class="plans__cell">
+              <span class="plans__feature">Розовый фильтр</span>
+              <img class="plans__mark plans__mark--mark-yes" src="img/icon-yes.svg" alt="mark-yes" width="31" height="21">
+            </td>
+            <td class="plans__cell">
+              <span class="plans__feature">Розовый фильтр</span>
+              <img class="plans__mark plans__mark--mark-yes" src="img/icon-yes.svg" alt="mark-yes" width="31" height="21">
+            </td>
+          </tr>
+          <tr class="plans__row  plans__row--smiles">
+            <td class="plans__cell plans__cell--text">Смайлики</td>
+            <td class="plans__cell">
+              <span class="plans__feature">Смайлики</span>
+              <img class="plans__mark plans__mark--mark-no" src="img/icon-no.svg" alt="mark-yes" width="27" height="26">
+            </td>
+            <td class="plans__cell">
+              <span class="plans__feature">Смайлики</span>
+              <img class="plans__mark plans__mark--mark-yes" src="img/icon-yes.svg" alt="mark-yes" width="31" height="21">
+            </td>
+            <td class="plans__cell">
+              <span class="plans__feature">Смайлики</span>
+              <img class="plans__mark plans__mark--mark-yes" src="img/icon-yes.svg" alt="mark-yes" width="31" height="21">
+            </td>
+          </tr>
+          <tr class="plans__row plans__row--notes">
+            <td class="plans__cell plans__cell--text">Комментарии</td>
+            <td class="plans__cell">
+              <span class="plans__feature">Комментарии</span>
+              <img class="plans__mark plans__mark--mark-no" src="img/icon-no.svg" alt="mark-yes" width="27" height="26">
+            </td>
+            <td class="plans__cell">
+              <span class="plans__feature">Комментарии</span>
+              <img class="plans__mark plans__mark--mark-no" src="img/icon-no.svg" alt="mark-yes" width="27" height="26">
+            </td>
+            <td class="plans__cell">
+              <span class="plans__feature">Комментарии</span>
+              <img class="plans__mark plans__mark--mark-yes" src="img/icon-yes.svg" alt="mark-yes" width="31" height="21">
+            </td>
+          </tr>
+        </table>
+        <div class="plans__toggle  slider__toggles slider__toggles--plans">
+          <label class="slider__toggle" for="plan-input-1">1</label>
+          <label class="slider__toggle" for="plan-input-2">2</label>
+          <label class="slider__toggle" for="plan-input-3">3</label>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="page-footer  page-footer--page-index">
+    <div class="page-footer__top">
+      <p class="page-footer__title  page-footer__title--page-index">Остались вопросы?
+        <br>Свяжитесь с нами!
+      </p>
+      <div class="contact  contact--phone">
+        <span class="contact__title">Звоните:</span>
+        <a class="contact__link" href="tel:+78125556666">+7 (812) 555-66-66</a>
+      </div>
+      <div class="contact  contact--email">
+        <span class="contact__title">Пишите:</span>
+        <a class="contact__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+      </div>
+      <div class="contact  contact--address">
+        <span class="contact__title">Приезжайте в гости:</span>
+        <p class="contact__text">ул. Большая
+          <br>Конюшенная, 19/8
+        </p>
+      </div>
+    </div>
+    <div id="map" class="page-footer__map"></div>
+    <div class="page-footer__bottom  page-footer__bottom--page-index">
+      <svg role="img" title="logo-pink-blue-mobile" class="page-footer__logo  page-footer__logo--mobile">
+        <use xlink:href="img/map.svg#logo-pink-blue-mobile"/>
+      </svg>
+      <svg role="img" title="logo-pink-blue-desktop" class="page-footer__logo  page-footer__logo--desktop">
+        <use xlink:href="img/map.svg#logo-pink-blue-desktop"/>
+      </svg>
+      <div class="social">
+        <a href="#" class="social__item  social__item--twitter">twitter</a>
+        <a href="#" class="social__item  social__item--facebook">facebook</a>
+        <a href="#" class="social__item  social__item--youtube">youtube</a>
+      </div>
+      <a href="https://htmlacademy.ru" class="page-footer__copyright">Разработано
+        <svg role="img" title="logo-htmlacademy" class="page-footer__htmlacademy-logo">
+          <use xlink:href="img/map.svg#logo-htmlacademy"/>
+        </svg>
+      </a>
+    </div>
+  </footer>
+
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+  <script src="js/app.js"></script>
+  <script src="js/svg4everybody.min.js"></script>
+  <script>svg4everybody();</script>
+</body>
+
+</html>
